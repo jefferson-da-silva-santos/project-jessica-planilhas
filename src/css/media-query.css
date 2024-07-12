@@ -1,0 +1,94 @@
+@media screen and (max-width: 860px) {
+
+  .groupHeader-primary > .titleHeader-primary {
+    font-size: 1.2em;
+  }
+  .groupHeader-primary > .titleHeader-secundary {
+    font-size: 3rem;
+  }
+  .groupHeader-primary > .btn {
+    width: 16em;
+  }
+  .circle {
+    width: 15em;
+    height: 15em;
+  }
+  .img {
+    width: 15em;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .nav > ul {
+    display: none;
+  }
+  .groupHeader-elements {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .groupHeader-primary {
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .groupHeader-primary > .titleHeader-secundary {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .groupHeader-primary > .btn {
+    width: 100%;
+    max-width: 20em;
+  }
+
+  .img {
+    width: 20em;
+    margin-bottom: 1em;
+  }
+
+  .btn-menu {
+    visibility: visible;
+  }
+
+  /* Sobre */
+  .sobre {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .groupSobre-primary img {
+    width: 20em;
+  }
+
+  .groupSobre-secundary-texts  {
+    width: 20em;
+  }
+
+  .titleSobre {
+    font-size: 2em;
+  }
+
+  
+}
+
+@media screen and (max-width: 450px) {
+  .groupHeader-primary {
+    padding: 2em;
+    gap: 3rem;
+  }
+
+  .groupHeader-primary > .titleHeader-primary {
+    font-size: 1em;
+  }
+
+  .groupHeader-primary > .titleHeader-secundary {
+    font-size: 2.5em;
+  }
+
+  .img {
+    width: 16em;
+  }
+
+}
