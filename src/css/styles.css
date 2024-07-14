@@ -16,26 +16,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   color: white;
 }
 
-/* Estilos do Heaader */
 
-.groupHeader {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: var(--primary-color);
-}
 
-.groupHeader > .header {
-  min-width: 100%;
-  height: 102vh;
-  background-color: inherit;
-}
+/* Estilos do nav */
 
 .nav {
   display: flex;
@@ -43,6 +33,9 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1em;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
 }
 
 .btn-menu {
@@ -61,13 +54,31 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 .nav > ul a {
   text-decoration: none;
   color: white;
   font-family: var(--secundary-font);
+  font-size: .96em;
+}
+
+
+
+
+/* Estilos do Heaader */
+
+.groupHeader {
+  background-color: var(--primary-color);
+}
+
+.groupHeader > .header {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  min-height: fit-content;
+  padding-bottom: 5em;
 }
 
 .groupHeader-elements {
@@ -80,8 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 2rem 2em 2em 3.5em;
-  background-color: var(--primary-color);
+  padding: 1em;
 }
 
 .groupHeader-primary > .titleHeader-primary {
@@ -90,21 +100,22 @@ body {
   color: var(--secundary-color);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .groupHeader-primary > .titleHeader-secundary {
   color: white;
   font-family: var(--primary-font);
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   width: 8em;
+  letter-spacing: 2px;
 }
 
 .groupHeader-primary > .btn {
-  width: 18em;
-  padding: 1em;
-  font-size: 1.2em;
+  width: 20em;
+  padding: 1.2em;
+  font-size: 1em;
   border: none;
   background-image: linear-gradient(to right, #0097b2, #79b699);
   border-radius: 40px;
@@ -118,27 +129,28 @@ body {
 
 .groupHeader-secundary {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 1.5em;
-  background-color: var(--primary-color);
+  padding: 2em;
 }
 
 .circle {
   position: absolute;
   z-index: 0;
-  width: 20em;
-  height: 20em;
+  width: 100%;
+  height: 100%;
+  max-width: 22em;
+  max-height: 22em;
   border-radius: 50%;
-  background-color: #10814c;
-  filter: blur(50px);
+  background-color: #7eebb83e;
+  filter: blur(23px);
+  right: 35px;
+  top: 54px;
 }
 
 .img {
   z-index: 1;
   position: absolute;
-  width: 20em;
+  width: 100%;
+  max-width: 18em;
   clip-path: polygon(
     35% 14%,
     100% 11%,
@@ -148,27 +160,32 @@ body {
     0 38%,
     5% 0
   );
+  right: 45px;
 }
+
+
+
+
+
 
 /* Estilos do Sobre */
 
 .groupSobre {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   background-color: var(--secundary-color);
 }
 
 .sobre {
-  height: 95vh;
-  min-width: 100%;
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  padding: 3em;
 }
 
 .groupSobre-primary {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,7 +193,10 @@ body {
 
 .groupSobre-primary img {
   clip-path: polygon(0 0, 83% 0, 100% 100%, 19% 100%);
-  width: 30em;
+  width: 100%;
+  max-width: 26em;
+  height: 100%;
+  max-height: 24em;
 }
 
 .groupSobre-secundary {
@@ -189,39 +209,42 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 35em;
+  width: 22em;
 }
 
 .titleSobre {
   font-family: var(--primary-font);
-  font-weight: bolder;
-  font-size: 2.5em;
-  line-height: 53px;
+  font-weight: 600;
+  font-size: 2.7em;
+  line-height: 50px;
   color: black;
 }
 
 .textSobre {
   font-family: var(--primary-font);
-  font-size: 1.05em;
+  font-size: .9em;
   line-height: 28px;
   color: black;
 }
 
+
+
+
+
 /* Estilos do Serviço (Excel) */
 
 .groupServiceExcel {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   background-color: var(--primary-color);
 }
 
 .service-excel {
-  min-height: 100vh;
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  padding-top: 5em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4em 3fr;
-  min-width: 100%;
+  grid-template-rows: 1fr 4em 22em;
 }
 
 .groupServiceExcel-primary {
@@ -241,7 +264,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 0 3.5em;
+  padding: 1em;
 }
 
 .titleService-secundary {
@@ -252,32 +275,85 @@ body {
 }
 
 .groupServiceExcel-terciary {
-  display: flex;
-  justify-content: space-around;
-  padding: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  column-gap: 1.5em;
 }
 
 .data {
-  min-width: 20%;
   background-color: var(--secundary-color);
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: .6em;
+  row-gap: 1em;
+  height: 18em;
+  overflow: hidden;
+}
+
+.groupData-img-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/excel-01.png');
+  background-size: cover;
+}
+
+.groupData-img-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/excel-02.png');
+  background-size: cover;
+}
+
+.groupData-img-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/excel-03.png');
+  background-size: cover;
+}
+
+.groupData-img-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/excel-04.png');
+  background-size: cover;
+}
+
+.data-title {
+  font-family: var(--secundary-font);
+  color: #011E11;
+  text-align: center;
+  line-height: 20px;
+  font-size: .99em;
+}
+
+.data-descricao {
+  font-family: var(--primary-font);
+  color: #011E11;
+  text-align: center;
+  font-size: .82em;
+  margin-top: .5em;
 }
 
 /* Estilos do Serviço (Google Sheets) */
 
 .groupServiceGoogle {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   background-color: var(--primary-color);
 }
 
 .service-google-sheets {
-  min-height: 80vh;
-  min-width: 100%;
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 22em;
   padding-bottom: 2em;
 }
 
@@ -285,36 +361,74 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 0 3.5em;
+  padding: 1em;
 }
 
 .groupServiceGoogle-secundary {
-  display: flex;
-  justify-content: space-around;
-  padding: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  column-gap: 1.5em;
 }
 
-/* Estilos do Contato */
 
-.groupYouTube {
+.groupData-img-5 {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  background-image: url('../image/google-1.png');
+  background-size: cover;
+}
+
+.groupData-img-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/google-2.png');
+  background-size: cover;
+}
+
+.groupData-img-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/google-3.png');
+  background-size: cover;
+}
+
+.groupData-img-8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../image/google-4.png');
+  background-size: cover;
+}
+
+
+
+
+
+
+/* Estilos do YouTube */
+
+.groupYouTube {
   background-color: var(--secundary-color);
 }
 
 .youtube {
   display: grid;
-  min-height: 100vh;
-  min-width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  width: 90%;
+  margin: auto;
+  max-width: 960px;
+  grid-template-columns: 25em 1fr;
+  grid-template-rows: 3fr 1fr;
+  padding-top: 3em;
 }
 
 .groupYouTube-primary {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 }
 
@@ -322,20 +436,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5em;
-  width: 27em;
+  padding: 1em;
 }
 
 .titleContato {
   font-family: var(--primary-font);
-  font-size: 3.5em;
+  font-size: 2.9em;
   font-weight: 600;
   color: var(--primary-color);
+  letter-spacing: 2px;
 }
 
 .textYoutube {
   font-family: var(--secundary-font);
   font-weight: bolder;
-  font-size: 1.6em;
+  font-size: 1.3em;
   line-height: 1.5em;
   color: #011e11;
 }
@@ -344,8 +459,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
+  justify-content: end;
+  padding: 1em;
 }
 
 .btnYoutube {
@@ -361,22 +476,33 @@ body {
   font-size: 1em;
 }
 
+.groupYouTube-terciary {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  grid-column: 2 / -1;
+}
+
+
+
+
+
+
 /* Estilos Benefícios */
 
 .groupBeneficios {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   background-color: white;
   color: black;
 }
 
 .beneficios {
-  min-height: 100vh;
-  width: 100%;
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 8em 1fr;
+  padding: 1em;
 }
 
 .groupBeneficios-primary {
@@ -388,6 +514,7 @@ body {
 .title-beneficios {
   font-family: var(--primary-font);
   font-size: 2.5em;
+  letter-spacing: 1.8px;
 }
 
 .groupBeneficios-secundary {
@@ -396,25 +523,25 @@ body {
   align-items: center;
   justify-content: space-around;
   gap: 1em;
-  padding: 0 5em;
+  padding: 0em 3em;
+  padding-bottom: 2em;
 }
 
 .beneficio-item {
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
   align-items: center;
   align-items: center;
-  padding: 1em;
 }
 
 .beneficio-item-circle-externo {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 13em;
-  height: 13em;
+  width: 11em;
+  height: 11em;
   border-radius: 50%;
   background-image: linear-gradient(to bottom right, #12ff46, #21a366, #7ed957);
 }
@@ -423,15 +550,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12em;
-  height: 12em;
+  width: 10em;
+  height: 10em;
   border-radius: 50%;
   background-color: white;
 }
 
 .icons-beneficios {
-  width: 6.5em;
-  height: 6.5em;
+  width: 6em;
+  height: 6em;
 }
 
 .beneficio-item-title {
@@ -445,21 +572,24 @@ body {
   text-align: center;
 }
 
+
+
+
+
+
 /* Estilos do Contato */
 
 .groupContato {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   background-color: var(--primary-color);
 }
 
 .contato {
-  min-height: 100vh;
-  width: 100%;
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 3em;
+  padding: 3em;
 }
 
 .groupContato-primary {
@@ -467,13 +597,14 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 2em 2em;
+  padding: 1em;
+  gap: 3em;
 }
 
 .groupContato-texts-top {
   display: flex;
   flex-direction: column;
-  gap: 1.3em;
+  gap: 1em;
   width: 35em;
 }
 
@@ -495,7 +626,7 @@ body {
   font-family: var(--secundary-font);
   font-weight: 800;
   width: 11.5em;
-  padding: 1em;
+  padding: .7em;
   font-size: 1em;
   border-radius: 30px;
   letter-spacing: .5px;
@@ -523,14 +654,14 @@ body {
   color: var(--secundary-color);
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: var(--primary-font);
 }
 
 .contato-link {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: var(--primary-font);
 }
 
@@ -554,7 +685,9 @@ body {
   position: absolute;
   z-index: 1;
   position: absolute;
-  width: 23em;
+  width: 100%;
+  max-width: 20em;
+  min-width: 18em;
   clip-path: polygon(
     35% 14%,
     100% 11%,
@@ -569,12 +702,22 @@ body {
 .circle-img-contato {
   position: absolute;
   z-index: 0;
-  width: 26em;
-  height: 26em;
+  width: 100%;
+  height: 100%;
+  max-width: 26em;
+  max-height: 26em;
   border-radius: 50%;
-  background-color: #10814c;
-  filter: blur(50px);
+  background-color: #7eebb83e;
+  filter: blur(23px);
 }
+
+
+
+
+
+
+
+
 
 
 /* Estilos Footer */
@@ -588,7 +731,7 @@ body {
 
 .footer {
   padding: 1em;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
