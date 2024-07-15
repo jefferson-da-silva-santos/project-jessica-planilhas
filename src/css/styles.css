@@ -27,15 +27,24 @@ body {
 
 /* Estilos do nav */
 
+.groupNav {
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: 100vw;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
   width: 100%;
   max-width: 960px;
   margin: auto;
+  padding: 1em 0em;
 }
 
 .btn-menu {
@@ -54,7 +63,8 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 0em;
+  
 }
 
 .nav > ul a {
@@ -62,9 +72,10 @@ body {
   color: white;
   font-family: var(--secundary-font);
   font-size: .96em;
+  padding: 1em;
+  position: relative;
+  transition: color .5s ease;
 }
-
-
 
 
 /* Estilos do Heaader */
@@ -85,6 +96,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: inherit;
+  padding-top: 6em;
 }
 
 .groupHeader-primary {
@@ -125,7 +137,16 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  transition-property: transform, box-shadow;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
+
+.groupHeader-primary > .btn:hover {
+  transform: scale(103%);
+  box-shadow: 0px 0px 10px #316d50;
+}
+
 
 .groupHeader-secundary {
   position: relative;
@@ -144,6 +165,7 @@ body {
   filter: blur(23px);
   right: 35px;
   top: 54px;
+  animation: float 3s ease-in-out infinite;
 }
 
 .img {
@@ -161,9 +183,17 @@ body {
     5% 0
   );
   right: 45px;
+  animation: float 3s ease-in-out infinite;
 }
 
-
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
 
 
@@ -181,7 +211,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  padding: 3em;
 }
 
 .groupSobre-primary {
@@ -247,6 +276,10 @@ body {
   grid-template-rows: 1fr 4em 22em;
 }
 
+.link-planilha {
+  text-decoration: none;
+}
+
 .groupServiceExcel-primary {
   display: flex;
   justify-content: center;
@@ -291,13 +324,21 @@ body {
   row-gap: 1em;
   height: 18em;
   overflow: hidden;
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+}
+
+.data:hover {
+  box-shadow: 0px 0px 21px #00ff37;
 }
 
 .groupData-img-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../image/excel-01.png');
+  background-image: url('../image/excel-04.png');
   background-size: cover;
 }
 
@@ -305,7 +346,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../image/excel-02.png');
+  background-image: url('../image/excel-01.png');
   background-size: cover;
 }
 
@@ -321,7 +362,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../image/excel-04.png');
+  background-image: url('../image/excel-02.png');
   background-size: cover;
 }
 
@@ -376,7 +417,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../image/google-1.png');
+  background-image: url('../image/google-2.png');
   background-size: cover;
 }
 
@@ -384,7 +425,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../image/google-2.png');
+  background-image: url('../image/google-1.png');
   background-size: cover;
 }
 
@@ -422,7 +463,8 @@ body {
   max-width: 960px;
   grid-template-columns: 25em 1fr;
   grid-template-rows: 3fr 1fr;
-  padding-top: 3em;
+  padding-top: 4em;
+  padding-bottom: 0;
 }
 
 .groupYouTube-primary {
@@ -474,6 +516,15 @@ body {
   font-weight: bolder;
   color: white;
   font-size: 1em;
+  transition-property: transform, box-shadow;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.btnYoutube:hover {
+  transform: scale(103%);
+  box-shadow: 0px 0px 10px #316d50;
 }
 
 .groupYouTube-terciary {
@@ -502,7 +553,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 8em 1fr;
-  padding: 1em;
+  padding: 2em 1em;
 }
 
 .groupBeneficios-primary {
@@ -630,6 +681,15 @@ body {
   font-size: 1em;
   border-radius: 30px;
   letter-spacing: .5px;
+  transition-property: transform, box-shadow;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.groupContato-button:hover {
+  transform: scale(103%);
+  box-shadow: 0px 0px 10px #316d50;
 }
 
 .groupContato-texts-bottom {
@@ -663,6 +723,11 @@ body {
   text-decoration: none;
   font-size: 1em;
   font-family: var(--primary-font);
+  transition: color 0.5s ease;
+}
+
+.contato-link:hover {
+  color: #00ff84;
 }
 
 .groupContato-select-redes-sociais {
@@ -697,7 +762,9 @@ body {
     0 38%,
     5% 0
   );
+  animation: float 3s ease-in-out infinite;
 }
+
 
 .circle-img-contato {
   position: absolute;
@@ -709,6 +776,7 @@ body {
   border-radius: 50%;
   background-color: #7eebb83e;
   filter: blur(23px);
+  animation: float 3s ease-in-out infinite;
 }
 
 

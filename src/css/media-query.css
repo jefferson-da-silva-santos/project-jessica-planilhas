@@ -1,24 +1,99 @@
+@media screen and (min-width: 899px) {
+  .nav > ul a:hover {
+    color: #00ff84;
+  }
+
+  .nav > ul a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    top: 38px;
+    left: 0px;
+    border-radius: 20px;
+    background-image: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
+    transition: width 0.5s ease;
+  }
+
+  .nav > ul a:hover:before {
+    width: 100%;
+  }
+
+  .sobre {
+    padding: 7em 3em;
+  }
+
+  .service-excel {
+    padding-top: 7em;
+  }
+
+  .youtube {
+    padding-top: 8em;
+  }
+
+  .beneficios {
+    padding: 5em 1em;
+  }
+
+  .contato {
+    padding: 5.5em 3em 3em 3em;
+  }
+}
+
 @media screen and (max-width: 900px) {
   /* Media do Nav */
-
+  .nav {
+    padding: 1em 2em;
+  }
+  
   .nav > ul {
     display: none;
+    position: absolute;
+    background-color: #011e11;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav > ul > li {
+    width: 80%;
+    text-align: center;
+    padding: 1em;
+  }
+
+  .nav > ul > li:hover {
+    background-color: #022817;
+  }
+
+  .nav > ul a {
+    font-size: 1.3em;
   }
 
   .btn-menu {
     visibility: visible;
+    z-index: 11;
   }
 
   /* Media do Header */
+
   .groupHeader-elements {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 1em;
+    padding-top: 6em;
   }
 
   .groupHeader-primary {
     align-items: center;
     padding: 2em;
+    gap: 3rem;
+    padding-bottom: 3em;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
@@ -44,6 +119,7 @@
   .sobre {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 5em;
   }
 
   .textSobre {
@@ -89,6 +165,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 20em 5em;
     width: 80%;
+    padding: 6em 0 4em 0;
   }
 
   .groupYouTube-primary {
@@ -163,8 +240,16 @@
   .groupContato-select-redes-sociais {
     margin: auto;
   }
+
+  .link-contato-icon {
+    font-size: 2em;
+  }
 }
 @media screen and (max-width: 846px) {
+  .nav > ul a {
+    font-size: 1.3em;
+  }
+
   .data {
     height: 11em;
   }
@@ -175,10 +260,19 @@
 
   .service-excel {
     grid-template-rows: 1fr 4em 26em;
+    padding: 6.5em 0 2em 0;
   }
 
   .service-google-sheets {
     grid-template-rows: 1fr 25em;
+  }
+
+  .beneficios {
+    padding: 6em 1em;
+  }
+
+  .contato {
+    padding: 5em 1em;
   }
 }
 
@@ -191,6 +285,14 @@
 
   .groupHeader-primary > .titleHeader-primary {
     font-size: 0.8em;
+  }
+
+  .groupSobre {
+    padding: 3em 0em;
+  }
+
+  .groupServiceExcel {
+    padding: 3em 0 1em 0;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
@@ -294,7 +396,7 @@
   /* Estilos YouTube */
 
   .youtube {
-    padding-top: 1em;
+    padding-top: 4em;
     width: 100%;
     max-width: 26em;
     grid-template-rows: 1fr 17em 5em;
@@ -328,6 +430,7 @@
     width: 90%;
     max-width: 26em;
     row-gap: 1em;
+    padding-top: 4em;
   }
 
   .title-beneficios {
@@ -371,7 +474,7 @@
   /* Estilos Contao */
 
   .contato {
-    padding: 1em;
+    padding: 4em 0em 1em 0;
   }
 
   .groupContato-primary {
@@ -415,12 +518,20 @@
     max-width: 20em;
     max-height: 23em;
   }
+
+  .link-contato-icon {
+    font-size: 1.7em;
+  }
 }
 
 @media screen and (max-width: 430px) {
   /* Estilos Nav */
 
   /* Estilos do Header */
+  .nav > ul a {
+    font-size: 1.3em;
+  }
+
   .groupHeader-primary > .titleHeader-primary {
     font-size: 0.759em;
   }
@@ -435,7 +546,7 @@
 
   .groupHeader-elements {
     grid-template-rows: 1fr 19em;
-    padding-bottom: 3em;
+    padding: 7em 0 3em 0;
   }
 
   .groupHeader-primary > .btn {
@@ -456,8 +567,8 @@
 
   .sobre {
     grid-template-rows: 17em 1fr;
-    padding: 0em;
-    padding-bottom: 2em;
+    padding: 1em 0em;
+    padding-bottom: 3em;
   }
 
   .groupSobre-secundary-texts {
@@ -482,7 +593,7 @@
   /* Estilos Excel */
 
   .service-excel {
-    padding: 1em;
+    padding: 2.5em 1em;
     grid-template-rows: 1fr 4em auto;
   }
 
@@ -512,9 +623,9 @@
   /* Estilos YouTube */
 
   .youtube {
-    padding-top: 0.5em;
+    padding: 4em 0em;
     grid-template-rows: 1fr 17em 5em;
-  }
+}
 
   .titleContato {
     font-size: 1.9em;
@@ -540,7 +651,7 @@
 
   .beneficios {
     grid-template-rows: 6em 1fr;
-    padding: 1em;
+    padding: 4em 0em;
   }
 
   .beneficio-item-circle-externo {
@@ -576,7 +687,7 @@
 
   .contato {
     padding: 0;
-    padding-top: 2em;
+    padding-top: 4em;
   }
 
   .groupContato-primary {
@@ -631,6 +742,10 @@
     min-width: 11em;
   }
 
+  .link-contato-icon {
+    font-size: 1.3em;
+  }
+
   /* Estilos do Footer */
 
   .text-footer {
@@ -639,14 +754,15 @@
 }
 
 @media screen and (max-width: 380px) {
-  .nav {
-    padding: 0.5em;
-  }
-
   /* Estilos Header */
+
+  .nav > ul a {
+    font-size: 1.3em;
+  }
 
   .groupHeader-primary {
     gap: 2rem;
+    padding: 2em 0em;
   }
 
   .groupHeader-elements {
@@ -697,7 +813,6 @@
   /* Estilos Excel */
 
   .service-excel {
-    padding: 1em;
     grid-template-rows: 1fr 3.5em auto;
   }
 
@@ -768,10 +883,6 @@
 
   /* Estilos Contato */
 
-  .contato {
-    padding-top: 1.5em;
-  }
-
   .groupContato-title {
     font-size: 1.5em;
   }
@@ -796,7 +907,26 @@
     min-width: 10em;
   }
 
+  .link-contato-icon {
+    font-size: 1.3em;
+  }
+
+  /* Estilos Footer */
+
   .text-footer {
     font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav > ul > li {
+    padding: 0.5em;
+  }
+  .nav > ul a {
+    font-size: 1.2em;
+  }
+
+  .groupHeader-elements {
+    padding-top: 5em;
   }
 }

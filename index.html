@@ -9,22 +9,26 @@
   </head>
   <body>
     <div class="groupHeader">
-      <header class="header">
-        <nav class="nav">
-          <img src="src/image/favicon-32x32.png" alt="logo" />
-          <button class="btn-menu">
-            <a href="#"><i class="bi bi-list"></i></a>
-          </button>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviço</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">Benefícios</a></li>
-            <li><a href="#">Dúvidas</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
+      <header class="header" id="header">
+        <div class="groupNav">
+          <nav class="nav">
+            <img src="src/image/favicon-32x32.png" alt="logo" />
+            <button class="btn-menu">
+              <a href="#">
+                <i class="bi bi-list" id="icon-btn-menu"></i>
+              </a>
+            </button>
+            <ul id="listMenu">
+              <li><a href="#header">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servico">Serviço</a></li>
+              <li><a href="#youtube">YouTube</a></li>
+              <li><a href="#beneficios">Benefícios</a></li>
+              <li><a href="#">Dúvidas</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="groupHeader-elements">
           <section class="groupHeader-primary">
             <p class="titleHeader-primary">jessica | planilhas</p>
@@ -46,10 +50,10 @@
     </div>
     <main>
       <div class="groupSobre">
-        <section class="sobre">
+        <section class="sobre" id="sobre">
           <div class="groupSobre-primary">
             <img
-            src="https://i.pinimg.com/564x/b4/b4/0a/b4b40ac2cbe20814b8649afe3ecf584f.jpg"
+              src="https://i.pinimg.com/564x/b4/b4/0a/b4b40ac2cbe20814b8649afe3ecf584f.jpg"
               alt=""
             />
           </div>
@@ -72,7 +76,7 @@
       </div>
 
       <div class="groupServiceExcel">
-        <section class="service-excel">
+        <section class="service-excel" id="servico">
           <div class="groupServiceExcel-primary">
             <h2 class="titleServiceExcel-primary">Planilhas que ofereço:</h2>
           </div>
@@ -80,43 +84,61 @@
             <h3 class="titleService-secundary">Excel</h3>
           </div>
           <section class="groupServiceExcel-terciary">
+            <a href="https://go.hotmart.com/E87078060R" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-1"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">Planilha Baseada na Regra 50/30/20</h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
 
-            <article class="data">
-              <div class="groupData-img-1">
-              </div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha Baseada na Regra 50/30/20</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
+            <a href="https://go.hotmart.com/I86610424W" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-2"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">Planilha para controle de gastos</h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
 
-            <article class="data">
-              <div class="groupData-img-2">
-              </div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha para controle de gastos</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
+            <a href="https://go.hotmart.com/T86923742R" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-3"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">
+                    Planilha de controle financeiro personalizável
+                  </h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
 
-            <article class="data">
-              <div class="groupData-img-3">
-              </div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha de controle financeiro personalizável</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
-
-            <article class="data">
-              <div class="groupData-img-4">
-              </div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha de controle financeiro simples</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
-            
+            <a href="https://youtu.be/TUVI1RCD7iE" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-4"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">
+                    Planilha de controle financeiro simples
+                  </h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
           </section>
         </section>
       </div>
@@ -126,39 +148,66 @@
             <h3 class="titleService-secundary">Google Sheets</h3>
           </div>
           <div class="groupServiceGoogle-secundary">
-            <article class="data">
-              <div class="groupData-img-5"></div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha Baseada na Regra 50/30/20</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
-            <article class="data">
-              <div class="groupData-img-6"></div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha para controle de gastos</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
-            <article class="data">
-              <div class="groupData-img-7"></div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha de controle financeiro personalizável</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
-            <article class="data">
-              <div class="groupData-img-8"></div>
-              <div class="groupData-text">
-                <h3 class="data-title">Planilha de controle financeiro simples</h3>
-                <p class="data-descricao">Give a detailed description of the service being provided here.</p>
-              </div>
-            </article>
+            <a href="https://go.hotmart.com/U89372251L" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-5"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">Planilha Baseada na Regra 50/30/20</h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
+
+            <a href="https://go.hotmart.com/X89372640G" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-6"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">Planilha para controle de gastos</h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
+
+            <a href="https://go.hotmart.com/X89372640G" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-7"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">
+                    Planilha de controle financeiro personalizável
+                  </h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
+
+            <a href="https://go.hotmart.com/U89959580R" class="link-planilha">
+              <article class="data">
+                <div class="groupData-img-8"></div>
+                <div class="groupData-text">
+                  <h3 class="data-title">
+                    Planilha de controle financeiro simples
+                  </h3>
+                  <p class="data-descricao">
+                    Give a detailed description of the service being provided
+                    here.
+                  </p>
+                </div>
+              </article>
+            </a>
           </div>
         </section>
       </div>
       <div class="groupYouTube">
-        <section class="youtube">
+        <section class="youtube" id="youtube">
           <div class="groupYouTube-primary">
             <div class="groupTouTube-texts">
               <h2 class="titleContato">Veja meu Canal no YouTube</h2>
@@ -182,13 +231,16 @@
             ></iframe>
           </div>
           <div class="groupYouTube-terciary">
-            <button class="btnYoutube">Ver mais detalhes</button>
+            <a
+              href="https://youtube.com/@jessicaplanilhasedashboards?si=QsgVMBawapeliemI"
+              ><button class="btnYoutube">Ir para canal</button></a
+            >
           </div>
         </section>
       </div>
 
       <div class="groupBeneficios">
-        <section class="beneficios">
+        <section class="beneficios" id="beneficios">
           <div class="groupBeneficios-primary">
             <h2 class="title-beneficios">
               Benefícios de utilizar minhas planilhas
@@ -248,7 +300,7 @@
       </div>
 
       <div class="groupContato">
-        <section class="contato">
+        <section class="contato" id="contato">
           <div class="groupContato-primary">
             <div class="groupContato-texts-top">
               <h2 class="groupContato-title">Entre em contato</h2>
@@ -260,28 +312,36 @@
             <div class="groupContato-texts-bottom">
               <div class="selectContato">
                 <p class="legend-contato">Whatsapp</p>
-                <a class="contato-link" href="https://wa.me/5581998414426"
+                <a
+                  class="contato-link"
+                  href="https://bit.ly/WhatsAppJessicaPlanilhasDashs
+                "
                   >(81) 98414426</a
                 >
               </div>
               <div class="selectContato">
                 <p class="legend-contato">Email</p>
-                <a
-                  class="contato-link"
-                  href="mailto:planilhasedashs12@gmail.com"
-                  >planilhasedashs12@gmail.com</a
-                >
+                <a class="contato-link" href="mailto:planilhasedashs12@gmail.com">planilhasedashs12@gmail.com</a>
               </div>
               <div class="selectContato">
                 <p class="legend-contato">Redes Sociais</p>
                 <div class="groupContato-select-redes-sociais">
-                  <a class="contato-link link-contato-icon" href="">
+                  <a
+                    class="contato-link link-contato-icon"
+                    href="https://pin.it/5APx1F0Bl"
+                  >
                     <i class="bi bi-pinterest"></i>
                   </a>
-                  <a class="contato-link link-contato-icon" href="">
+                  <a
+                    class="contato-link link-contato-icon"
+                    href="https://youtube.com/@jessicaplanilhasedashboards?si=QsgVMBawapeliemI"
+                  >
                     <i class="bi bi-youtube"></i>
                   </a>
-                  <a class="contato-link link-contato-icon" href="">
+                  <a
+                    class="contato-link link-contato-icon"
+                    href="https://instagram.com/jessica.planilhas?igshid=NzZlODBkYWE4Ng=="
+                  >
                     <i class="bi bi-instagram"></i>
                   </a>
                 </div>
@@ -304,5 +364,7 @@
         <a class="text-footer" href="">&copy; 2024 Jefferson Santos</a>
       </footer>
     </div>
+
+    <script src="src/js/script.js"></script>
   </body>
 </html>
