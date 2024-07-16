@@ -44,7 +44,7 @@ body {
   width: 100%;
   max-width: 960px;
   margin: auto;
-  padding: 1em 0em;
+  padding: .5em 0em;
 }
 
 .btn-menu {
@@ -124,7 +124,7 @@ body {
   letter-spacing: 2px;
 }
 
-.groupHeader-primary > .btn {
+ .btn {
   width: 20em;
   padding: 1.2em;
   font-size: 1em;
@@ -142,7 +142,7 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-.groupHeader-primary > .btn:hover {
+.btn:hover {
   transform: scale(103%);
   box-shadow: 0px 0px 10px #316d50;
 }

@@ -37,14 +37,14 @@
   }
 
   .contato {
-    padding: 5.5em 3em 3em 3em;
+    padding: 5.5em 2em 3em 2em;
   }
 }
 
 @media screen and (max-width: 900px) {
   /* Media do Nav */
   .nav {
-    padding: 1em 2em;
+    padding: .8em 2em;
   }
   
   .nav > ul {
@@ -281,6 +281,10 @@
 
   .groupHeader > .header {
     padding-bottom: 0em;
+  }
+
+  .btn {
+    width: 16em;
   }
 
   .groupHeader-primary > .titleHeader-primary {
@@ -541,12 +545,12 @@
   }
 
   .groupHeader-primary > .titleHeader-secundary {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .groupHeader-elements {
     grid-template-rows: 1fr 19em;
-    padding: 7em 0 3em 0;
+    padding: 6em 0 3em 0;
   }
 
   .groupHeader-primary > .btn {
@@ -756,6 +760,10 @@
 @media screen and (max-width: 380px) {
   /* Estilos Header */
 
+  .btn {
+    width: 14em;
+  }
+
   .nav > ul a {
     font-size: 1.3em;
   }
@@ -771,11 +779,11 @@
   }
 
   .groupHeader-primary > .titleHeader-primary {
-    font-size: 0.65em;
+    font-size: .8em;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 10em;
   }
 
@@ -915,6 +923,12 @@
 
   .text-footer {
     font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .groupHeader-primary > .titleHeader-secundary {
+    font-size: 1.7rem;
   }
 }
 
