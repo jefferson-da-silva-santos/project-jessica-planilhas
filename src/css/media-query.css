@@ -25,19 +25,19 @@
   }
 
   .service-excel {
-    padding-top: 7em;
+    padding-top: 6em;
   }
 
   .youtube {
-    padding-top: 8em;
+    padding-top: 7em;
   }
 
   .beneficios {
-    padding: 5em 1em;
+    padding: 4em 1em;
   }
 
   .contato {
-    padding: 5.5em 2em 3em 2em;
+    padding: 5em 2em 3em 2em;
   }
 }
 
@@ -48,7 +48,8 @@
   }
   
   .nav > ul {
-    display: none;
+    visibility: hidden;
+    display: flex;
     position: absolute;
     background-color: #011e11;
     left: 0;
@@ -146,18 +147,27 @@
   .data {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    height: 9em;
+    height: 10em;
     row-gap: 0em;
     column-gap: 1em;
   }
+
+  .service-excel {
+    grid-template-rows: 1fr 4em 25em;
+  }
+  
 
   /* Media do Google Sheets */
 
   .groupServiceGoogle-secundary {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
     grid-gap: 1.5em;
   }
+
+  .service-google-sheets {
+    grid-template-rows: 1fr 24em;
+}
 
   /* Media do YouTube */
 
@@ -251,7 +261,7 @@
   }
 
   .data {
-    height: 11em;
+    height: 12em;
   }
 
   .groupServiceGoogle {
@@ -264,7 +274,7 @@
   }
 
   .service-google-sheets {
-    grid-template-rows: 1fr 25em;
+    grid-template-rows: 1fr 28em;
   }
 
   .beneficios {

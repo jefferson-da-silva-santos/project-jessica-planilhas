@@ -12,20 +12,42 @@
       <header class="header" id="header">
         <div class="groupNav">
           <nav class="nav">
-            <img src="src/image/favicon-32x32.png" alt="logo" />
+            <img loading="lazy" src="src/image/favicon-32x32.png" alt="logo" />
             <button class="btn-menu">
-              <a href="#">
+              <a href="#" id="btn-menu-link">
                 <i class="bi bi-list" id="icon-btn-menu"></i>
               </a>
             </button>
             <ul id="listMenu">
-              <li><a href="#header">Início</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servico">Serviço</a></li>
-              <li><a href="#youtube">YouTube</a></li>
-              <li><a href="#beneficios">Benefícios</a></li>
-              <li><a href="#">Dúvidas</a></li>
-              <li><a href="#contato">Contato</a></li>
+              <li>
+                <a class="link-menu" id="link-inicio" href="#header">Início</a>
+              </li>
+              <li>
+                <a class="link-menu" id="link-sobre" href="#sobre">Sobre</a>
+              </li>
+              <li>
+                <a class="link-menu" id="link-servico" href="#servico"
+                  >Serviço</a
+                >
+              </li>
+              <li>
+                <a class="link-menu" id="link-youtube" href="#youtube"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a class="link-menu" id="link-beneficios" href="#beneficios"
+                  >Benefícios</a
+                >
+              </li>
+              <li>
+                <a class="link-menu" id="link-duvida" href="#">Dúvidas</a>
+              </li>
+              <li>
+                <a class="link-menu" id="link-contato" href="#contato"
+                  >Contato</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -42,6 +64,7 @@
           <section class="groupHeader-secundary">
             <div class="circle"></div>
             <img
+              loading="lazy"
               class="img"
               src="http://www.oorders.com/images/6105fbb0f558a2ba7589ea492afa4331.jpg"
               alt="moça sorrindo"
@@ -55,6 +78,7 @@
         <section class="sobre" id="sobre">
           <div class="groupSobre-primary">
             <img
+              loading="lazy"
               src="https://i.pinimg.com/564x/b4/b4/0a/b4b40ac2cbe20814b8649afe3ecf584f.jpg"
               alt=""
             />
@@ -96,8 +120,8 @@
                 <div class="groupData-text">
                   <h3 class="data-title">Planilha Baseada na Regra 50/30/20</h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Gerencie suas finanças de acordo com a regra 50/30/20 no
+                    Excel.
                   </p>
                 </div>
               </article>
@@ -113,8 +137,7 @@
                 <div class="groupData-text">
                   <h3 class="data-title">Planilha para controle de gastos</h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Monitore e controle seus gastos mensais no Excel.
                   </p>
                 </div>
               </article>
@@ -132,8 +155,8 @@
                     Planilha de controle financeiro personalizável
                   </h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Personalize seu controle financeiro de acordo com suas
+                    necessidades no Excel.
                   </p>
                 </div>
               </article>
@@ -151,8 +174,8 @@
                     Planilha de controle financeiro simples
                   </h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Mantenha suas finanças organizadas com uma planilha simples
+                    no Excel.
                   </p>
                 </div>
               </article>
@@ -176,8 +199,8 @@
                 <div class="groupData-text">
                   <h3 class="data-title">Planilha Baseada na Regra 50/30/20</h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Administre suas finanças seguindo a regra 50/30/20 no Google
+                    Sheets.
                   </p>
                 </div>
               </article>
@@ -193,8 +216,7 @@
                 <div class="groupData-text">
                   <h3 class="data-title">Planilha para controle de gastos</h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Acompanhe seus gastos mensais no Google Sheets.
                   </p>
                 </div>
               </article>
@@ -212,8 +234,8 @@
                     Planilha de controle financeiro personalizável
                   </h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Customize seu controle financeiro conforme suas preferências
+                    no Google Sheets.
                   </p>
                 </div>
               </article>
@@ -231,8 +253,8 @@
                     Planilha de controle financeiro simples
                   </h3>
                   <p class="data-descricao">
-                    Give a detailed description of the service being provided
-                    here.
+                    Organize suas finanças com uma planilha simples no Google
+                    Sheets.
                   </p>
                 </div>
               </article>
@@ -253,7 +275,7 @@
             </div>
           </div>
           <div class="groupYouTube-secundary">
-            <iframe
+            <!-- <iframe
               width="95%"
               height="100%"
               src="https://www.youtube.com/embed/xCsGn3CFCi4?si=UBuXmEfqJgvENF4N"
@@ -262,7 +284,7 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
-            ></iframe>
+            ></iframe> -->
           </div>
           <div class="groupYouTube-terciary">
             <a
@@ -286,6 +308,7 @@
               <div class="beneficio-item-circle-externo">
                 <div class="beneficio-item-circle-interno">
                   <img
+                    loading="lazy"
                     class="icons-beneficios"
                     src="src/image/grafico-icon.png"
                     alt=""
@@ -302,6 +325,7 @@
               <div class="beneficio-item-circle-externo">
                 <div class="beneficio-item-circle-interno">
                   <img
+                    loading="lazy"
                     class="icons-beneficios"
                     src="src/image/message-icon.png"
                     alt=""
@@ -319,6 +343,7 @@
               <div class="beneficio-item-circle-externo">
                 <div class="beneficio-item-circle-interno">
                   <img
+                    loading="lazy"
                     class="icons-beneficios"
                     src="src/image/desktop-icon.png"
                     alt=""
@@ -407,6 +432,7 @@
           <div class="groupContato-secundary">
             <div class="circle-img-contato"></div>
             <img
+              loading="lazy"
               class="image-contato"
               src="https://i.pinimg.com/564x/81/03/0a/81030adc99491a843c426bc5c76d71c5.jpg"
               alt=""
