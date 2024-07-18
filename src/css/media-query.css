@@ -33,8 +33,9 @@
   }
 
   .beneficios {
-    padding: 4em 1em;
-  }
+    padding: 3.8em 1em;
+    row-gap: 1.4em;
+}
 
   .contato {
     padding: 5em 2em 3em 2em;
@@ -588,7 +589,6 @@
 }
 
 @media screen and (max-width: 485px) {
-
   .groupDuvidas-title {
     font-size: 1em;
   }
@@ -752,6 +752,24 @@
   .beneficio-item-text {
     font-size: 0.84em;
   }
+
+  /* Estilos das Dúvidas */
+  .duvidas {
+    padding: 2.5em 0em;
+  }
+
+  .groupDuvidas-title {
+    font-size: 0.76em;
+    font-weight: bolder;
+  }
+
+  .groupDuvidas-pergunta {
+    font-size: 1em;
+}
+
+.groupDuvidas-respostas {
+  font-size: 0.8em;
+}
 
   /* Estilos de Contatos */
 
