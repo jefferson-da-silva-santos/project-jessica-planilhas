@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/styles.css" />
     <link rel="stylesheet" href="src/css/media-query.css" />
+    <link rel="stylesheet" href="src/css/scroll-effects.css">
     <link rel="shortcut icon" href="src/image/favicon.ico" type="image/x-icon">
     <title>Jessíca | Planilhas</title>
   </head>
@@ -53,19 +54,19 @@
         </div>
         <div class="groupHeader-elements">
           <section class="groupHeader-primary">
-            <p class="titleHeader-primary">jessica | planilhas</p>
-            <h1 class="titleHeader-secundary">
+            <p class="titleHeader-primary hidden-inicio">jessica | planilhas</p>
+            <h1 class="titleHeader-secundary hidden-i hidden-inicio">
               Soluções para <wbr /> você através de <wbr /> planilhas
             </h1>
             <a target="_blank" href="https://linktr.ee/jessicaplanilhasdashs"
-              ><button class="btn">Ver planilhas</button></a
+              ><button class="btn hidden-i hidden-inicio">Ver planilhas</button></a
             >
           </section>
           <section class="groupHeader-secundary">
             <div class="circle"></div>
             <img
               loading="lazy"
-              class="img"
+              class="img hidden-i hidden-inicio"
               src="http://www.oorders.com/images/6105fbb0f558a2ba7589ea492afa4331.jpg"
               alt="moça sorrindo"
             />
@@ -78,6 +79,7 @@
         <section class="sobre" id="sobre">
           <div class="groupSobre-primary">
             <img
+              class="hidden-sobre"
               loading="lazy"
               src="https://i.pinimg.com/564x/b4/b4/0a/b4b40ac2cbe20814b8649afe3ecf584f.jpg"
               alt=""
@@ -85,11 +87,11 @@
           </div>
           <div class="groupSobre-secundary">
             <div class="groupSobre-secundary-texts">
-              <h2 class="titleSobre">
+              <h2 class="titleSobre hidden-sobre">
                 Procura planilhas para agilizar sua produtividade? Conte
                 conosco.
               </h2>
-              <p class="textSobre">
+              <p class="textSobre hidden-sobre">
                 Write a paragraph that talks about your company here. You can
                 talk about your company's background, history, mission, vision,
                 or philosophy. Anything that will introduce your brand's persona
@@ -268,8 +270,8 @@
         <section class="youtube" id="youtube">
           <div class="groupYouTube-primary">
             <div class="groupTouTube-texts">
-              <h2 class="titleContato">Veja meu Canal no YouTube</h2>
-              <p class="textYoutube">
+              <h2 class="titleContato hidden-youtube">Veja meu Canal no YouTube</h2>
+              <p class="textYoutube hidden-youtube">
                 Explore mais detalhes sobre nossas planilhas e descubra como
                 maximizar seu uso conferindo o
                 <a href="" class="link-generico"><i class="bi bi-link-45deg"></i>nosso canal do YouTube </a>.
@@ -278,6 +280,7 @@
           </div>
           <div class="groupYouTube-secundary">
             <!-- <iframe
+             class=" hidden-youtube"
               width="95%"
               height="100%"
               src="https://www.youtube.com/embed/xCsGn3CFCi4?si=UBuXmEfqJgvENF4N"
@@ -292,7 +295,7 @@
             <a
               target="_blank"
               href="https://youtube.com/@jessicaplanilhasedashboards?si=QsgVMBawapeliemI"
-              ><button class="btnYoutube">Ir para canal</button></a
+              ><button class="btnYoutube hidden-youtube">Ir para canal</button></a
             >
           </div>
         </section>
@@ -306,43 +309,44 @@
             </h2>
           </div>
           <div class="groupBeneficios-secundary">
+
             <article class="beneficio-item">
-              <div class="beneficio-item-circle-externo">
-                <div class="beneficio-item-circle-interno">
+              <div class="beneficio-item-circle-externo hidden-beneficios">
+                <div class="beneficio-item-circle-interno ">
                   <img
                     loading="lazy"
-                    class="icons-beneficios"
+                    class="icons-beneficios "
                     src="src/image/grafico-icon.png"
                     alt=""
                   />
                 </div>
               </div>
-              <h3 class="beneficio-item-title">Análise de Dados facilitada</h3>
-              <p class="beneficio-item-text">
+              <h3 class="beneficio-item-title hidden-beneficios">Análise de Dados facilitada</h3>
+              <p class="beneficio-item-text hidden-beneficios">
                 As planilhas organizam as informações de forma estruturada
               </p>
             </article>
 
             <article class="beneficio-item">
-              <div class="beneficio-item-circle-externo">
-                <div class="beneficio-item-circle-interno">
+              <div class="beneficio-item-circle-externo hidden-beneficios">
+                <div class="beneficio-item-circle-interno ">
                   <img
                     loading="lazy"
-                    class="icons-beneficios"
+                    class="icons-beneficios "
                     src="src/image/message-icon.png"
                     alt=""
                   />
                 </div>
               </div>
-              <h3 class="beneficio-item-title">Suporte Contínuo</h3>
-              <p class="beneficio-item-text">
+              <h3 class="beneficio-item-title hidden-beneficios">Suporte Contínuo</h3>
+              <p class="beneficio-item-text hidden-beneficios">
                 Forneço assistência para resolver quaisquer dúvidas ou problemas
                 que possam surgir
               </p>
             </article>
 
             <article class="beneficio-item">
-              <div class="beneficio-item-circle-externo">
+              <div class="beneficio-item-circle-externo hidden-beneficios">
                 <div class="beneficio-item-circle-interno">
                   <img
                     loading="lazy"
@@ -352,8 +356,8 @@
                   />
                 </div>
               </div>
-              <h3 class="beneficio-item-title">Automatização de Processos</h3>
-              <p class="beneficio-item-text">
+              <h3 class="beneficio-item-title hidden-beneficios">Automatização de Processos</h3>
+              <p class="beneficio-item-text hidden-beneficios">
                 As planilhas automatizam cálculos e processos repetitivos
               </p>
             </article>

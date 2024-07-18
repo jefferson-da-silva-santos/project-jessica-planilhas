@@ -44,6 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  criarObservacao('.hidden-inicio', 'show-inicio');
+  criarObservacao('.hidden-sobre', 'show-sobre');
+  criarObservacao('.hidden-youtube', 'show-youtube');
+  criarObservacao('.hidden-beneficios', 'show-beneficios');
+
 });
 
 function openMenu(menu) {
@@ -66,4 +72,19 @@ function debounce(func, wait) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func.apply(this, args), wait);
   };
+}
+
+function criarObservacao(classeOculta, classeMostrar) {
+  const observacao = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(classeMostrar);
+      } else {
+        return;
+      }
+    });
+  });
+
+  const elementosOcultos = document.querySelectorAll(classeOculta);
+  elementosOcultos.forEach((element) => observacao.observe(element));
 }

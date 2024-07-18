@@ -1,0 +1,65 @@
+/* Efeito Inicio */
+
+.hidden-inicio {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all .5s;
+  transform: translateX(-80%);
+}
+
+.show-inicio {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all .5s;
+}
+
+/* Efeito Sobre */
+
+.hidden-sobre {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all .5s;
+  transform: translateX(80%);
+}
+
+.show-sobre {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all .5s;
+}
+
+/* Efeito YouTube */
+
+
+.hidden-youtube {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all .5s;
+  transform: translateX(80%);
+}
+
+.show-youtube {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all .5s;
+}
+
+
+/* Efeito Beneficios */
+
+.hidden-beneficios {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all .5s;
+  transform: translateY(100%);
+}
+
+.show-beneficios {
+  opacity: 1;
+  filter: blur(0);
+  transition: all .5s;
+  transform: translateY(0);
+}
