@@ -1,8 +1,11 @@
+//Variaveis atribuidas para tratar o menu
 const menu = document.getElementById('listMenu');
 const btnMenuLink = document.getElementById('btn-menu-link');
 const iconBtnMenu = document.getElementById('icon-btn-menu');
 const linksMenu = document.querySelectorAll('.link-menu');
 let menuOpen = false;
+// Variaveis do details
+const detailsList = document.querySelectorAll('.caixa-pergunta');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -29,7 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
         menuOpen = !menuOpen;
       }
     });
-  })
+  });
+
+  detailsList.forEach((currentDetail, currentIndex) => {
+    currentDetail.addEventListener('click', () => {
+      detailsList.forEach((detail, index) => {
+        if (index !== currentIndex) {
+          detail.open = false;
+        }
+      });
+    });
+  });
 
 });
 
@@ -49,7 +62,7 @@ function closeMenu(menu) {
 
 function debounce(func, wait) {
   let timeout;
-  return function(...args) {
+  return function (...args) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func.apply(this, args), wait);
   };

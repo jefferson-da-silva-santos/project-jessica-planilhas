@@ -564,7 +564,7 @@ body {
 
 .title-beneficios {
   font-family: var(--primary-font);
-  font-size: 2.5em;
+  font-size: 2.7em;
   letter-spacing: 1.8px;
 }
 
@@ -625,6 +625,64 @@ body {
 
 
 
+
+/* Estilos das Duvidas */
+
+
+.groupDuvidas {
+  background-color: var(--secundary-color);
+  color: black;
+}
+
+.duvidas {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6em 1fr;
+  padding: 5em 2em;
+  row-gap: 2em;
+}
+
+.groupDuvidas-primary {
+  display: flex;
+  align-items: center;
+  padding: 0 1em 0 1em;
+  font-size: 2em;
+}
+
+.groupDuvidas-secundary {
+  padding: 1em ;
+}
+
+.groupDuvidas-pergunta {
+  font-family: var(--secundary-font);
+  font-weight: bolder;
+  font-size: 1.4em;
+  cursor: pointer;
+  padding: .7em 1em;
+  color: #011E11;
+}
+
+.groupDuvidas-pergunta:focus {
+  outline: none;
+}
+
+.groupDuvidas-title {
+  font-family: var(--primary-font);
+  color: black;
+  font-size: 1.5em;
+}
+
+.groupDuvidas-respostas {
+  font-family: var(--secundary-font);
+  padding: 1em 3em;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: rgb(27, 27, 27);
+}
 
 
 

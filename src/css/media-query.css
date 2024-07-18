@@ -44,9 +44,9 @@
 @media screen and (max-width: 900px) {
   /* Media do Nav */
   .nav {
-    padding: .8em 2em;
+    padding: 0.8em 2em;
   }
-  
+
   .nav > ul {
     visibility: hidden;
     display: flex;
@@ -155,7 +155,6 @@
   .service-excel {
     grid-template-rows: 1fr 4em 25em;
   }
-  
 
   /* Media do Google Sheets */
 
@@ -167,7 +166,7 @@
 
   .service-google-sheets {
     grid-template-rows: 1fr 24em;
-}
+  }
 
   /* Media do YouTube */
 
@@ -255,6 +254,7 @@
     font-size: 2em;
   }
 }
+
 @media screen and (max-width: 846px) {
   .nav > ul a {
     font-size: 1.3em;
@@ -279,10 +279,31 @@
 
   .beneficios {
     padding: 6em 1em;
+    row-gap: 2em;
   }
 
   .contato {
     padding: 5em 1em;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .groupDuvidas-title {
+    font-size: 1.4em;
+    padding: 0 0.5em;
+  }
+
+  .groupDuvidas-primary {
+    padding: 0;
+  }
+
+  .groupDuvidas-secundary {
+    padding: 0em;
+  }
+
+  .duvidas {
+    padding: 5em 1em;
+    row-gap: 1em;
   }
 }
 
@@ -485,6 +506,34 @@
     font-size: 0.89em;
   }
 
+  /* Estilos Duvidas */
+
+  .groupDuvidas-title {
+    font-size: 1.1em;
+    padding: 0 0.5em;
+  }
+
+  .groupDuvidas-primary {
+    padding: 0;
+  }
+
+  .groupDuvidas-secundary {
+    padding: 0em;
+  }
+
+  .duvidas {
+    padding: 3em 1em;
+    row-gap: 1em;
+  }
+
+  .groupDuvidas-pergunta {
+    font-size: 1.2em;
+  }
+
+  .groupDuvidas-respostas {
+    font-size: 0.9em;
+  }
+
   /* Estilos Contao */
 
   .contato {
@@ -535,6 +584,13 @@
 
   .link-contato-icon {
     font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 485px) {
+
+  .groupDuvidas-title {
+    font-size: 1em;
   }
 }
 
@@ -639,7 +695,7 @@
   .youtube {
     padding: 4em 0em;
     grid-template-rows: 1fr 17em 5em;
-}
+  }
 
   .titleContato {
     font-size: 1.9em;
@@ -789,7 +845,7 @@
   }
 
   .groupHeader-primary > .titleHeader-primary {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
