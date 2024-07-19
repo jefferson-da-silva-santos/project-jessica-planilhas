@@ -1921,6 +1921,7 @@ body {
 
 /* Estilos Scroll Effects */
 
+/*
 :root {
   --opacity-hidden: 0;
   --filter-hidden: blur(5px);
@@ -1937,76 +1938,76 @@ body {
 }
 
 /* Efeito Inicio */
-.hidden-inicio {
+/* .hidden-inicio {
   opacity: var(--opacity-hidden);
   filter: var(--filter-hidden);
   transition: var(--transition-fast);
   transform: var(--transform-hidden-inicio);
-}
-
+} */
+/* 
 .show-inicio {
   opacity: var(--opacity-show);
   filter: var(--filter-show);
   transform: var(--transform-show);
   transition: var(--transition-slow);
-}
+} */
 
 /* Efeito Sobre */
-.hidden-sobre {
+/* .hidden-sobre {
   opacity: var(--opacity-hidden);
   filter: var(--filter-hidden);
   transition: var(--transition-slow);
   transform: var(--transform-hidden-default);
-}
+} */
 
-.show-sobre {
+/* .show-sobre {
   opacity: var(--opacity-show);
   filter: var(--filter-show);
   transform: var(--transform-show);
   transition: var(--transition-slow);
-}
+} */
 
 /* Efeito YouTube */
-.hidden-youtube {
+/* .hidden-youtube {
   opacity: var(--opacity-hidden);
   filter: var(--filter-hidden);
   transition: var(--transition-slow);
   transform: var(--transform-hidden-default);
-}
+} */
 
-.show-youtube {
+/* .show-youtube {
   opacity: var(--opacity-show);
   filter: var(--filter-show);
   transform: var(--transform-show);
   transition: var(--transition-slow);
-}
+} */
 
-.hidden-youtube-video {
+/* .hidden-youtube-video {
   opacity: var(--opacity-hidden);
   filter: var(--filter-hidden);
   transform: translate(4%);
   transition: var(--transition-slow);
-}
+} */
 
 
-.show-youtube-video {
+/* .show-youtube-video {
   opacity: var(--opacity-show);
   filter: var(--filter-show);
   transform: translate(0);
   transition: var(--transition-slow);
-}
+} */
 
 /* Efeito Beneficios */
-.hidden-beneficios {
+/* .hidden-beneficios {
   opacity: var(--opacity-hidden);
   filter: var(--filter-hidden);
   transition: var(--transition-slow);
   transform: var(--transform-hidden-beneficios);
-}
-
+} */
+/* 
 .show-beneficios {
   opacity: var(--opacity-show);
   filter: var(--filter-show);
   transition: var(--transition-slow);
   transform: var(--transform-show-beneficios);
-}
+}  */

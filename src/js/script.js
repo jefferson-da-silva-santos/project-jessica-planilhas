@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  criarObservacao('.hidden-inicio', 'show-inicio');
-  criarObservacao('.hidden-sobre', 'show-sobre');
-  criarObservacao('.hidden-youtube', 'show-youtube');
-  criarObservacao('.hidden-beneficios', 'show-beneficios');
-  criarObservacao('.hidden-youtube-video', 'show-youtube-video');
+  // criarObservacao('.hidden-inicio', 'show-inicio');
+  // criarObservacao('.hidden-sobre', 'show-sobre');
+  // criarObservacao('.hidden-youtube', 'show-youtube');
+  // criarObservacao('.hidden-beneficios', 'show-beneficios');
+  // criarObservacao('.hidden-youtube-video', 'show-youtube-video');
 
 });
 
