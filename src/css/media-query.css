@@ -1,6 +1,18 @@
+:root {
+  --nav-hover-color: #00ff84;
+   --nav-hover-before-bg: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
+  --nav-hover-before-transition: width 0.5s ease;
+  --padding-sobre-large: 7em 3em;
+  --padding-beneficios-large: 3.8em 1em;
+  --nav-link-font-size-small-gap-line-heigth: 1.3em;
+  --row-gap-beneficios-large-font-size: 1.4em;
+  --nav-bg-color-small: #011e11;
+  --nav-hover-bg-small: #022817;
+}
+
 @media screen and (min-width: 899px) {
   .nav > ul a:hover {
-    color: #00ff84;
+    color: var(--nav-hover-color);
   }
 
   .nav > ul a::before {
@@ -12,8 +24,8 @@
     top: 38px;
     left: 0px;
     border-radius: 20px;
-    background-image: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
-    transition: width 0.5s ease;
+    background-image: var(--nav-hover-before-bg);
+    transition: var(--nav-hover-before-transition);
   }
 
   .nav > ul a:hover:before {
@@ -21,11 +33,11 @@
   }
 
   .sobre {
-    padding: 7em 3em;
+    padding: var(--padding-sobre-large);
   }
 
   .service-excel {
-    padding-top: 6em;
+    padding-top: 5em;
   }
 
   .youtube {
@@ -33,8 +45,8 @@
   }
 
   .beneficios {
-    padding: 3.8em 1em;
-    row-gap: 1.4em;
+    padding: var(--padding-beneficios-large);
+    row-gap: var(--row-gap-beneficios-large-font-size);
 }
 
   .contato {
@@ -52,7 +64,7 @@
     visibility: hidden;
     display: flex;
     position: absolute;
-    background-color: #011e11;
+    background-color: var(--nav-bg-color-small);
     left: 0;
     top: 0;
     width: 100vw;
@@ -70,11 +82,11 @@
   }
 
   .nav > ul > li:hover {
-    background-color: #022817;
+    background-color: var(--nav-hover-bg-small);
   }
 
   .nav > ul a {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .btn-menu {
@@ -258,7 +270,7 @@
 
 @media screen and (max-width: 846px) {
   .nav > ul a {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .data {
@@ -290,7 +302,7 @@
 
 @media screen and (max-width: 678px) {
   .groupDuvidas-title {
-    font-size: 1.4em;
+    font-size: var(--row-gap-beneficios-large-font-size);
     padding: 0 0.5em;
   }
 
@@ -451,7 +463,7 @@
 
   .textYoutube {
     font-size: 1em;
-    line-height: 1.3em;
+    line-height: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .btnYoutube {
@@ -599,7 +611,7 @@
 
   /* Estilos do Header */
   .nav > ul a {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .groupHeader-primary > .titleHeader-primary {
@@ -703,11 +715,11 @@
 
   .textYoutube {
     font-size: 0.95em;
-    line-height: 1.3em;
+    line-height: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .groupTouTube-texts {
-    gap: 1.3em;
+    gap: var(--nav-link-font-size-small-gap-line-heigth);
     width: 18em;
   }
 
@@ -817,7 +829,7 @@
   }
 
   .groupContato-texts-bottom {
-    gap: 1.3em;
+    gap: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .circle-img-contato {
@@ -831,7 +843,7 @@
   }
 
   .link-contato-icon {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   /* Estilos do Footer */
@@ -849,7 +861,7 @@
   }
 
   .nav > ul a {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .groupHeader-primary {
@@ -913,7 +925,7 @@
   }
 
   .titleService-secundary {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   /* Estilos YouTube */
@@ -923,7 +935,7 @@
 
   .textYoutube {
     font-size: 0.84em;
-    line-height: 1.3em;
+    line-height: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .btnYoutube {
@@ -1000,7 +1012,7 @@
   }
 
   .link-contato-icon {
-    font-size: 1.3em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   /* Estilos Footer */
