@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   criarObservacao('.hidden-sobre', 'show-sobre');
   criarObservacao('.hidden-youtube', 'show-youtube');
   criarObservacao('.hidden-beneficios', 'show-beneficios');
+  criarObservacao('.hidden-youtube-video', 'show-youtube-video');
 
 });
 

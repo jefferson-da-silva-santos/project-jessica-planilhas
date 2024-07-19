@@ -3,9 +3,10 @@
   --filter-hidden: blur(5px);
   --transition-fast: all 0.5s;
   --transition-slow: all 1s;
-  --transform-hidden-inicio: translateX(-13%);
-  --transform-hidden-default: translateX(13%);
+  --transform-hidden-inicio: translateX(-10%);
+  --transform-hidden-default: translateX(10%);
   --transform-hidden-beneficios: translateY(100%);
+  
   --opacity-show: 1;
   --filter-show: blur(0);
   --transform-show: translateX(0);
@@ -54,6 +55,21 @@
   opacity: var(--opacity-show);
   filter: var(--filter-show);
   transform: var(--transform-show);
+  transition: var(--transition-slow);
+}
+
+.hidden-youtube-video {
+  opacity: var(--opacity-hidden);
+  filter: var(--filter-hidden);
+  transform: translate(4%);
+  transition: var(--transition-slow);
+}
+
+
+.show-youtube-video {
+  opacity: var(--opacity-show);
+  filter: var(--filter-show);
+  transform: translate(0);
   transition: var(--transition-slow);
 }
 

@@ -61,12 +61,11 @@ body {
   background-color: transparent;
   width: 3em;
   visibility: hidden;
-}
-
-.btn-menu a {
   color: white;
   font-size: 3em;
+  text-align: end;
 }
+
 
 .nav > ul {
   list-style: none;
@@ -143,9 +142,6 @@ body {
   transition-property: transform, box-shadow;
   transition-duration: .3s;
   transition-timing-function: var(--transition-ease);
-}
-
-.btn a {
   font-size: 1em;
   text-decoration: none;
   font-weight: 800;
@@ -153,6 +149,7 @@ body {
   font-family: var(--secundary-font);
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -508,16 +505,18 @@ body {
   transition-duration: .3s;
   transition-timing-function: var(--transition-ease);
   cursor: pointer;
-}
-
-.btnYoutube a {
   text-transform: uppercase;
   font-family: var(--primary-font);
   font-weight: bolder;
   color: white;
   font-size: 1em;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 .btnYoutube:hover {
   transform: scale(103%);
@@ -735,9 +734,6 @@ body {
   transition-duration: .3s;
   transition-timing-function: var(--transition-ease);
   cursor: pointer;
-}
-
-.groupContato-button a {
   text-transform: uppercase;
   font-family: var(--secundary-font);
   font-weight: 800;
@@ -745,7 +741,9 @@ body {
   letter-spacing: .5px;
   text-decoration: none;
   color: var(--primary-color);
+  text-align: center;
 }
+
 
 .groupContato-button:hover {
   transform: scale(103%);
