@@ -88,7 +88,6 @@
               loading="lazy"
               class="img hidden-inicio-img"
               src="https://images.unsplash.com/photo-1598257006408-538c27529235?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              
               alt="moça sorrindo"
               role="img"
               aria-label="Mulher sorridente"
@@ -359,7 +358,17 @@
             </div>
           </div>
           <div class="groupYouTube-secundary">
-            <iframe class="hidden-youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/qtvcfT42NJc?si=6HrZljLftezJviEe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              class="hidden-youtube-video"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/qtvcfT42NJc?si=6HrZljLftezJviEe"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="groupYouTube-terciary">
             <a
@@ -625,6 +634,98 @@
       </footer>
     </div>
 
-    <script src="src/js/script.js"></script>
+    <script>
+      //Variaveis atribuidas para tratar o menu
+      const menu = document.getElementById("listMenu");
+      const btnMenuLink = document.getElementById("btn-menu-link");
+      const iconBtnMenu = document.getElementById("icon-btn-menu");
+      const linksMenu = document.querySelectorAll(".link-menu");
+      let menuOpen = false;
+      // Variaveis do details
+      const detailsList = document.querySelectorAll(".caixa-pergunta");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        btnMenuLink.addEventListener("click", (event) => {
+          event.preventDefault();
+          menuOpen ? closeMenu(menu) : openMenu(menu);
+          menuOpen = !menuOpen;
+        });
+
+        window.addEventListener(
+          "resize",
+          debounce(() => {
+            if (window.innerWidth > 900) {
+              document.body.style.overflow = "auto";
+              menu.style.visibility = "visible";
+            } else {
+              menuOpen = false;
+              closeMenu(menu);
+            }
+          }, 100)
+        );
+
+        linksMenu.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (menuOpen) {
+              closeMenu(menu);
+              menuOpen = !menuOpen;
+            }
+          });
+        });
+
+        detailsList.forEach((currentDetail, currentIndex) => {
+          currentDetail.addEventListener("click", () => {
+            detailsList.forEach((detail, index) => {
+              if (index !== currentIndex) {
+                detail.open = false;
+              }
+            });
+          });
+        });
+
+        // criarObservacao('.hidden-inicio', 'show-inicio');
+        // criarObservacao('.hidden-sobre', 'show-sobre');
+        // criarObservacao('.hidden-youtube', 'show-youtube');
+        // criarObservacao('.hidden-beneficios', 'show-beneficios');
+        // criarObservacao('.hidden-youtube-video', 'show-youtube-video');
+      });
+
+      function openMenu(menu) {
+        menu.style.visibility = "visible";
+        iconBtnMenu.classList.remove("bi-list");
+        iconBtnMenu.classList.add("bi-x-lg");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMenu(menu) {
+        menu.style.visibility = "hidden";
+        iconBtnMenu.classList.remove("bi-x-lg");
+        iconBtnMenu.classList.add("bi-list");
+        document.body.style.overflow = "auto";
+      }
+
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
+      function criarObservacao(classeOculta, classeMostrar) {
+        const observacao = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(classeMostrar);
+            } else {
+              return;
+            }
+          });
+        });
+
+        const elementosOcultos = document.querySelectorAll(classeOculta);
+        elementosOcultos.forEach((element) => observacao.observe(element));
+      }
+    </script>
   </body>
 </html>
