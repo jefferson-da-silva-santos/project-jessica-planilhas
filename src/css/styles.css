@@ -53,13 +53,12 @@ body {
   width: 100%;
   max-width: var(--max-width-sections);
   margin: auto;
-  padding: .5em 1em;
+  padding: 0em 1em;
 }
 
 .btn-menu {
   border: none;
   background-color: transparent;
-  width: 3em;
   visibility: hidden;
   color: white;
   font-size: 3em;
@@ -933,7 +932,7 @@ body {
 @media screen and (max-width: 900px) {
   /* Media do Nav */
   .nav {
-    padding: 0.8em 2em;
+    padding: 0em 2em;
   }
 
   .nav > ul {
