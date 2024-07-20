@@ -19,7 +19,6 @@
 
   --circle-blur-filter: blur(23px);
   --transition-ease: ease-in-out;
-
 }
 
 * {
@@ -31,8 +30,6 @@
 body {
   color: white;
 }
-
-
 
 /* Estilos do nav */
 
@@ -65,25 +62,22 @@ body {
   text-align: end;
 }
 
-
 .nav > ul {
   list-style: none;
   display: flex;
   flex-direction: row;
   gap: 0em;
-  
 }
 
 .nav > ul a {
   text-decoration: none;
   color: white;
   font-family: var(--secundary-font);
-  font-size: .96em;
+  font-size: 0.96em;
   padding: 1em;
   position: relative;
-  transition: color .5s ease;
+  transition: color 0.5s ease;
 }
-
 
 /* Estilos do Heaader */
 
@@ -131,7 +125,7 @@ body {
   letter-spacing: 2px;
 }
 
- .btn {
+.btn {
   width: 20em;
   padding: 1.2em;
   border: none;
@@ -139,7 +133,7 @@ body {
   border-radius: 40px;
   cursor: pointer;
   transition-property: transform, box-shadow;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: var(--transition-ease);
   font-size: 1em;
   text-decoration: none;
@@ -155,7 +149,6 @@ body {
   transform: scale(103%);
   box-shadow: var(--btn-hover-box-shadow);
 }
-
 
 .groupHeader-secundary {
   position: relative;
@@ -196,16 +189,14 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
   }
 }
-
-
-
 
 /* Estilos do Sobre */
 
@@ -260,14 +251,10 @@ body {
 
 .textSobre {
   font-family: var(--primary-font);
-  font-size: .9em;
+  font-size: 0.9em;
   line-height: 28px;
   color: black;
 }
-
-
-
-
 
 /* Estilos do Serviço (Excel) */
 
@@ -287,6 +274,8 @@ body {
 
 .link-planilha {
   text-decoration: none;
+  width: fit-content;
+  margin: auto;
 }
 
 .groupServiceExcel-primary {
@@ -329,13 +318,13 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: .6em;
+  padding: 0.6em;
   row-gap: 1em;
   height: 18em;
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
 }
 
@@ -358,19 +347,19 @@ body {
 }
 
 .groupData-img-1 {
-  background-image: url('../image/excel-04.webp');
+  background-image: url("../image/excel-04.webp");
 }
 
 .groupData-img-2 {
-  background-image: url('../image/excel-01.webp');
+  background-image: url("../image/excel-01.webp");
 }
 
 .groupData-img-3 {
-  background-image: url('../image/excel-03.webp');
+  background-image: url("../image/excel-03.webp");
 }
 
 .groupData-img-4 {
-  background-image: url('../image/excel-02.webp');
+  background-image: url("../image/excel-02.webp");
 }
 
 .data-title {
@@ -378,15 +367,15 @@ body {
   color: var(--primary-color);
   text-align: center;
   line-height: 20px;
-  font-size: .99em;
+  font-size: 0.99em;
 }
 
 .data-descricao {
   font-family: var(--primary-font);
   color: var(--primary-color);
   text-align: center;
-  font-size: .82em;
-  margin-top: .5em;
+  font-size: 0.82em;
+  margin-top: 0.5em;
 }
 
 /* Estilos do Serviço (Google Sheets) */
@@ -419,25 +408,21 @@ body {
   column-gap: 1.5em;
 }
 
-
 .groupData-img-5 {
-  background-image: url('../image/google-2.webp');
+  background-image: url("../image/google-2.webp");
 }
 
 .groupData-img-6 {
-  background-image: url('../image/google-1.webp');
+  background-image: url("../image/google-1.webp");
 }
 
 .groupData-img-7 {
-  background-image: url('../image/google-3.webp');
+  background-image: url("../image/google-3.webp");
 }
 
 .groupData-img-8 {
-  background-image: url('../image/google-4.webp');
+  background-image: url("../image/google-4.webp");
 }
-
-
-
 
 /* Estilos do YouTube */
 
@@ -501,7 +486,7 @@ body {
   background-color: var(--secundary-color);
   border-radius: 30px;
   transition-property: transform, box-shadow;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: var(--transition-ease);
   cursor: pointer;
   text-transform: uppercase;
@@ -515,8 +500,6 @@ body {
   justify-content: center;
 }
 
-
-
 .btnYoutube:hover {
   transform: scale(103%);
   box-shadow: var(--btn-hover-box-shadow);
@@ -528,11 +511,6 @@ body {
   align-items: baseline;
   grid-column: 2 / -1;
 }
-
-
-
-
-
 
 /* Estilos Benefícios */
 
@@ -618,11 +596,7 @@ body {
   text-align: center;
 }
 
-
-
-
 /* Estilos das Duvidas */
-
 
 .groupDuvidas {
   background-color: var(--secundary-color);
@@ -649,14 +623,14 @@ body {
 }
 
 .groupDuvidas-secundary {
-  padding: 1em ;
+  padding: 1em;
 }
 
 .groupDuvidas-pergunta {
   font-family: var(--secundary-font);
   font-weight: bolder;
   font-size: 1.4em;
-  padding: .7em 1em;
+  padding: 0.7em 1em;
   color: var(--primary-color);
   cursor: pointer;
 }
@@ -678,8 +652,6 @@ body {
   line-height: 1.6em;
   color: rgb(27, 27, 27);
 }
-
-
 
 /* Estilos do Contato */
 
@@ -727,22 +699,21 @@ body {
   background-color: var(--secundary-color);
   border: none;
   width: 11.5em;
-  padding: .7em;
+  padding: 0.7em;
   border-radius: 30px;
   transition-property: transform, box-shadow;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: var(--transition-ease);
   cursor: pointer;
   text-transform: uppercase;
   font-family: var(--secundary-font);
   font-weight: 800;
   font-size: 1em;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   color: var(--primary-color);
   text-align: center;
 }
-
 
 .groupContato-button:hover {
   transform: scale(103%);
@@ -822,7 +793,6 @@ body {
   animation: float 3s var(--transition-ease) infinite;
 }
 
-
 .circle-img-contato {
   position: absolute;
   z-index: 0;
@@ -835,15 +805,6 @@ body {
   filter: var(--circle-blur-filter);
   animation: float 3s var(--transition-ease) infinite;
 }
-
-
-
-
-
-
-
-
-
 
 /* Estilos Footer */
 
@@ -870,12 +831,11 @@ body {
   text-decoration: none;
 }
 
-
 /* Estilos Media querys */
 
 :root {
   --nav-hover-color: #00ff84;
-   --nav-hover-before-bg: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
+  --nav-hover-before-bg: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
   --nav-hover-before-transition: width 0.5s ease;
   --padding-sobre-large: 7em 3em;
   --padding-beneficios-large: 3.8em 1em;
@@ -922,7 +882,7 @@ body {
   .beneficios {
     padding: var(--padding-beneficios-large);
     row-gap: var(--row-gap-beneficios-large-font-size);
-}
+  }
 
   .contato {
     padding: 5em 2em 3em 2em;
@@ -967,6 +927,7 @@ body {
   .btn-menu {
     visibility: visible;
     z-index: 11;
+    font-size: 2.3em;
   }
 
   /* Media do Header */
@@ -1207,7 +1168,7 @@ body {
   }
 
   .groupHeader-primary > .titleHeader-primary {
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
 
   .groupSobre {
@@ -1219,13 +1180,13 @@ body {
   }
 
   .groupHeader-primary > .titleHeader-secundary {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     width: 9em;
   }
 
   .groupHeader-primary > .btn {
     width: 16em;
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   .circle {
@@ -1235,7 +1196,7 @@ body {
 
   .img {
     width: 100%;
-    max-width: 14em;
+    max-width: 16em;
   }
 
   /* Estilos do Sobre */
@@ -1247,33 +1208,34 @@ body {
   }
 
   .groupSobre-primary img {
-    max-width: 18em;
-    max-height: 17em;
+    max-width: 19em;
+    max-height: 20em;
   }
 
   .titleSobre {
-    font-size: 2.3rem;
+    margin-top: 1em;
+    font-size: 2.5rem;
     line-height: 43px;
   }
 
   .textSobre {
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
 
   .groupSobre-secundary-texts {
     gap: 2rem;
-    width: 19em;
+    width: 24em;
   }
 
   /* Estilos Excel */
 
   .service-excel {
     padding: 2em;
-    grid-template-rows: 1fr 3em auto;
+    grid-template-rows: 1fr 6em auto;
   }
 
   .groupServiceExcel-primary > .titleServiceExcel-primary {
-    font-size: 2.1em;
+    font-size: 2.5em;
   }
 
   .groupServiceExcel-secundary {
@@ -1281,22 +1243,32 @@ body {
   }
 
   .titleService-secundary {
-    font-size: 1.8em;
+    font-size: 2.3em;
   }
 
   .groupServiceExcel-terciary {
     grid-template-columns: 1fr;
-    grid-gap: 1.5em;
+    grid-gap: 3em;
   }
 
   .data {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    height: 15em;
+    height: 23em;
     row-gap: 1em;
     column-gap: 0em;
-    width: 13em;
+    width: 19em;
     margin: auto;
+  }
+
+  .data-title {
+    line-height: 25px;
+    font-size: 1.3em;
+  }
+
+  .data-descricao {
+    font-size: 1.2em;
+    margin-top: 1em;
   }
 
   /* Estilos Google */
@@ -1313,7 +1285,7 @@ body {
   .groupServiceGoogle-secundary {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 1.5em;
+    grid-gap: 3em;
   }
 
   /* Estilos YouTube */
@@ -1327,24 +1299,24 @@ body {
 
   .groupTouTube-texts {
     gap: 2em;
-    width: 19em;
+    width: 26em;
   }
 
   .titleContato {
-    font-size: 2.1em;
+    font-size: 2.5em;
     letter-spacing: 0px;
     line-height: 1em;
   }
 
   .textYoutube {
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .btnYoutube {
     width: 16em;
     height: 3.7em;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   /* Estilos Beneficios */
@@ -1357,7 +1329,7 @@ body {
   }
 
   .title-beneficios {
-    font-size: 2.1em;
+    font-size: 2.5em;
     letter-spacing: 0px;
   }
 
@@ -1372,32 +1344,32 @@ body {
   }
 
   .beneficio-item-circle-externo {
-    width: 10em;
-    height: 10em;
+    width: 12em;
+    height: 12em;
   }
 
   .beneficio-item-circle-interno {
-    width: 9em;
-    height: 9em;
+    width: 11em;
+    height: 11em;
   }
 
   .icons-beneficios {
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
   }
 
   .beneficio-item-title {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
   .beneficio-item-text {
-    font-size: 0.89em;
+    font-size: 1em;
   }
 
   /* Estilos Duvidas */
 
   .groupDuvidas-title {
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 0 0.5em;
   }
 
@@ -1410,16 +1382,16 @@ body {
   }
 
   .duvidas {
-    padding: 3em 1em;
+    padding: 3em 0em 12em 0;
     row-gap: 1em;
   }
 
   .groupDuvidas-pergunta {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   .groupDuvidas-respostas {
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
 
   /* Estilos Contao */
@@ -1434,17 +1406,17 @@ body {
   }
 
   .groupContato-title {
-    font-size: 2.1em;
+    font-size: 2.6em;
   }
 
   .groupContato-legend {
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   .groupContato-button {
     font-weight: 800;
     width: 11em;
-    font-size: 0.88em;
+    font-size: 1em;
     letter-spacing: 0px;
   }
 
@@ -1453,16 +1425,16 @@ body {
   }
 
   .legend-contato {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   .contato-link {
-    font-size: 0.89em;
+    font-size: 1em;
   }
 
   .image-contato {
-    max-width: 10em;
-    min-width: 14em;
+    max-width: 12em;
+    min-width: 16em;
   }
 
   .circle-img-contato {
@@ -1475,13 +1447,7 @@ body {
   }
 }
 
-@media screen and (max-width: 485px) {
-  .groupDuvidas-title {
-    font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 466px) {
   /* Estilos Nav */
 
   /* Estilos do Header */
@@ -1490,7 +1456,7 @@ body {
   }
 
   .groupHeader-primary > .titleHeader-primary {
-    font-size: 0.759em;
+    font-size: 1em;
   }
 
   .groupHeader-primary {
@@ -1498,7 +1464,7 @@ body {
   }
 
   .groupHeader-primary > .titleHeader-secundary {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 
   .groupHeader-elements {
@@ -1508,16 +1474,16 @@ body {
 
   .groupHeader-primary > .btn {
     width: 15em;
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   .img {
-    max-width: 12em;
+    max-width: 14em;
   }
 
   .circle {
-    max-width: 15em;
-    max-height: 15em;
+    max-width: 17em;
+    max-height: 17em;
   }
 
   /* Estilos Sobre */
@@ -1529,21 +1495,21 @@ body {
   }
 
   .groupSobre-secundary-texts {
-    width: 16em;
+    width: 20em;
   }
 
   .groupSobre-primary img {
-    max-width: 14em;
-    max-height: 13em;
+    max-width: 16em;
+    max-height: 15em;
   }
 
   .titleSobre {
-    font-size: 1.9rem;
+    font-size: 2rem;
     line-height: 35px;
   }
 
   .textSobre {
-    font-size: 0.85em;
+    font-size: 1.1em;
     line-height: 21px;
   }
 
@@ -1555,26 +1521,27 @@ body {
   }
 
   .groupServiceExcel-primary > .titleServiceExcel-primary {
-    font-size: 1.8em;
+    font-size: 2.1em;
   }
 
   .titleService-secundary {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
   .data {
     row-gap: 0.5em;
     column-gap: 0em;
-    width: 12em;
+    width: 18em;
   }
 
   .data-title {
-    line-height: 18px;
-    font-size: 0.9em;
+    line-height: 20px;
+    font-size: 1.3em;
+    margin-top: 1em;
   }
 
   .data-descricao {
-    font-size: 0.78em;
+    font-size: 1.1em;
   }
 
   /* Estilos YouTube */
@@ -1585,23 +1552,23 @@ body {
   }
 
   .titleContato {
-    font-size: 1.9em;
+    font-size: 2.3em;
   }
 
   .textYoutube {
-    font-size: 0.95em;
+    font-size: 1.1em;
     line-height: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .groupTouTube-texts {
     gap: var(--nav-link-font-size-small-gap-line-heigth);
-    width: 18em;
+    width: 23em;
   }
 
   .btnYoutube {
     width: 14em;
     height: 3.5em;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   /* Estilo do Beneficios */
@@ -1617,46 +1584,50 @@ body {
   }
 
   .title-beneficios {
-    font-size: 1.87em;
+    font-size: 2.3em;
     line-height: 1.1em;
   }
 
+  .beneficio-item-circle-externo {
+    width: 12em;
+    height: 12em;
+  }
   .beneficio-item-circle-interno {
-    width: 8em;
-    height: 8em;
+    width: 11em;
+    height: 11em;
   }
 
   .icons-beneficios {
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
   }
 
   .beneficio-item-title {
-    font-size: 0.98em;
+    font-size: 1.3em;
     line-height: 1em;
   }
 
   .beneficio-item-text {
-    font-size: 0.84em;
+    font-size: 1.1em;
   }
 
   /* Estilos das Dúvidas */
   .duvidas {
-    padding: 2.5em 0em;
+    padding: 2.5em 0em 10em 0em;
   }
 
   .groupDuvidas-title {
-    font-size: 0.76em;
+    font-size: 1em;
     font-weight: bolder;
   }
 
   .groupDuvidas-pergunta {
-    font-size: 1em;
-}
+    font-size: 1.3em;
+  }
 
-.groupDuvidas-respostas {
-  font-size: 0.8em;
-}
+  .groupDuvidas-respostas {
+    font-size: 1em;
+  }
 
   /* Estilos de Contatos */
 
@@ -1674,17 +1645,16 @@ body {
   }
 
   .groupContato-title {
-    font-size: 1.9em;
+    font-size: 2.2em;
   }
 
   .groupContato-legend {
-    font-size: 0.76em;
+    font-size: 1em;
   }
 
   .groupContato-button {
     width: 10em;
-    height: 3.3em;
-    font-size: 0.69em;
+    font-size: 1em;
   }
 
   .groupContato-primary {
@@ -1692,11 +1662,11 @@ body {
   }
 
   .legend-contato {
-    font-size: 0.86em;
+    font-size: 1em;
   }
 
   .contato-link {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .selectContato {
@@ -1708,13 +1678,13 @@ body {
   }
 
   .circle-img-contato {
-    max-width: 14em;
-    max-height: 15em;
+    max-width: 16em;
+    max-height: 16em;
   }
 
   .image-contato {
-    max-width: 7em;
-    min-width: 11em;
+    max-width: 10em;
+    min-width: 12em;
   }
 
   .link-contato-icon {
@@ -1728,20 +1698,16 @@ body {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 418px) {
   /* Estilos Header */
 
   .btn {
     width: 14em;
   }
 
-  .nav > ul a {
-    font-size: var(--nav-link-font-size-small-gap-line-heigth);
-  }
-
   .groupHeader-primary {
     gap: 2rem;
-    padding: 2em 0em;
+    padding: 2em 0em 5em 0em;
   }
 
   .groupHeader-elements {
@@ -1750,17 +1716,17 @@ body {
   }
 
   .groupHeader-primary > .titleHeader-primary {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
-    font-size: 2rem;
+    font-size: 2.2rem;
     width: 10em;
   }
 
   .groupHeader-primary > .btn {
-    width: 14em;
-    font-size: 0.78em;
+    width: 13em;
+    font-size: 1em;
   }
 
   .circle {
@@ -1769,24 +1735,24 @@ body {
   }
 
   .img {
-    max-width: 11em;
+    max-width: 13em;
   }
 
   /* Estilos do Sobre */
 
   .groupSobre-primary img {
-    max-width: 13em;
-    max-height: 13em;
+    max-width: 15em;
+    max-height: 20em;
   }
 
   .titleSobre {
-    font-size: 1.5rem;
-    line-height: 28px;
+    font-size: 2rem;
+    line-height: 35px;
   }
 
   .groupSobre-secundary-texts {
-    gap: 1.5rem;
-    width: 16em;
+    gap: 2rem;
+    width: 18em;
   }
 
   /* Estilos Excel */
@@ -1796,41 +1762,46 @@ body {
   }
 
   .groupServiceExcel-primary > .titleServiceExcel-primary {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
   .titleService-secundary {
     font-size: var(--nav-link-font-size-small-gap-line-heigth);
+    font-size: 1.65em;
+  }
+
+  .data {
+    width: 16em;
   }
 
   /* Estilos YouTube */
   .titleContato {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .textYoutube {
-    font-size: 0.84em;
+    font-size: 1em;
     line-height: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
   .btnYoutube {
     width: 14em;
     height: 3.5em;
-    font-size: 0.74em;
+    font-size: 1em;
   }
 
   /* Estilos Beneficios */
 
   .beneficios {
-    row-gap: 0em;
+    row-gap: 2em;
   }
 
   .groupBeneficios-secundary {
-    gap: 1em;
+    gap: 2em;
   }
 
   .title-beneficios {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .beneficio-item {
@@ -1838,11 +1809,11 @@ body {
   }
 
   .beneficio-item-title {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   .beneficio-item-text {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .icons-beneficios {
@@ -1863,18 +1834,18 @@ body {
   /* Estilos Contato */
 
   .groupContato-title {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .groupContato-legend {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .legend-contato {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .contato-link {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   .circle-img-contato {
     max-width: 12em;
@@ -1882,8 +1853,8 @@ body {
   }
 
   .image-contato {
-    max-width: 6em;
-    min-width: 10em;
+    max-width: 8em;
+    min-width: 12em;
   }
 
   .link-contato-icon {
@@ -1897,26 +1868,82 @@ body {
   }
 }
 
-@media screen and (max-width: 345px) {
-  .groupHeader-primary > .titleHeader-secundary {
-    font-size: 1.7rem;
-  }
-}
+@media screen and (max-width: 378px) {
+  /* Estilos Header */
 
-@media screen and (max-width: 320px) {
-  .nav > ul > li {
-    padding: 0.5em;
+  .btn {
+    width: 14em;
   }
+
   .nav > ul a {
-    font-size: 1.2em;
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
+  }
+
+  .groupHeader-primary {
+    gap: 2rem;
+    padding: 2em 0em 5em 0em;
   }
 
   .groupHeader-elements {
-    padding-top: 5em;
+    grid-template-rows: 1fr 17em;
+    padding-bottom: 2.5em;
+  }
+
+  .groupHeader-primary > .titleHeader-primary {
+    font-size: 1em;
+  }
+
+  .groupHeader-primary > .titleHeader-secundary {
+    font-size: 2rem;
+    width: 10em;
+  }
+
+  .groupHeader-primary > .btn {
+    width: 13em;
+    font-size: 1em;
+  }
+
+  .circle {
+    max-width: 14em;
+    max-height: 14em;
+  }
+
+  .img {
+    max-width: 13em;
+  }
+
+  /* Estilos Excel */
+
+  .service-excel {
+    grid-template-rows: 1fr 3.5em auto;
+  }
+
+  .groupServiceExcel-primary > .titleServiceExcel-primary {
+    font-size: 1.8em;
+  }
+
+  .titleService-secundary {
+    font-size: var(--nav-link-font-size-small-gap-line-heigth);
+    font-size: 1.65em;
+  }
+
+  .data {
+    width: 16em;
+  }
+
+  /* Estilos YouTube */
+  .groupTouTube-texts {
+    width: 18em;
   }
 }
 
+@media screen and (max-width: 338px) {
+  .groupHeader-primary > .titleHeader-secundary {
+    font-size: 1.7rem;
+    width: auto;
+  }
 
-
-/* Estilos Scroll Effects */
-
+  .data {
+    width: 14em;
+  }
+}
