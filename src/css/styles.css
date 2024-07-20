@@ -1157,6 +1157,9 @@ body {
 }
 
 @media screen and (max-width: 620px) {
+  .groupNav {
+    padding-top: .5em;
+}
   /* Estilos Header */
 
   .groupHeader > .header {
@@ -1449,6 +1452,8 @@ body {
 
 @media screen and (max-width: 466px) {
   /* Estilos Nav */
+
+  
 
   /* Estilos do Header */
   .nav > ul a {
