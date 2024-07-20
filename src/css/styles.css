@@ -1838,6 +1838,12 @@ body {
     height: 8em;
   }
 
+  /* Estilos Duvidas */
+
+  .groupDuvidas-title {
+    font-size: .93em;
+  }
+
   /* Estilos Contato */
 
   .groupContato-title {
@@ -1941,6 +1947,11 @@ body {
   /* Estilos YouTube */
   .groupTouTube-texts {
     width: 18em;
+  }
+
+  .groupDuvidas-title {
+    font-size: .86em;
+    font-weight: bolder;
   }
 }
 
