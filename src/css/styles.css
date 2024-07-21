@@ -19,6 +19,29 @@
 
   --circle-blur-filter: blur(23px);
   --transition-ease: ease-in-out;
+
+  --nav-hover-color: #00ff84;
+  --nav-hover-before-bg: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
+  --nav-hover-before-transition: width 0.5s ease;
+  --padding-sobre-large: 7em 3em;
+  --padding-beneficios-large: 3.8em 1em;
+  --nav-link-font-size-small-gap-line-heigth: 1.3em;
+  --row-gap-beneficios-large-font-size: 1.4em;
+  --nav-bg-color-small: #011e11;
+  --nav-hover-bg-small: #022817;
+
+  --opacity-hidden: 0;
+  --filter-hidden: blur(5px);
+  --transition-fast: all 0.5s;
+  --transition-slow: all 1s;
+  --transform-hidden-inicio: translateX(-10%);
+  --transform-hidden-default: translateX(10%);
+  --transform-hidden-beneficios: translateY(100%);
+
+  --opacity-show: 1;
+  --filter-show: blur(0);
+  --transform-show: translateX(0);
+  --transform-show-beneficios: translateY(0);
 }
 
 * {
@@ -831,19 +854,9 @@ body {
   text-decoration: none;
 }
 
-/* Estilos Media querys */
 
-:root {
-  --nav-hover-color: #00ff84;
-  --nav-hover-before-bg: linear-gradient(to left, #5dffb0, #00ff84, #011e11);
-  --nav-hover-before-transition: width 0.5s ease;
-  --padding-sobre-large: 7em 3em;
-  --padding-beneficios-large: 3.8em 1em;
-  --nav-link-font-size-small-gap-line-heigth: 1.3em;
-  --row-gap-beneficios-large-font-size: 1.4em;
-  --nav-bg-color-small: #011e11;
-  --nav-hover-bg-small: #022817;
-}
+
+/* Estilos Media querys */
 
 @media screen and (min-width: 899px) {
   .nav > ul a:hover {
@@ -1158,8 +1171,8 @@ body {
 
 @media screen and (max-width: 620px) {
   .groupNav {
-    padding-top: .5em;
-}
+    padding-top: 0.5em;
+  }
   /* Estilos Header */
 
   .groupHeader > .header {
@@ -1453,8 +1466,6 @@ body {
 @media screen and (max-width: 466px) {
   /* Estilos Nav */
 
-  
-
   /* Estilos do Header */
   .nav > ul a {
     font-size: var(--nav-link-font-size-small-gap-line-heigth);
@@ -1518,8 +1529,6 @@ body {
     line-height: 21px;
   }
 
-  
-
   /* Estilos Excel */
 
   .service-excel {
@@ -1545,7 +1554,7 @@ body {
     line-height: 26px;
     font-size: 1.3em;
     margin-top: 1em;
-}
+  }
 
   .data-descricao {
     font-size: 1.1em;
@@ -1841,7 +1850,7 @@ body {
   /* Estilos Duvidas */
 
   .groupDuvidas-title {
-    font-size: .93em;
+    font-size: 0.93em;
   }
 
   /* Estilos Contato */
@@ -1950,7 +1959,7 @@ body {
   }
 
   .groupDuvidas-title {
-    font-size: .86em;
+    font-size: 0.86em;
     font-weight: bolder;
   }
 }
@@ -1965,3 +1974,77 @@ body {
     width: 14em;
   }
 }
+
+
+/* Efeito Inicio */
+.hidden-inicio {
+  opacity: var(--opacity-hidden);
+  filter: var(--filter-hidden);
+  transition: var(--transition-fast);
+  transform: var(--transform-hidden-inicio);
+}
+
+.show-inicio {
+  opacity: var(--opacity-show);
+  filter: var(--filter-show);
+  transform: var(--transform-show);
+  transition: var(--transition-slow);
+}
+
+/* Efeito Sobre */
+.hidden-sobre {
+  opacity: var(--opacity-hidden);
+  filter: var(--filter-hidden);
+  transition: var(--transition-slow);
+  transform: var(--transform-hidden-default);
+}
+
+.show-sobre {
+  opacity: var(--opacity-show);
+  filter: var(--filter-show);
+  transform: var(--transform-show);
+  transition: var(--transition-slow);
+}
+
+/* Efeito YouTube */
+.hidden-youtube {
+  opacity: var(--opacity-hidden);
+  filter: var(--filter-hidden);
+  transition: var(--transition-slow);
+  transform: var(--transform-hidden-default);
+}
+
+.show-youtube {
+  opacity: var(--opacity-show);
+  filter: var(--filter-show);
+  transform: var(--transform-show);
+  transition: var(--transition-slow);
+}
+
+.hidden-youtube-video {
+  opacity: var(--opacity-hidden);
+  filter: var(--filter-hidden);
+  transform: translate(2%);
+  transition: var(--transition-slow);
+}
+
+.show-youtube-video {
+  opacity: var(--opacity-show);
+  filter: var(--filter-show);
+  transform: translate(0);
+  transition: var(--transition-slow);
+}
+
+/* Efeito Beneficios */
+.hidden-beneficios {
+  opacity: var(--opacity-hidden);
+  filter: var(--filter-hidden);
+  transition: var(--transition-slow);
+  transform: var(--transform-hidden-beneficios);
+}
+
+.show-beneficios {
+  opacity: var(--opacity-show);
+  filter: var(--filter-show);
+  transition: var(--transition-slow);
+  transform: var(--transform-show-beneficios);
