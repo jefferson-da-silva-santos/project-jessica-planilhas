@@ -2048,3 +2048,4 @@ body {
   filter: var(--filter-show);
   transition: var(--transition-slow);
   transform: var(--transform-show-beneficios);
+}
