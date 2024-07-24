@@ -1,7 +1,3 @@
-Aqui está um exemplo de README para o projeto "Jessica-planilhas" em português:
-
----
-
 # Jessica-planilhas
 
 **Jessica-planilhas** é uma aplicação web responsiva projetada para gerenciar e visualizar planilhas de forma eficiente e interativa. Este projeto utiliza tecnologias modernas para garantir uma experiência de usuário fluida e otimizada, com menus interativos, animações baseadas em rolagem e gerenciamento avançado de eventos.
