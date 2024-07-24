@@ -89,3 +89,5 @@ function criarObservacao(classeOculta, classeMostrar) {
   const elementosOcultos = document.querySelectorAll(classeOculta);
   elementosOcultos.forEach((element) => observacao.observe(element));
 }
+
+
