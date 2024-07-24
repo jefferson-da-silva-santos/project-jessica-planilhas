@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jessíca | Planilhas</title>
-    <meta name="description" content="Soluções para você através de planilhas. Conheça nossas planilhas para Excel e Google Sheets." />
-    <meta name="keywords" content="planilhas, Excel, Google Sheets, produtividade, finanças, controle financeiro, suporte contínuo, automatização de processos" />
+    <meta
+      name="description"
+      content="Soluções para você através de planilhas. Conheça nossas planilhas para Excel e Google Sheets."
+    />
+    <meta
+      name="keywords"
+      content="planilhas, Excel, Google Sheets, produtividade, finanças, controle financeiro, suporte contínuo, automatização de processos"
+    />
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="src/css/styles.css" />
     <link
@@ -13,7 +19,6 @@
       href="src/image/favicon.ico"
       type="image/x-icon"
     />
-    
   </head>
   <body>
     <div class="groupHeader">
@@ -116,7 +121,12 @@
                 conosco.
               </h2>
               <p class="textSobre hidden-sobre">
-                Nossa missão é facilitar sua rotina com planilhas eficientes e personalizadas. Com vasta experiência, oferecemos soluções que otimizam sua gestão. Garantimos ferramentas que simplificam processos, aumentam sua produtividade e proporcionam mais tempo para o que realmente importa. Explore nossas opções e transforme sua forma de trabalhar.
+                Nossa missão é facilitar sua rotina com planilhas eficientes e
+                personalizadas. Com vasta experiência, oferecemos soluções que
+                otimizam sua gestão. Garantimos ferramentas que simplificam
+                processos, aumentam sua produtividade e proporcionam mais tempo
+                para o que realmente importa. Explore nossas opções e transforme
+                sua forma de trabalhar.
               </p>
             </div>
           </div>
@@ -131,7 +141,9 @@
           aria-labelledby="servico"
         >
           <div class="groupServiceExcel-primary">
-            <h2 class="titleServiceExcel-primary">Algumas Planilhas que ofereço:</h2>
+            <h2 class="titleServiceExcel-primary">
+              Algumas Planilhas que ofereço:
+            </h2>
           </div>
           <div class="groupServiceExcel-secundary">
             <h3 class="titleService-secundary">Excel</h3>
@@ -349,7 +361,10 @@
               <p class="textYoutube hidden-youtube">
                 Explore mais detalhes sobre nossas planilhas e descubra como
                 maximizar seu uso conferindo o
-                <a target="_blank" href="https://youtube.com/@jessicaplanilhasedashboards?si=QsgVMBawapeliemI" class="link-generico"
+                <a
+                  target="_blank"
+                  href="https://youtube.com/@jessicaplanilhasedashboards?si=QsgVMBawapeliemI"
+                  class="link-generico"
                   ><i class="bi bi-link-45deg"></i>nosso canal do YouTube.</a
                 >
               </p>
@@ -631,6 +646,98 @@
         >
       </footer>
     </div>
-    <script src="src/js/script.js"></script>
+    <script>
+      //Variaveis atribuidas para tratar o menu
+      const menu = document.getElementById("listMenu");
+      const btnMenuLink = document.getElementById("btn-menu-link");
+      const iconBtnMenu = document.getElementById("icon-btn-menu");
+      const linksMenu = document.querySelectorAll(".link-menu");
+      let menuOpen = false;
+      // Variaveis do details
+      const detailsList = document.querySelectorAll(".caixa-pergunta");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        btnMenuLink.addEventListener("click", (event) => {
+          event.preventDefault();
+          menuOpen ? closeMenu(menu) : openMenu(menu);
+          menuOpen = !menuOpen;
+        });
+
+        window.addEventListener(
+          "resize",
+          debounce(() => {
+            if (window.innerWidth > 900) {
+              document.body.style.overflow = "auto";
+              menu.style.visibility = "visible";
+            } else {
+              menuOpen = false;
+              closeMenu(menu);
+            }
+          }, 100)
+        );
+
+        linksMenu.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (menuOpen) {
+              closeMenu(menu);
+              menuOpen = !menuOpen;
+            }
+          });
+        });
+
+        detailsList.forEach((currentDetail, currentIndex) => {
+          currentDetail.addEventListener("click", () => {
+            detailsList.forEach((detail, index) => {
+              if (index !== currentIndex) {
+                detail.open = false;
+              }
+            });
+          });
+        });
+
+        criarObservacao(".hidden-inicio", "show-inicio");
+        criarObservacao(".hidden-sobre", "show-sobre");
+        criarObservacao(".hidden-youtube", "show-youtube");
+        criarObservacao(".hidden-beneficios", "show-beneficios");
+        criarObservacao(".hidden-youtube-video", "show-youtube-video");
+      });
+
+      function openMenu(menu) {
+        menu.style.visibility = "visible";
+        iconBtnMenu.classList.remove("bi-list");
+        iconBtnMenu.classList.add("bi-x-lg");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMenu(menu) {
+        menu.style.visibility = "hidden";
+        iconBtnMenu.classList.remove("bi-x-lg");
+        iconBtnMenu.classList.add("bi-list");
+        document.body.style.overflow = "auto";
+      }
+
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
+      function criarObservacao(classeOculta, classeMostrar) {
+        const observacao = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(classeMostrar);
+            } else {
+              return;
+            }
+          });
+        });
+
+        const elementosOcultos = document.querySelectorAll(classeOculta);
+        elementosOcultos.forEach((element) => observacao.observe(element));
+      }
+    </script>
   </body>
 </html>
