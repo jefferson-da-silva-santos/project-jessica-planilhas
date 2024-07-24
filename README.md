@@ -53,5 +53,5 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 
-Se você tiver dúvidas ou precisar de ajuda, entre em contato pelo e-mail: [seu-email@exemplo.com](mailto:seu-email@exemplo.com).
+Se você tiver dúvidas ou precisar de ajuda, entre em contato pelo e-mail: [planilhasedashs12@gmail.com](mailto:planilhasedashs12@gmail.com).
 
