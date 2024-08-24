@@ -8,6 +8,7 @@ let menuOpen = false;
 const detailsList = document.querySelectorAll(".caixa-pergunta");
 
 document.addEventListener("DOMContentLoaded", () => {
+
   btnMenuLink.addEventListener("click", (event) => {
     event.preventDefault();
     menuOpen ? closeMenu(menu) : openMenu(menu);
