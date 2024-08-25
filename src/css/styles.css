@@ -250,36 +250,41 @@ body {
 }
 
 .img-excel {
-  animation: imgExcelFlutuando 10s ease-in-out 0s infinite alternate;
+  animation: imgExcelFlutuando 8s ease-in-out 0s infinite alternate;
 }
 
 .img-sheets {
-  animation: imgSheetsFlutuando 8s ease 0s infinite alternate;
+  animation: imgSheetsFlutuando 7s ease 0s infinite alternate;
 }
 
 @keyframes imgExcelFlutuando {
   0% {
-    transform: translateX(158px);
+    transform: translateX(-208px);
      transform: translateY(60px);
   }
-  100% {
+
+  50% {
     transform: translateY(0);
-    transform: translateX(-150px);
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateY(200px);
+    transform: translateX(-20px);
   }
 }
 
 @keyframes imgSheetsFlutuando {
   0% {
-    transform: translateX(158px);
-  transform: translateY(60px);
+    transform: translateX(-100px);
+  transform: translateY(-50px);
   }
   50% {
-    transform: translateY(50px);
-    transform: translateX(80px);
+    transform: translateY(-100px);
+    transform: translateX(100px);
   }
   100% {
-    transform: translateY(-80px);
-    transform: translateX(-40px);
+    transform: translateY(-150px);
+    transform: translateX(50px);
   }
 }
 
@@ -375,7 +380,7 @@ body {
   grid-template-rows: 9em 1fr;
   padding: 0.6em;
   row-gap: 1em;
-  height: 22em;
+  height: 345px;
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
@@ -1182,7 +1187,7 @@ body {
   }
 
   .data {
-    height: 18em;
+    height: 13em;
   }
 
   .groupServiceGoogle {
@@ -1190,12 +1195,12 @@ body {
   }
 
   .service-excel {
-    grid-template-rows: 1fr 4em 39em;
+    grid-template-rows: 1fr 4em 29em;
     padding: 3.5em 0 2em 0;
   }
 
   .service-google-sheets {
-    grid-template-rows: 1fr 39em;
+    grid-template-rows: 1fr 29em;
   }
 
   .beneficios {
@@ -1329,7 +1334,7 @@ body {
   .data {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    height: 23em;
+    height: 27em;
     row-gap: 1em;
     column-gap: 0em;
     width: 19em;
