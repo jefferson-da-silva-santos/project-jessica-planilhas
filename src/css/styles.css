@@ -168,7 +168,7 @@ body {
 }
 
 .btn:hover {
-  transform: scale(103%);
+  transform: scale(110%);
   box-shadow: var(--btn-hover-box-shadow);
 }
 
@@ -229,6 +229,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 3em 0em;
 }
 
 .sobre {
@@ -328,6 +329,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3em 0em;
   overflow: hidden;
 }
 
@@ -338,7 +340,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 6em 5fr;
-  padding: 1em 0;
 }
 
 .link-planilha {
@@ -477,6 +478,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 3em 0em;
 }
 
 .service-google-sheets {
@@ -526,6 +528,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 3em 0em;
 }
 
 .youtube {
@@ -618,6 +621,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 3em 0em;
 }
 
 .beneficios {
@@ -707,17 +711,20 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 3em 0em;
 }
 
+
 .duvidas {
-  width: var(--width-sections);
-  max-width: var(--max-width-sections);
-  margin: auto;
-  min-height: fit-content;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 6fr;
-  row-gap: 2em;
+    width: var(--width-sections);
+    max-width: var(--max-width-sections);
+    margin: auto;
+    min-height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 6fr;
+    row-gap: 1em;
+    padding-bottom: 2em;
 }
 
 .groupDuvidas-primary {
@@ -763,6 +770,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 3em 0em;
 }
 
 .contato {
