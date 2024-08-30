@@ -21,8 +21,8 @@
     />
   </head>
   <body>
-    <div class="groupHeader">
-      <header class="header" id="header" role="banner">
+    <div class="groupHeader" id="header">
+      <header class="header" role="banner">
         <div class="groupNav">
           <nav class="nav">
             <a href="#" aria-label="Página Inicial"
@@ -104,8 +104,8 @@
       </header>
     </div>
     <main>
-      <div class="groupSobre">
-        <section class="sobre" id="sobre" role="region" aria-labelledby="sobre">
+      <div class="groupSobre" id="sobre">
+        <section class="sobre" role="region" aria-labelledby="sobre">
           <div class="groupSobre-primary">
             <img src="src/image/excel.png" alt="Logo do excel" class="img-excel">
             <img src="src/image/sheets.png" alt="Logo do google sheets" class="img-sheets">
@@ -129,10 +129,9 @@
         </section>
       </div>
 
-      <div class="groupServiceExcel">
+      <div class="groupServiceExcel" id="servico">
         <section
           class="service-excel"
-          id="servico"
           role="region"
           aria-labelledby="servico"
         >
@@ -368,10 +367,9 @@
         </section>
       </div>
 
-      <div class="groupYouTube">
+      <div class="groupYouTube" id="youtube">
         <section
           class="youtube"
-          id="youtube"
           role="region"
           aria-labelledby="youtube"
         >
@@ -416,10 +414,9 @@
         </section>
       </div>
 
-      <div class="groupBeneficios">
+      <div class="groupBeneficios" id="beneficios">
         <section
           class="beneficios"
-          id="beneficios"
           role="region"
           aria-labelledby="beneficios"
         >
@@ -490,10 +487,9 @@
         </section>
       </div>
 
-      <div class="groupDuvidas">
+      <div class="groupDuvidas" id="duvidas">
         <section
           class="duvidas"
-          id="duvidas"
           role="region"
           aria-labelledby="duvidas"
         >
@@ -570,10 +566,9 @@
         </section>
       </div>
 
-      <div class="groupContato">
+      <div class="groupContato" id="contato">
         <section
           class="contato"
-          id="contato"
           role="region"
           aria-labelledby="contato"
         >
@@ -678,11 +673,6 @@
       // Variaveis do details
       const detailsList = document.querySelectorAll(".caixa-pergunta");
 
-      /*
-     .img-service:hover {
-  background-size: 115%;
-}
-      */
 
       document.querySelectorAll('.img-service').forEach(element => {
         element.addEventListener('mouseover', () => {

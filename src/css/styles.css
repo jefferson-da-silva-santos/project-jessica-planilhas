@@ -34,8 +34,8 @@
   --filter-hidden: blur(5px);
   --transition-fast: all 0.5s;
   --transition-slow: all 1s;
-  --transform-hidden-inicio: translateX(-10%);
-  --transform-hidden-default: translateX(10%);
+  --transform-hidden-inicio: translateX(-50%);
+  --transform-hidden-default: translateX(50%);
   --transform-hidden-beneficios: translateY(100%);
 
   --opacity-show: 1;
@@ -70,10 +70,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 98%;
   max-width: var(--max-width-sections);
   margin: auto;
-  padding: 0em 1em;
 }
 
 .btn-menu {
@@ -89,7 +88,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 0em;
+  gap: 1em;
 }
 
 .nav > ul a {
@@ -97,7 +96,6 @@ body {
   color: white;
   font-family: var(--secundary-font);
   font-size: 0.96em;
-  padding: 1em;
   position: relative;
   transition: color 0.5s ease;
 }
@@ -106,6 +104,10 @@ body {
 
 .groupHeader {
   background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .groupHeader > .header {
@@ -113,21 +115,18 @@ body {
   max-width: var(--max-width-sections);
   margin: auto;
   min-height: fit-content;
-  padding-bottom: 5em;
 }
 
 .groupHeader-elements {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: inherit;
-  padding-top: 6em;
 }
 
 .groupHeader-primary {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 1em;
 }
 
 .groupHeader-primary > .titleHeader-primary {
@@ -225,6 +224,11 @@ body {
 
 .groupSobre {
   background-color: var(--secundary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .sobre {
@@ -246,7 +250,7 @@ body {
 
 .groupSobre-primary img {
   position: absolute;
-  width: 70%;
+  width: 54%;
 }
 
 .img-excel {
@@ -260,7 +264,7 @@ body {
 @keyframes imgExcelFlutuando {
   0% {
     transform: translateX(-208px);
-     transform: translateY(60px);
+    transform: translateY(60px);
   }
 
   50% {
@@ -276,7 +280,7 @@ body {
 @keyframes imgSheetsFlutuando {
   0% {
     transform: translateX(-100px);
-  transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   50% {
     transform: translateY(-100px);
@@ -320,16 +324,21 @@ body {
 
 .groupServiceExcel {
   background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .service-excel {
   width: var(--width-sections);
   max-width: var(--max-width-sections);
   margin: auto;
-  padding-top: 5em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5em 4em 26em;
+  grid-template-rows: 1fr 6em 5fr;
+  padding: 1em 0;
 }
 
 .link-planilha {
@@ -355,7 +364,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 1em;
 }
 
 .titleService-secundary {
@@ -368,8 +376,7 @@ body {
 .groupServiceExcel-terciary {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 1em;
-  column-gap: .8em;
+  column-gap: 0.8em;
 }
 
 .data {
@@ -403,9 +410,8 @@ body {
   background-size: 100%;
   border-radius: 5px;
   overflow: hidden;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
-
 
 .groupData-img-1 {
   background-image: url("../image/excel-04.webp");
@@ -436,7 +442,7 @@ body {
   color: var(--primary-color);
   text-align: center;
   font-size: 0.82em;
-  margin-top: 0.5em;
+  margin-bottom: 0.67em;
 }
 
 .btn-ver-planilha {
@@ -444,16 +450,18 @@ body {
   border: none;
   border-radius: 5px;
   font-weight: 500;
-  font-family: var(--primary-font);
-  background-color: rgb(226, 226, 226);
-  border: 1px solid rgb(226, 226, 226);
-  transition: all .5s ease;
+  font-family: var(--secundary-font);
+  color: #e1fff1;
+  font-weight: bolder;
+  background-color: #79b699;
+  border: 2px solid #ccffe6;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
 .btn-ver-planilha:hover {
-  background-color: rgb(176, 255, 178);
-  border: 1px solid rgb(180, 255, 147);
+  background-color: #011e11;
 }
 
 .btn-ver-planilha .icone {
@@ -464,6 +472,11 @@ body {
 
 .groupServiceGoogle {
   background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .service-google-sheets {
@@ -472,22 +485,20 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 24em;
-  padding-bottom: 2em;
+  grid-template-rows: 7em 1fr;
+  padding: 1em 0;
 }
 
 .groupServiceGoogle-primary {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 1em;
 }
 
 .groupServiceGoogle-secundary {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 1em;
-  column-gap: .8em;
+  column-gap: 0.8em;
 }
 
 .groupData-img-5 {
@@ -510,6 +521,11 @@ body {
 
 .groupYouTube {
   background-color: var(--secundary-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .youtube {
@@ -518,9 +534,7 @@ body {
   margin: auto;
   max-width: var(--max-width-sections);
   grid-template-columns: 25em 1fr;
-  grid-template-rows: 3fr 1fr;
-  padding-top: 4em;
-  padding-bottom: 0;
+  grid-template-rows: 4fr 1fr;
 }
 
 .groupYouTube-primary {
@@ -599,6 +613,11 @@ body {
 .groupBeneficios {
   background-color: white;
   color: black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .beneficios {
@@ -683,6 +702,11 @@ body {
 .groupDuvidas {
   background-color: var(--secundary-color);
   color: black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .duvidas {
@@ -692,8 +716,7 @@ body {
   min-height: fit-content;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 6em 1fr;
-  padding: 5em 2em;
+  grid-template-rows: 1fr 6fr;
   row-gap: 2em;
 }
 
@@ -702,10 +725,6 @@ body {
   align-items: center;
   padding: 0 1em 0 1em;
   font-size: 2em;
-}
-
-.groupDuvidas-secundary {
-  padding: 1em;
 }
 
 .groupDuvidas-pergunta {
@@ -739,6 +758,11 @@ body {
 
 .groupContato {
   background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .contato {
@@ -747,7 +771,6 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 3em;
 }
 
 .groupContato-primary {
@@ -913,8 +936,6 @@ body {
   text-decoration: none;
 }
 
-
-
 /* Estilos Media querys */
 
 @media screen and (min-width: 899px) {
@@ -928,7 +949,7 @@ body {
     position: absolute;
     height: 2px;
     width: 0px;
-    top: 38px;
+    top: 25px;
     left: 0px;
     border-radius: 20px;
     background-image: var(--nav-hover-before-bg);
@@ -939,32 +960,15 @@ body {
     width: 100%;
   }
 
-  .sobre {
-    padding: var(--padding-sobre-large);
-  }
-
-  .service-excel {
-    padding-top: 5em;
-  }
-
-  .youtube {
-    padding-top: 7em;
-  }
-
   .beneficios {
-    padding: var(--padding-beneficios-large);
     row-gap: var(--row-gap-beneficios-large-font-size);
-  }
-
-  .contato {
-    padding: 5em 2em 3em 2em;
   }
 }
 
 @media screen and (max-width: 900px) {
   /* Media do Nav */
   .nav {
-    padding: 0em 2em;
+    padding: 0.5em;
   }
 
   .nav > ul {
@@ -1054,7 +1058,7 @@ body {
 
   .groupSobre-primary {
     display: none;
-}
+  }
 
   .groupSobre-primary img {
     max-width: 22em;
@@ -1078,8 +1082,7 @@ body {
   }
 
   .service-excel {
-    grid-template-rows: 1fr 4em 29em;
-    padding-bottom: 2em;
+    grid-template-rows: 1fr 7em 29em;
   }
 
   /* Media do Google Sheets */
@@ -1091,7 +1094,7 @@ body {
   }
 
   .service-google-sheets {
-    grid-template-rows: 1fr 29em;
+    grid-template-rows: 8em 1fr;
   }
 
   /* Media do YouTube */
@@ -1100,7 +1103,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 20em 5em;
     width: 80%;
-    padding: 6em 0 4em 0;
   }
 
   .groupYouTube-primary {
@@ -1151,13 +1153,12 @@ body {
   .contato {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    padding-bottom: 1em;
+    padding: 2em 0;
   }
 
   .groupContato-primary {
     text-align: center;
     gap: 3em;
-    padding: 2em 1em;
   }
 
   .groupContato-texts-top {
@@ -1187,7 +1188,7 @@ body {
   }
 
   .data {
-    height: 13em;
+    height: 14em;
   }
 
   .groupServiceGoogle {
@@ -1195,8 +1196,7 @@ body {
   }
 
   .service-excel {
-    grid-template-rows: 1fr 4em 29em;
-    padding: 3.5em 0 2em 0;
+    grid-template-rows: 5em 7em 1fr;
   }
 
   .service-google-sheets {
@@ -1209,7 +1209,7 @@ body {
   }
 
   .contato {
-    padding: 5em 1em;
+    padding: 2em 0em;
   }
 }
 
@@ -1223,12 +1223,7 @@ body {
     padding: 0;
   }
 
-  .groupDuvidas-secundary {
-    padding: 0em;
-  }
-
   .duvidas {
-    padding: 5em 1em;
     row-gap: 1em;
   }
 }
@@ -1252,11 +1247,11 @@ body {
   }
 
   .groupSobre {
-    padding: 6em 0em;
+    padding: 0em 0em;
   }
 
   .groupServiceExcel {
-    padding: 3em 0 1em 0;
+    padding: 3em 0;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
@@ -1283,8 +1278,8 @@ body {
 
   .sobre {
     grid-template-rows: 21em 1fr;
-    padding: 1em;
-    padding-bottom: 2em;
+    padding: 0;
+    padding-bottom: 0;
   }
 
   .groupSobre-primary img {
@@ -1293,13 +1288,13 @@ body {
   }
 
   .titleSobre {
-    margin-top: 1em;
-    font-size: 2.5rem;
-    line-height: 43px;
+    font-size: 43px;
+    line-height: 48px;
   }
 
   .textSobre {
-    font-size: 1.2em;
+    font-size: 23px;
+    line-height: 28px;
   }
 
   .groupSobre-secundary-texts {
@@ -1310,8 +1305,8 @@ body {
   /* Estilos Excel */
 
   .service-excel {
-    padding: 2em;
-    grid-template-rows: 1fr 6em auto;
+    padding: 2em 0;
+    grid-template-rows: 1fr 8em auto;
   }
 
   .groupServiceExcel-primary > .titleServiceExcel-primary {
@@ -1337,7 +1332,7 @@ body {
     height: 27em;
     row-gap: 1em;
     column-gap: 0em;
-    width: 19em;
+    width: 75%;
     margin: auto;
   }
 
@@ -1354,8 +1349,8 @@ body {
   /* Estilos Google */
 
   .service-google-sheets {
-    grid-template-rows: 1fr auto;
-    padding-bottom: 1em;
+    grid-template-rows: 7em 1fr;
+    padding-bottom: 3em;
   }
 
   .groupServiceGoogle-primary {
@@ -1371,7 +1366,7 @@ body {
   /* Estilos YouTube */
 
   .youtube {
-    padding-top: 4em;
+    padding-top: 1em 0;
     width: 100%;
     max-width: 26em;
     grid-template-rows: 1fr 17em 5em;
@@ -1405,7 +1400,7 @@ body {
     width: 90%;
     max-width: 26em;
     row-gap: 1em;
-    padding-top: 4em;
+    padding-top: 1em;
   }
 
   .title-beneficios {
@@ -1414,7 +1409,7 @@ body {
   }
 
   .groupBeneficios-secundary {
-    padding: 0em 1em;
+    padding: 0em 0em;
     padding-bottom: 1em;
     gap: 2em;
   }
@@ -1457,12 +1452,8 @@ body {
     padding: 0;
   }
 
-  .groupDuvidas-secundary {
-    padding: 0em;
-  }
-
   .duvidas {
-    padding: 3em 0em 12em 0;
+    padding: 0;
     row-gap: 1em;
   }
 
@@ -1477,12 +1468,12 @@ body {
   /* Estilos Contao */
 
   .contato {
-    padding: 4em 0em 1em 0;
+    padding: 0;
   }
 
   .groupContato-primary {
     gap: 3em;
-    padding: 1em 1em;
+    padding: 0;
   }
 
   .groupContato-title {
@@ -1575,7 +1566,7 @@ body {
   }
 
   .groupSobre-secundary-texts {
-    width: 20em;
+    width: 97%;
   }
 
   .groupSobre-primary img {
@@ -1583,20 +1574,10 @@ body {
     max-height: 15em;
   }
 
-  .titleSobre {
-    font-size: 2rem;
-    line-height: 35px;
-  }
-
-  .textSobre {
-    font-size: 1.1em;
-    line-height: 21px;
-  }
-
   /* Estilos Excel */
 
   .service-excel {
-    padding: 2.5em 1em;
+    padding: 1em 0em;
     grid-template-rows: 1fr 4em auto;
   }
 
@@ -1611,7 +1592,7 @@ body {
   .data {
     row-gap: 0.5em;
     column-gap: 0em;
-    width: 18em;
+    width: 85%;
   }
 
   .data-title {
@@ -1830,6 +1811,10 @@ body {
     line-height: 35px;
   }
 
+  .textSobre {
+    font-size: 21px;
+  }
+
   .groupSobre-secundary-texts {
     gap: 2rem;
     width: 18em;
@@ -1851,7 +1836,7 @@ body {
   }
 
   .data {
-    width: 16em;
+    width: 93%;
   }
 
   /* Estilos YouTube */
@@ -2001,7 +1986,7 @@ body {
   /* Estilos Excel */
 
   .service-excel {
-    grid-template-rows: 1fr 3.5em auto;
+    grid-template-rows: 1fr 6em auto;
   }
 
   .groupServiceExcel-primary > .titleServiceExcel-primary {
@@ -2014,7 +1999,7 @@ body {
   }
 
   .data {
-    width: 16em;
+    width: 100%;
   }
 
   /* Estilos YouTube */
@@ -2033,12 +2018,7 @@ body {
     font-size: 1.7rem;
     width: auto;
   }
-
-  .data {
-    width: 14em;
-  }
 }
-
 
 /* Efeito Inicio */
 .hidden-inicio {
