@@ -462,7 +462,8 @@ body {
 }
 
 .btn-ver-planilha:hover {
-  background-color: #011e11;
+  background-color: #ffffff;
+  color: var(--primary-color);
 }
 
 .btn-ver-planilha .icone {
