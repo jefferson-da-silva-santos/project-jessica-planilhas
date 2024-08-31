@@ -1341,7 +1341,7 @@ body {
     height: 27em;
     row-gap: 1em;
     column-gap: 0em;
-    width: 75%;
+    width: 20em;
     margin: auto;
   }
 
@@ -1601,7 +1601,7 @@ body {
   .data {
     row-gap: 0.5em;
     column-gap: 0em;
-    width: 85%;
+    width: 18em;
   }
 
   .data-title {
@@ -1845,7 +1845,7 @@ body {
   }
 
   .data {
-    width: 93%;
+    width: 18em;
   }
 
   /* Estilos YouTube */
