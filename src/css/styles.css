@@ -447,6 +447,7 @@ body {
 }
 
 .btn-ver-planilha {
+  font-size: .75em;
   height: 3em;
   border: none;
   border-radius: 5px;
@@ -551,7 +552,7 @@ body {
 .groupTouTube-texts {
   display: flex;
   flex-direction: column;
-  gap: 5em;
+  gap: 4em;
   padding: 1em;
 }
 
@@ -601,7 +602,7 @@ body {
 }
 
 .btnYoutube:hover {
-  transform: scale(103%);
+  transform: scale(110%);
   box-shadow: var(--btn-hover-box-shadow);
 }
 
@@ -830,7 +831,7 @@ body {
 }
 
 .groupContato-button:hover {
-  transform: scale(103%);
+  transform: scale(105%);
   box-shadow: var(--btn-hover-box-shadow);
 }
 
@@ -1302,7 +1303,7 @@ body {
   }
 
   .textSobre {
-    font-size: 23px;
+    font-size: 18px;
     line-height: 28px;
   }
 
@@ -1818,10 +1819,6 @@ body {
   .titleSobre {
     font-size: 2rem;
     line-height: 35px;
-  }
-
-  .textSobre {
-    font-size: 21px;
   }
 
   .groupSobre-secundary-texts {
