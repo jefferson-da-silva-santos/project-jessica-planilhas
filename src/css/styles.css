@@ -193,19 +193,12 @@ body {
 }
 
 .img {
+  filter: saturate(115%);
   z-index: 1;
   position: absolute;
   width: 100%;
-  max-width: 18em;
-  clip-path: polygon(
-    35% 14%,
-    100% 11%,
-    80% 100%,
-    19% 77%,
-    14% 53%,
-    0 38%,
-    5% 0
-  );
+  max-width: 20em;
+  clip-path: polygon(35% 14%, 100% 11%, 80% 100%, 19% 77%, 14% 53%, 0 38%, 5% 0);
   right: 45px;
   animation: float 3s var(--transition-ease) infinite;
 }
@@ -890,6 +883,8 @@ body {
 }
 
 .image-contato {
+  object-position: center;
+  filter: saturate(140%);
   position: absolute;
   z-index: 1;
   position: absolute;
