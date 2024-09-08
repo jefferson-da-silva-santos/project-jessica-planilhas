@@ -4,10 +4,26 @@ const btnMenuLink = document.getElementById("btn-menu-link");
 const iconBtnMenu = document.getElementById("icon-btn-menu");
 const linksMenu = document.querySelectorAll(".link-menu");
 let menuOpen = false;
+let sessionProjectsExpanded = false;
 // Variaveis do details
 const detailsList = document.querySelectorAll(".caixa-pergunta");
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  document.getElementById('btn-ver-mais').addEventListener('click', () => {
+    const sessao = document.querySelector('.groupServiceExcel-secundary');
+    const sessaoTerciary = document.querySelector('');
+
+    if (!sessionProjectsExpanded) {
+      sessao.style.heigth = 'auto';
+      sessaoTerciary.style.boxShadow = '';
+      sessionProjectsExpanded = !sessionProjectsExpanded;
+    } else {
+      sessao.style.heigth = 'auto';
+      sessaoTerciary.style.boxShadow = '';
+      sessionProjectsExpanded = !sessionProjectsExpanded;
+    }
+  })
 
   btnMenuLink.addEventListener("click", (event) => {
     event.preventDefault();

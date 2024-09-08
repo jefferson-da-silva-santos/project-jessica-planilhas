@@ -88,7 +88,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 1.7em;
 }
 
 .nav > ul a {
@@ -198,7 +198,15 @@ body {
   position: absolute;
   width: 100%;
   max-width: 20em;
-  clip-path: polygon(35% 14%, 100% 11%, 80% 100%, 19% 77%, 14% 53%, 0 38%, 5% 0);
+  clip-path: polygon(
+    35% 14%,
+    100% 11%,
+    80% 100%,
+    19% 77%,
+    14% 53%,
+    0 38%,
+    5% 0
+  );
   right: 45px;
   animation: float 3s var(--transition-ease) infinite;
 }
@@ -317,12 +325,13 @@ body {
 /* Estilos do Serviço (Excel) */
 
 .groupServiceExcel {
+  position: relative;
   background-color: var(--primary-color);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3em 0em;
+  padding: 3em 0em 0em 0em;
   overflow: hidden;
 }
 
@@ -332,7 +341,7 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 6em 5fr;
+  grid-template-rows: 10em 1fr 7em;
 }
 
 .link-planilha {
@@ -358,19 +367,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
+  padding: 0 2em;
 }
 
-.titleService-secundary {
-  font-family: var(--primary-font);
-  text-align: left;
-  font-size: 2.2em;
-  color: var(--secundary-color);
-}
-
-.groupServiceExcel-terciary {
+.groupServiceExcel-secundary {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 0.8em;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1em;
+  row-gap: 2em;
+  height: 46em;
+  overflow: hidden;
+  transition-duration: .3s;
+  transition-property: all;
+  transition-timing-function: ease-in;
 }
 
 .data {
@@ -378,13 +387,14 @@ body {
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 9em 1fr;
+  grid-template-rows: 2fr 1fr;
   padding: 0.6em;
   row-gap: 1em;
-  height: 345px;
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
+  max-width: 18em;
+  height: 20em;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
@@ -394,7 +404,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0;
+  gap: 1.3em;
 }
 
 .img-service {
@@ -423,81 +433,6 @@ body {
   background-image: url("../image/excel-02.webp");
 }
 
-.data-title {
-  font-family: var(--secundary-font);
-  color: var(--primary-color);
-  text-align: center;
-  line-height: 20px;
-  font-size: 0.99em;
-}
-
-.data-descricao {
-  font-family: var(--primary-font);
-  color: var(--primary-color);
-  text-align: center;
-  font-size: 0.82em;
-  margin-bottom: 0.67em;
-}
-
-.btn-ver-planilha {
-  font-size: .75em;
-  height: 3em;
-  border: none;
-  border-radius: 5px;
-  font-weight: 500;
-  font-family: var(--secundary-font);
-  color: #e1fff1;
-  font-weight: bolder;
-  background-color: #79b699;
-  border: 2px solid #ccffe6;
-  letter-spacing: 1px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-.btn-ver-planilha:hover {
-  background-color: #ffffff;
-  color: var(--primary-color);
-}
-
-.btn-ver-planilha .icone {
-  color: rgb(0, 0, 0);
-}
-
-/* Estilos do Serviço (Google Sheets) */
-
-.groupServiceGoogle {
-  background-color: var(--primary-color);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 3em 0em;
-}
-
-.service-google-sheets {
-  width: var(--width-sections);
-  max-width: var(--max-width-sections);
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 7em 1fr;
-  padding: 1em 0;
-}
-
-.groupServiceGoogle-primary {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.groupServiceGoogle-secundary {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 0.8em;
-}
-
 .groupData-img-5 {
   background-image: url("../image/google-2.webp");
 }
@@ -512,6 +447,79 @@ body {
 
 .groupData-img-8 {
   background-image: url("../image/google-4.webp");
+}
+
+.data-title {
+  font-family: var(--secundary-font);
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.99em;
+  max-width: 16em;
+  margin: auto;
+}
+
+.data-descricao {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 0.82em;
+  margin-bottom: 0.67em;
+}
+
+.btn-ver-planilha {
+  font-size: 0.75em;
+  height: 3.2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-family: var(--secundary-font);
+  color: #e1fff1;
+  font-weight: bolder;
+  background-color: #79b699;
+  border: 2px solid #ccffe6;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn-ver-planilha:hover {
+  background-color: #ccffe6;
+  color: var(--primary-color);
+}
+
+.btn-ver-planilha .icone {
+  color: rgb(0, 0, 0);
+}
+
+.btn-ver-mais-projetos {
+  background-color: var(--primary-color);
+  border: 2px solid #e1fff1;
+  color: #e1fff1;
+  font-family: var(--primary-font);
+  font-weight: bolder;
+  font-size: 1.1em;
+  width: 14em;
+  height: 3.5em;
+  border-radius: 30px;
+  bottom: 0;
+  margin: 1em;
+  cursor: pointer;
+  padding: 1em;
+  transition: all 0.2s ease;
+}
+
+.btn-ver-mais-projetos:hover {
+  transform: scale(105%);
+}
+
+.groupServiceExcel-terciary {
+  position: relative;
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -46px 27px var(--primary-color);
 }
 
 /* Estilos do YouTube */
@@ -709,17 +717,16 @@ body {
   padding: 3em 0em;
 }
 
-
 .duvidas {
-    width: var(--width-sections);
-    max-width: var(--max-width-sections);
-    margin: auto;
-    min-height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 6fr;
-    row-gap: 1em;
-    padding-bottom: 2em;
+  width: var(--width-sections);
+  max-width: var(--max-width-sections);
+  margin: auto;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 6fr;
+  row-gap: 1em;
+  padding-bottom: 2em;
 }
 
 .groupDuvidas-primary {
@@ -1072,37 +1079,14 @@ body {
 
   /* Media do Excel */
 
-  .groupServiceExcel-terciary {
+  .groupServiceExcel-secundary {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1.5em;
   }
 
   .data {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    height: 13em;
-    row-gap: 0em;
-    column-gap: 1em;
+    max-width: none;
+    width: 21em;
   }
-
-  .service-excel {
-    grid-template-rows: 1fr 7em 29em;
-  }
-
-  /* Media do Google Sheets */
-
-  .groupServiceGoogle-secundary {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 1.5em;
-  }
-
-  .service-google-sheets {
-    grid-template-rows: 8em 1fr;
-  }
-
-  /* Media do YouTube */
 
   .youtube {
     grid-template-columns: 1fr;
@@ -1192,21 +1176,17 @@ body {
     font-size: var(--nav-link-font-size-small-gap-line-heigth);
   }
 
-  .data {
+  /* .data {
     height: 14em;
-  }
+  } */
 
   .groupServiceGoogle {
     background-color: var(--primary-color);
   }
 
-  .service-excel {
+  /* .service-excel {
     grid-template-rows: 5em 7em 1fr;
-  }
-
-  .service-google-sheets {
-    grid-template-rows: 1fr 29em;
-  }
+  } */
 
   .beneficios {
     padding: 6em 1em;
@@ -1215,6 +1195,24 @@ body {
 
   .contato {
     padding: 2em 0em;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .data {
+    width: 19em;
+  }
+}
+
+@media screen and (max-width: 773px) {
+  .data {
+    width: 18em;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .data {
+    width: 16em;
   }
 }
 
@@ -1231,6 +1229,21 @@ body {
   .duvidas {
     row-gap: 1em;
   }
+}
+
+@media screen and (max-width: 660px) {
+  .groupServiceExcel-secundary {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .data {
+    width: 20em;
+    height: 23em;
+}
+
+.groupServiceExcel-secundary {
+  height: 54em;
+}
 }
 
 @media screen and (max-width: 620px) {
@@ -1253,10 +1266,6 @@ body {
 
   .groupSobre {
     padding: 0em 0em;
-  }
-
-  .groupServiceExcel {
-    padding: 3em 0;
   }
 
   .groupHeader-primary > .titleHeader-secundary {
@@ -1309,63 +1318,9 @@ body {
 
   /* Estilos Excel */
 
-  .service-excel {
-    padding: 2em 0;
-    grid-template-rows: 1fr 8em auto;
-  }
-
-  .groupServiceExcel-primary > .titleServiceExcel-primary {
-    font-size: 2.5em;
-  }
-
-  .groupServiceExcel-secundary {
-    justify-content: center;
-  }
-
-  .titleService-secundary {
-    font-size: 2.3em;
-  }
-
-  .groupServiceExcel-terciary {
-    grid-template-columns: 1fr;
-    grid-gap: 3em;
-  }
-
-  .data {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 27em;
-    row-gap: 1em;
-    column-gap: 0em;
-    width: 20em;
-    margin: auto;
-  }
-
   .data-title {
     line-height: 25px;
     font-size: 1.3em;
-  }
-
-  .data-descricao {
-    font-size: 1.2em;
-    margin-top: 1em;
-  }
-
-  /* Estilos Google */
-
-  .service-google-sheets {
-    grid-template-rows: 7em 1fr;
-    padding-bottom: 3em;
-  }
-
-  .groupServiceGoogle-primary {
-    justify-content: center;
-  }
-
-  .groupServiceGoogle-secundary {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 3em;
   }
 
   /* Estilos YouTube */
@@ -1460,7 +1415,8 @@ body {
   .duvidas {
     padding: 0;
     row-gap: 1em;
-  }
+    grid-template-rows: 1fr 6fr;
+}
 
   .groupDuvidas-pergunta {
     font-size: 1.5em;
@@ -1523,6 +1479,13 @@ body {
   }
 }
 
+@media screen and (max-width: 486px) {
+  .data {
+    width: 19em;
+    height: 23em;
+  }
+}
+
 @media screen and (max-width: 466px) {
   /* Estilos Nav */
 
@@ -1581,11 +1544,6 @@ body {
 
   /* Estilos Excel */
 
-  .service-excel {
-    padding: 1em 0em;
-    grid-template-rows: 1fr 4em auto;
-  }
-
   .groupServiceExcel-primary > .titleServiceExcel-primary {
     font-size: 2.1em;
   }
@@ -1594,11 +1552,11 @@ body {
     font-size: 1.8em;
   }
 
-  .data {
+  /* .data {
     row-gap: 0.5em;
     column-gap: 0em;
     width: 18em;
-  }
+  } */
 
   .data-title {
     line-height: 26px;
@@ -1823,21 +1781,8 @@ body {
 
   /* Estilos Excel */
 
-  .service-excel {
-    grid-template-rows: 1fr 3.5em auto;
-  }
-
   .groupServiceExcel-primary > .titleServiceExcel-primary {
     font-size: 1.8em;
-  }
-
-  .titleService-secundary {
-    font-size: var(--nav-link-font-size-small-gap-line-heigth);
-    font-size: 1.65em;
-  }
-
-  .data {
-    width: 18em;
   }
 
   /* Estilos YouTube */
@@ -1940,6 +1885,12 @@ body {
   }
 }
 
+@media screen and (max-width: 402px) {
+  .data {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 378px) {
   /* Estilos Header */
 
@@ -1986,10 +1937,6 @@ body {
 
   /* Estilos Excel */
 
-  .service-excel {
-    grid-template-rows: 1fr 6em auto;
-  }
-
   .groupServiceExcel-primary > .titleServiceExcel-primary {
     font-size: 1.8em;
   }
@@ -1999,9 +1946,6 @@ body {
     font-size: 1.65em;
   }
 
-  .data {
-    width: 100%;
-  }
 
   /* Estilos YouTube */
   .groupTouTube-texts {
