@@ -54,6 +54,97 @@ body {
   color: white;
 }
 
+/* Estilos do Option */
+
+.groupOption-project {
+  position: fixed;
+  z-index: 9000;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #011e11dd;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-font);
+}
+
+.option-project {
+  position: relative;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  max-width: 35em;
+  padding: 2em;
+  box-shadow: 0px 0px 10px #316d50;
+  border-radius: 20px;
+  margin: 2em;
+  animation: effectOption .5s ease 0s 1 normal forwards;
+}
+
+@keyframes effectOption {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn-close-option {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.6em;
+  color: #21a366;
+  padding-right: 8px;
+  padding-top: 7px;
+}
+
+
+
+.option-project__title {
+  font-size: 2em;
+}
+
+.option-project__description {
+  color: #eeecec;
+}
+
+.option-project__group-btn {
+  margin-top: 1.5em;
+  display: flex;
+  gap: 1em;
+}
+
+.option-project__group-btn__btn-ver,
+.option-project__group-btn__btn-comprar {
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 800;
+  font-family: var(--secundary-font);
+  background-color: #5dffb0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.option-project__group-btn__btn-ver:hover,
+.option-project__group-btn__btn-comprar:hover {
+  background-color: #33ae73;
+}
+
+.icon-btn-option {
+  color: #011e11;
+  font-size: 1.1em;
+}
+
 /* Estilos do nav */
 
 .groupNav {
@@ -246,7 +337,7 @@ body {
   position: relative;
   padding: 1rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -377,7 +468,7 @@ body {
   row-gap: 2em;
   height: 46em;
   overflow: hidden;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-property: all;
   transition-timing-function: ease-in;
 }
@@ -724,15 +815,14 @@ body {
   min-height: fit-content;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 6fr;
-  row-gap: 1em;
+  grid-template-rows: 7em 6fr;
   padding-bottom: 2em;
 }
 
 .groupDuvidas-primary {
   display: flex;
   align-items: center;
-  padding: 0 1em 0 1em;
+  padding: 0 1em 0 0.5em;
   font-size: 2em;
 }
 
@@ -1239,11 +1329,11 @@ body {
   .data {
     width: 20em;
     height: 23em;
-}
+  }
 
-.groupServiceExcel-secundary {
-  height: 54em;
-}
+  .groupServiceExcel-secundary {
+    height: 54em;
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -1416,7 +1506,7 @@ body {
     padding: 0;
     row-gap: 1em;
     grid-template-rows: 1fr 6fr;
-}
+  }
 
   .groupDuvidas-pergunta {
     font-size: 1.5em;
@@ -1722,7 +1812,45 @@ body {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .option-project {
+    align-items: center;
+    text-align: center;
+  }
+
+  .option-project__group-btn {
+    flex-direction: column;
+  }
+
+  .option-project__group-btn {
+    margin-top: 0.5em;
+    display: flex;
+    gap: 0.7em;
+  }
+
+  .option-project {
+    gap: 1em;
+  }
+}
+
 @media screen and (max-width: 418px) {
+  .option-project__title {
+    font-size: 1.5em;
+  }
+
+  .option-project__group-btn__btn-ver,
+  .option-project__group-btn__btn-comprar {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+  }
+
+  .option-project__description {
+    font-size: 0.8em;
+  }
+
+
+
+
   /* Estilos Header */
 
   .btn {
@@ -1946,7 +2074,6 @@ body {
     font-size: 1.65em;
   }
 
-
   /* Estilos YouTube */
   .groupTouTube-texts {
     width: 18em;
@@ -2037,4 +2164,16 @@ body {
   filter: var(--filter-show);
   transition: var(--transition-slow);
   transform: var(--transform-show-beneficios);
+}
+
+.hidden-inicio-img {
+  right: 50%;
+  transition: right 1s ease;
+  opacity: 0;
+}
+
+.show-inicio-img {
+  right: 45px;
+  transition: right 1s ease;
+  opacity: 1;
 }

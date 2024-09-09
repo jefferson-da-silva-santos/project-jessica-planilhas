@@ -1,29 +1,155 @@
+
+let dataProjects = [
+  {
+    id: 'p1',
+    title: 'Planilha Baseada na Regra 50/30/20',
+    description: 'Gerencie suas finanças de acordo com a regra 50/30/20 no Excel.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/E87078060R'
+  },
+  {
+    id: 'p2',
+    title: 'Planilha para controle de gastos',
+    description: 'Monitore e controle seus gastos mensais no Excel com auxílio de gráficos intuitivos.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/I86610424W'
+  },
+  {
+    id: 'p3',
+    title: 'Planilha de controle financeiro personalizável',
+    description: 'Personalize seu controle financeiro de acordo com suas necessidades no Excel.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/T86923742R'
+  },
+  {
+    id: 'p4',
+    title: 'Planilha de controle financeiro simples',
+    description: 'Mantenha suas finanças organizadas com uma planilha simples no Excel.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/S89958786B'
+  },
+  {
+    id: 'p5',
+    title: 'Planilha Baseada na Regra 50/30/20',
+    description: 'Administre suas finanças seguindo a regra 50/30/20 no Google.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/U89372251L'
+  },
+  {
+    id: 'p6',
+    title: 'Planilha para controle de gastos',
+    description: 'Acompanhe seus gastos mensais no Google Sheets com auxílio de gráficos intuitivos.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/X89372640G'
+  },
+  {
+    id: 'p7',
+    title: 'Planilha de controle financeiro personalizável',
+    description: 'Customize seu controle financeiro conforme suas preferências no Google Sheets.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/X89372640G'
+  },
+  {
+    id: 'p8',
+    title: 'Planilha de controle financeiro simples',
+    description: 'Organize suas finanças com uma planilha simples no Google Sheets.',
+    libkSee: '',
+    linkBuy: 'https://go.hotmart.com/U89959580R'
+  }
+]
 //Variaveis atribuidas para tratar o menu
 const menu = document.getElementById("listMenu");
 const btnMenuLink = document.getElementById("btn-menu-link");
 const iconBtnMenu = document.getElementById("icon-btn-menu");
 const linksMenu = document.querySelectorAll(".link-menu");
+const groupOption = document.querySelector('.groupOption-project');
 let menuOpen = false;
 let sessionProjectsExpanded = false;
+let optionVisibled = false;
 // Variaveis do details
 const detailsList = document.querySelectorAll(".caixa-pergunta");
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  document.querySelector('.btn-close-option').addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (optionVisibled) {
+      groupOption.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      optionVisibled = !optionVisibled;
+    }
+  });
+
+  document.querySelectorAll('.btn-ver-planilha').forEach(element => {
+    element.addEventListener('click', () => {
+      if (!optionVisibled) {
+        groupOption.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        optionVisibled = !optionVisibled;
+
+
+        const classes = Array.from(element.parentNode.parentNode.classList);
+        console.log(classes);
+        
+        dataProjects.forEach(element => {
+          if (element.id === classes[1]) {
+            console.log(element);
+            document.querySelector('.option-project__title').innerHTML = element.title;
+            document.querySelector('.option-project__description').innerHTML = element.description;
+            document.querySelector('.option-project__group-btn__btn-comprar').setAttribute('href', element.linkBuy)
+            return;
+          }
+        })
+      }
+    });
+  });
+
   document.getElementById('btn-ver-mais').addEventListener('click', () => {
     const sessao = document.querySelector('.groupServiceExcel-secundary');
-    const sessaoTerciary = document.querySelector('');
+    const sessaoTerciary = document.querySelector('.groupServiceExcel-terciary');
+    const btnVerMais = document.querySelector('.btn-ver-mais-projetos');
 
     if (!sessionProjectsExpanded) {
-      sessao.style.heigth = 'auto';
-      sessaoTerciary.style.boxShadow = '';
+      sessao.style.transition = 'height .3s ease';
+      sessao.style.height = '100%';
+      sessaoTerciary.style.boxShadow = 'none';
+      btnVerMais.style.outline = 'none';
       sessionProjectsExpanded = !sessionProjectsExpanded;
+      btnVerMais.textContent = 'Ver menos';
     } else {
-      sessao.style.heigth = 'auto';
-      sessaoTerciary.style.boxShadow = '';
+      sessao.style.transition = 'height .3s ease';
+      if (window.innerWidth > 660) {
+        sessao.style.height = '46em';
+      } else {
+        sessao.style.height = '54em';
+      }
+      btnVerMais.textContent = 'Ver mais';
+      btnVerMais.style.outline = 'none';
+      sessaoTerciary.style.boxShadow = '0px -46px 27px var(--primary-color)';
       sessionProjectsExpanded = !sessionProjectsExpanded;
     }
-  })
+  });
+
+  document.querySelectorAll(".img-service").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.style.backgroundSize = "115%";
+    });
+    element.addEventListener("mouseout", () => {
+      element.style.backgroundSize = "100%";
+    });
+  });
+
+  document.querySelectorAll(".btn-ver-planilha").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.parentElement.parentElement.firstElementChild.style.backgroundSize =
+        "115%";
+    });
+    element.addEventListener("mouseout", () => {
+      element.parentElement.parentElement.firstElementChild.style.backgroundSize =
+        "100%";
+    });
+  });
 
   btnMenuLink.addEventListener("click", (event) => {
     event.preventDefault();
@@ -63,11 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  criarObservacao('.hidden-inicio', 'show-inicio');
-  criarObservacao('.hidden-sobre', 'show-sobre');
-  criarObservacao('.hidden-youtube', 'show-youtube');
-  criarObservacao('.hidden-beneficios', 'show-beneficios');
-  criarObservacao('.hidden-youtube-video', 'show-youtube-video');
+  criarObservacao(".hidden-inicio", "show-inicio");
+  criarObservacao(".hidden-sobre", "show-sobre");
+  criarObservacao(".hidden-youtube", "show-youtube");
+  criarObservacao(".hidden-beneficios", "show-beneficios");
+  criarObservacao(".hidden-youtube-video", "show-youtube-video");
+  criarObservacao(".hidden-inicio-img", "show-inicio-img");
 });
 
 function openMenu(menu) {
@@ -106,5 +233,3 @@ function criarObservacao(classeOculta, classeMostrar) {
   const elementosOcultos = document.querySelectorAll(classeOculta);
   elementosOcultos.forEach((element) => observacao.observe(element));
 }
-
-
