@@ -71,6 +71,7 @@ body {
 }
 
 .option-project {
+  text-align: center;
   position: relative;
   background-color: var(--primary-color);
   display: flex;
@@ -82,6 +83,7 @@ body {
   border-radius: 20px;
   margin: 2em;
   animation: effectOption .5s ease 0s 1 normal forwards;
+  align-items: center;
 }
 
 @keyframes effectOption {
@@ -100,12 +102,10 @@ body {
   right: 0;
   top: 0;
   font-size: 1.6em;
-  color: #21a366;
-  padding-right: 8px;
-  padding-top: 7px;
+  color: #5dffb0;
+  padding-right: 13px;
+  padding-top: 11px;
 }
-
-
 
 .option-project__title {
   font-size: 2em;
@@ -123,7 +123,7 @@ body {
 
 .option-project__group-btn__btn-ver,
 .option-project__group-btn__btn-comprar {
-  padding: 0.6em 1.5em;
+  padding: 0.6em 1em;
   border: none;
   border-radius: 5px;
   font-weight: 800;
@@ -133,6 +133,8 @@ body {
   transition: background-color 0.3s ease;
   text-decoration: none;
   color: var(--primary-color);
+  width: 12em;
+  
 }
 
 .option-project__group-btn__btn-ver:hover,
@@ -489,6 +491,7 @@ body {
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
+  margin: auto;
 }
 
 .groupData-text {
@@ -1326,6 +1329,11 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .data-title {
+    line-height: 25px;
+    font-size: 1.3em;
+  }
+
   .data {
     width: 20em;
     height: 23em;
@@ -1405,14 +1413,6 @@ body {
     gap: 2rem;
     width: 24em;
   }
-
-  /* Estilos Excel */
-
-  .data-title {
-    line-height: 25px;
-    font-size: 1.3em;
-  }
-
   /* Estilos YouTube */
 
   .youtube {
