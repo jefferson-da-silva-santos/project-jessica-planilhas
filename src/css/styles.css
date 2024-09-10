@@ -78,11 +78,11 @@ body {
   flex-direction: column;
   gap: 1.3em;
   max-width: 35em;
-  padding: 2em;
+  padding: 3em 2em;
   box-shadow: 0px 0px 10px #316d50;
   border-radius: 20px;
-  margin: 2em;
-  animation: effectOption .5s ease 0s 1 normal forwards;
+  margin: 1em;
+  animation: effectOption 0.5s ease 0s 1 normal forwards;
   align-items: center;
 }
 
@@ -113,6 +113,7 @@ body {
 
 .option-project__description {
   color: #eeecec;
+  font-size: 1.2em;
 }
 
 .option-project__group-btn {
@@ -134,7 +135,6 @@ body {
   text-decoration: none;
   color: var(--primary-color);
   width: 12em;
-  
 }
 
 .option-project__group-btn__btn-ver:hover,
@@ -1825,12 +1825,12 @@ body {
   }
 
   .option-project {
-    gap: 1em;
+    gap: 1.5em;
   }
 }
 
 @media screen and (max-width: 418px) {
-  .option-project__title {
+  /* .option-project__title {
     font-size: 1.5em;
   }
 
@@ -1843,9 +1843,7 @@ body {
   .option-project__description {
     font-size: 0.8em;
   }
-
-
-
+ */
 
   /* Estilos Header */
 
@@ -2174,10 +2172,19 @@ body {
   opacity: 1;
 }
 
-
 @media screen and (max-height: 600px) {
   .groupSobre {
     padding: 0em 0em;
     height: 40em;
+  }
+}
+
+@media screen and (max-height: 572px) {
+  .option-project {
+    gap: 0.5em;
+  }
+
+  .option-project__title {
+    font-size: 1.8em;
   }
 }
