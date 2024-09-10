@@ -1101,6 +1101,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0em;
   }
 
   .nav > ul > li {
@@ -1341,18 +1342,13 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .data-title {
-    line-height: 25px;
-    font-size: 1.3em;
-  }
-
   .data {
-    width: 20em;
-    height: 23em;
+    width: 18em;
+    height: 22em;
   }
 
   .groupServiceExcel-secundary {
-    height: 54em;
+    height: 75em;
   }
 }
 
@@ -1583,8 +1579,8 @@ body {
 
 @media screen and (max-width: 486px) {
   .data {
-    width: 19em;
-    height: 23em;
+    width: 16em;
+    height: 22em;
   }
 }
 
@@ -1652,18 +1648,6 @@ body {
 
   .titleService-secundary {
     font-size: 1.8em;
-  }
-
-  /* .data {
-    row-gap: 0.5em;
-    column-gap: 0em;
-    width: 18em;
-  } */
-
-  .data-title {
-    line-height: 26px;
-    font-size: 1.3em;
-    margin-top: 1em;
   }
 
   .data-descricao {
@@ -2027,7 +2011,7 @@ body {
 
 @media screen and (max-width: 402px) {
   .data {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -2188,4 +2172,12 @@ body {
   right: 45px;
   transition: right 1s ease;
   opacity: 1;
+}
+
+
+@media screen and (max-height: 600px) {
+  .groupSobre {
+    padding: 0em 0em;
+    height: 40em;
+  }
 }

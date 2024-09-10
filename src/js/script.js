@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.innerWidth > 660) {
         sessao.style.height = '46em';
       } else {
-        sessao.style.height = '54em';
+        sessao.style.height = '75em';
       }
       btnVerMais.textContent = 'Ver mais';
       btnVerMais.style.outline = 'none';
