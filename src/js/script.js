@@ -4,59 +4,60 @@ let dataProjects = [
     id: 'p1',
     title: 'Planilha Baseada na Regra 50/30/20',
     description: 'Gerencie suas finanças de acordo com a regra 50/30/20 no Excel.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/RhlQY29CdHc',
     linkBuy: 'https://go.hotmart.com/E87078060R'
   },
   {
     id: 'p2',
     title: 'Planilha para controle de gastos',
     description: 'Monitore e controle seus gastos mensais no Excel com auxílio de gráficos intuitivos.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/yAAx9B1dVjI',
     linkBuy: 'https://go.hotmart.com/I86610424W'
   },
   {
     id: 'p3',
     title: 'Planilha de controle financeiro personalizável',
     description: 'Personalize seu controle financeiro de acordo com suas necessidades no Excel.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/lozbSyah2XI',
     linkBuy: 'https://go.hotmart.com/T86923742R'
   },
   {
     id: 'p4',
     title: 'Planilha de controle financeiro simples',
     description: 'Mantenha suas finanças organizadas com uma planilha simples no Excel.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/t24u-C-wRtI',
     linkBuy: 'https://go.hotmart.com/S89958786B'
   },
   {
     id: 'p5',
     title: 'Planilha Baseada na Regra 50/30/20',
     description: 'Administre suas finanças seguindo a regra 50/30/20 no Google.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/RhlQY29CdHc',
     linkBuy: 'https://go.hotmart.com/U89372251L'
   },
   {
     id: 'p6',
     title: 'Planilha para controle de gastos',
     description: 'Acompanhe seus gastos mensais no Google Sheets com auxílio de gráficos intuitivos.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/yAAx9B1dVjI',
     linkBuy: 'https://go.hotmart.com/X89372640G'
   },
   {
     id: 'p7',
     title: 'Planilha de controle financeiro personalizável',
     description: 'Customize seu controle financeiro conforme suas preferências no Google Sheets.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/lozbSyah2XI',
     linkBuy: 'https://go.hotmart.com/X89372640G'
   },
   {
     id: 'p8',
     title: 'Planilha de controle financeiro simples',
     description: 'Organize suas finanças com uma planilha simples no Google Sheets.',
-    libkSee: '',
+    linkSee: 'https://youtu.be/t24u-C-wRtI',
     linkBuy: 'https://go.hotmart.com/U89959580R'
   }
 ]
+
 //Variaveis atribuidas para tratar o menu
 const menu = document.getElementById("listMenu");
 const btnMenuLink = document.getElementById("btn-menu-link");
@@ -90,14 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         const classes = Array.from(element.parentNode.parentNode.classList);
-        console.log(classes);
         
         dataProjects.forEach(element => {
           if (element.id === classes[1]) {
-            console.log(element);
             document.querySelector('.option-project__title').innerHTML = element.title;
             document.querySelector('.option-project__description').innerHTML = element.description;
-            document.querySelector('.option-project__group-btn__btn-comprar').setAttribute('href', element.linkBuy)
+            document.querySelector('.option-project__group-btn__btn-comprar').setAttribute('href', element.linkBuy);
+            document.querySelector('.option-project__group-btn__btn-ver').setAttribute('href', element.linkSee)
             return;
           }
         })
