@@ -78,11 +78,11 @@ body {
   flex-direction: column;
   gap: 1.3em;
   max-width: 35em;
-  padding: 3em 2em;
+  padding: 2em;
   box-shadow: 0px 0px 10px #316d50;
   border-radius: 20px;
-  margin: 1em;
-  animation: effectOption 0.5s ease 0s 1 normal forwards;
+  margin: 2em;
+  animation: effectOption .5s ease 0s 1 normal forwards;
   align-items: center;
 }
 
@@ -113,7 +113,6 @@ body {
 
 .option-project__description {
   color: #eeecec;
-  font-size: 1.2em;
 }
 
 .option-project__group-btn {
@@ -134,7 +133,8 @@ body {
   transition: background-color 0.3s ease;
   text-decoration: none;
   color: var(--primary-color);
-  width: 12em;
+  width: 13em;
+  
 }
 
 .option-project__group-btn__btn-ver:hover,
@@ -1071,18 +1071,6 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .circle {
-    display: none;
-  }
-
-  .groupHeader-secundary {
-    padding: 16px;
-  }
-
-  .img {
-    position: initial;
-    filter: drop-shadow(0px 0px 20px #7eebb8);
-  }
   /* Media do Nav */
   .nav {
     padding: 0 1em;
@@ -1101,7 +1089,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0em;
   }
 
   .nav > ul > li {
@@ -1342,13 +1329,18 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .data-title {
+    line-height: 25px;
+    font-size: 1.3em;
+  }
+
   .data {
-    width: 18em;
-    height: 22em;
+    width: 20em;
+    height: 23em;
   }
 
   .groupServiceExcel-secundary {
-    height: 75em;
+    height: 54em;
   }
 }
 
@@ -1579,8 +1571,8 @@ body {
 
 @media screen and (max-width: 486px) {
   .data {
-    width: 16em;
-    height: 22em;
+    width: 19em;
+    height: 23em;
   }
 }
 
@@ -1648,6 +1640,18 @@ body {
 
   .titleService-secundary {
     font-size: 1.8em;
+  }
+
+  /* .data {
+    row-gap: 0.5em;
+    column-gap: 0em;
+    width: 18em;
+  } */
+
+  .data-title {
+    line-height: 26px;
+    font-size: 1.3em;
+    margin-top: 1em;
   }
 
   .data-descricao {
@@ -1825,12 +1829,12 @@ body {
   }
 
   .option-project {
-    gap: 1.5em;
+    gap: 1em;
   }
 }
 
 @media screen and (max-width: 418px) {
-  /* .option-project__title {
+  .option-project__title {
     font-size: 1.5em;
   }
 
@@ -1843,7 +1847,9 @@ body {
   .option-project__description {
     font-size: 0.8em;
   }
- */
+
+
+
 
   /* Estilos Header */
 
@@ -2009,7 +2015,7 @@ body {
 
 @media screen and (max-width: 402px) {
   .data {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -2170,21 +2176,4 @@ body {
   right: 45px;
   transition: right 1s ease;
   opacity: 1;
-}
-
-@media screen and (max-height: 600px) {
-  .groupSobre {
-    padding: 0em 0em;
-    height: 40em;
-  }
-}
-
-@media screen and (max-height: 572px) {
-  .option-project {
-    gap: 0.5em;
-  }
-
-  .option-project__title {
-    font-size: 1.8em;
-  }
 }
