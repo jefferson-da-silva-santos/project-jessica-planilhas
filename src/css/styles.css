@@ -1502,8 +1502,8 @@ body {
   .duvidas {
     padding: 0;
     row-gap: 1em;
-    grid-template-rows: 1fr 6fr;
-  }
+    grid-template-rows: 4em 6fr;
+}
 
   .groupDuvidas-pergunta {
     font-size: 1.5em;
@@ -1720,7 +1720,7 @@ body {
 
   /* Estilos das Dúvidas */
   .duvidas {
-    padding: 2.5em 0em 10em 0em;
+    padding: 2.5em 0em 0em 0em;
   }
 
   .groupDuvidas-title {
