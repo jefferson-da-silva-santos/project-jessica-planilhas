@@ -488,7 +488,7 @@ body {
   cursor: pointer;
   transition-property: box-shadow;
   max-width: 18em;
-  height: 20em;
+  height:19em;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
@@ -510,6 +510,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.5s ease;
+  background-repeat: no-repeat;
 }
 
 .groupData-img-1 {
@@ -1332,7 +1333,7 @@ body {
 
     .data {
         width: 18em;
-        height: 22em;
+        height: 21em;
     }
 
   .groupServiceExcel-secundary {
@@ -1568,7 +1569,7 @@ body {
 @media screen and (max-width: 486px) {
   .data {
     width: 17em;
-    height: 22em;
+    height: 18em;
 }
 }
 
@@ -1826,22 +1827,6 @@ body {
 }
 
 @media screen and (max-width: 418px) {
-  .option-project__title {
-    font-size: 1.5em;
-  }
-
-  .option-project__group-btn__btn-ver,
-  .option-project__group-btn__btn-comprar {
-    padding: 0.5em 1em;
-    font-size: 0.8em;
-  }
-
-  .option-project__description {
-    font-size: 0.8em;
-  }
-
-
-
 
   /* Estilos Header */
 
@@ -2008,6 +1993,12 @@ body {
 @media screen and (max-width: 402px) {
   .data {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 383px) {
+  .data {
+    height: 17em;
   }
 }
 
