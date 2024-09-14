@@ -54,6 +54,11 @@ body {
   color: white;
 }
 
+.value-planilha {
+  color: #12ff46;
+  white-space: nowrap;
+}
+
 /* Estilos do Option */
 
 .groupOption-project {
@@ -2159,4 +2164,12 @@ body {
   right: 45px;
   transition: right 1s ease;
   opacity: 1;
+}
+
+
+@media screen and (max-height: 600px) {
+  .sobre {
+    padding: 13em 0em;
+    padding-bottom: 13em;
+  }
 }
