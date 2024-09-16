@@ -2167,7 +2167,7 @@ body {
 }
 
 
-@media screen and (max-height: 600px) {
+@media (max-height: 600px) and (max-width: 320px) {
   .sobre {
     padding: 13em 0em;
     padding-bottom: 13em;
