@@ -1816,6 +1816,14 @@ body {
     text-align: center;
   }
 
+  .option-project__title {
+    font-size: 1.5em;
+  }
+  
+  .option-project__description {
+    font-size: 1.15em;
+  }
+
   .option-project__group-btn {
     flex-direction: column;
   }
