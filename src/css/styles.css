@@ -493,7 +493,7 @@ body {
   cursor: pointer;
   transition-property: box-shadow;
   max-width: 18em;
-  height:19em;
+  height: 263px;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
@@ -519,35 +519,39 @@ body {
 }
 
 .groupData-img-1 {
-  background-image: url("../image/excel-04.webp");
+  background-image: url("../image/imagem-excel-1.png");
 }
 
 .groupData-img-2 {
-  background-image: url("../image/excel-01.webp");
+  background-image: url("../image/controle-de-gastor.png");
 }
 
 .groupData-img-3 {
-  background-image: url("../image/excel-03.webp");
+  background-image: url("../image/personalizavel.png");
 }
 
 .groupData-img-4 {
-  background-image: url("../image/excel-02.webp");
+  background-image: url("../image/simples.png");
 }
 
 .groupData-img-5 {
-  background-image: url("../image/google-2.webp");
+  background-image: url("../image/503020Gs.png");
 }
 
 .groupData-img-6 {
-  background-image: url("../image/google-1.webp");
+  background-image: url("../image/gastosGs.png");
 }
 
 .groupData-img-7 {
-  background-image: url("../image/google-3.webp");
+  background-image: url("../image/personzGz.png");
 }
 
 .groupData-img-8 {
-  background-image: url("../image/google-4.webp");
+  background-image: url("../image/simplesGs.png");
+}
+
+.groupData-img-9 {
+  background-image: url("../image/planner.png");
 }
 
 .data-title {
@@ -1077,6 +1081,30 @@ body {
   }
 }
 
+@media screen and (max-width: 997px) {
+  .data {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 956px) {
+  .data {
+    height: 253px;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .data {
+    height: 253px;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .data {
+    height: 248px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   /* Media do Nav */
   .nav {
@@ -1186,6 +1214,7 @@ body {
   .data {
     max-width: none;
     width: 21em;
+    height: 294px;
   }
 
   .youtube {
@@ -1301,18 +1330,21 @@ body {
 @media screen and (max-width: 833px) {
   .data {
     width: 19em;
+    height: 278px;
   }
 }
 
 @media screen and (max-width: 773px) {
   .data {
     width: 18em;
+    height: 269px;
   }
 }
 
 @media screen and (max-width: 738px) {
   .data {
     width: 16em;
+    height: 253px;
   }
 }
 
@@ -1338,7 +1370,7 @@ body {
 
     .data {
         width: 18em;
-        height: 21em;
+        height: 269px;
     }
 
   .groupServiceExcel-secundary {
@@ -1574,8 +1606,8 @@ body {
 @media screen and (max-width: 486px) {
   .data {
     width: 17em;
-    height: 18em;
-}
+    height: 261px;
+  }
 }
 
 @media screen and (max-width: 466px) {
@@ -2005,13 +2037,14 @@ body {
 
 @media screen and (max-width: 402px) {
   .data {
-    width: 80%;
+    width: 235px;
+    height: 244px;
   }
 }
 
 @media screen and (max-width: 383px) {
   .data {
-    height: 17em;
+    height: 243px;
   }
 }
 
