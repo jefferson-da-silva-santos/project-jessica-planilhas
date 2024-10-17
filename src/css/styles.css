@@ -55,11 +55,14 @@ body {
 }
 
 .value-planilha {
-  color: #12ff46;
+  color: #509d68;
   white-space: nowrap;
 }
 
 /* Estilos do Option */
+
+/* background-color: #012816;
+  border: 1px solid #023d21; */
 
 .groupOption-project {
   position: fixed;
@@ -79,12 +82,13 @@ body {
   text-align: center;
   position: relative;
   background-color: var(--primary-color);
+  border: 1px solid #02341c;
   display: flex;
   flex-direction: column;
   gap: 1.3em;
   max-width: 35em;
   padding: 3em 2em 2em 2em;
-  box-shadow: 0px 0px 10px #316d50;
+  box-shadow: 0px 0px 10px #02341c;
   border-radius: 20px;
   margin: 2em;
   animation: effectOption .5s ease 0s 1 normal forwards;
@@ -117,7 +121,7 @@ body {
 }
 
 .option-project__description {
-  color: #eeecec;
+  color: white;
   font-size: 1.26em;
 }
 
@@ -130,22 +134,23 @@ body {
 .option-project__group-btn__btn-ver,
 .option-project__group-btn__btn-comprar {
   padding: 0.6em 1em;
-  border: none;
+  border: 2px solid #02341c;
   border-radius: 5px;
   font-weight: 800;
   font-family: var(--secundary-font);
-  background-color: #5dffb0;
+  background-color: var(--primary-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
-  color: var(--primary-color);
+  color: #9ce7c5;
+  font-weight: 600;
   width: 13em;
   
 }
 
 .option-project__group-btn__btn-ver:hover,
 .option-project__group-btn__btn-comprar:hover {
-  background-color: #33ae73;
+  background-color: #257850;
 }
 
 .icon-btn-option {
@@ -482,22 +487,62 @@ body {
 }
 
 .data {
-  background-color: var(--secundary-color);
-  border-radius: 5px;
+  background-color: #012816;
+  border: 1px solid #023d21;
+  border-radius: 3px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
-  padding: 0.6em;
+  padding: .7em;
   row-gap: 1em;
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
   max-width: 18em;
-  height: 263px;
+  height: 267px;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
   margin: auto;
+}
+
+.data-title {
+  font-family: var(--secundary-font);
+  color: #9ce7c5;
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.99em;
+  max-width: 16em;
+  font-weight: 600;
+  margin: auto;
+}
+
+.data-descricao {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 0.82em;
+  margin-bottom: 0.67em;
+}
+
+.btn-ver-planilha {
+  font-size: 0.75em;
+  height: 3.2em;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  font-family: var(--secundary-font);
+  color: #9ce7c5;
+  font-weight: bolder;
+  background-color: #012816;
+  border: 2px solid #02341d;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn-ver-planilha:hover {
+  background-color: #012415;
 }
 
 .groupData-text {
@@ -512,7 +557,7 @@ body {
   justify-content: center;
   align-items: center;
   background-size: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
   transition: all 0.5s ease;
   background-repeat: no-repeat;
@@ -552,46 +597,6 @@ body {
 
 .groupData-img-9 {
   background-image: url("../image/planner.png");
-}
-
-.data-title {
-  font-family: var(--secundary-font);
-  color: var(--primary-color);
-  text-align: center;
-  line-height: 20px;
-  font-size: 0.99em;
-  max-width: 16em;
-  font-weight: 600;
-  margin: auto;
-}
-
-.data-descricao {
-  font-family: var(--primary-font);
-  color: var(--primary-color);
-  text-align: center;
-  font-size: 0.82em;
-  margin-bottom: 0.67em;
-}
-
-.btn-ver-planilha {
-  font-size: 0.75em;
-  height: 3.2em;
-  border: none;
-  border-radius: 5px;
-  font-weight: 500;
-  font-family: var(--secundary-font);
-  color: #e1fff1;
-  font-weight: bolder;
-  background-color: #79b699;
-  border: 2px solid #ccffe6;
-  letter-spacing: 1px;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-.btn-ver-planilha:hover {
-  background-color: #ccffe6;
-  color: var(--primary-color);
 }
 
 .btn-ver-planilha .icone {
@@ -1084,25 +1089,25 @@ body {
 
 @media screen and (max-width: 997px) {
   .data {
-    height: 260px;
+    height: 261px;
   }
 }
 
 @media screen and (max-width: 956px) {
   .data {
-    height: 253px;
+    height: 255px;
   }
 }
 
 @media screen and (max-width: 949px) {
   .data {
-    height: 253px;
+    height: 254px;
   }
 }
 
 @media screen and (max-width: 922px) {
   .data {
-    height: 248px;
+    height: 249px;
   }
 }
 
@@ -1215,7 +1220,7 @@ body {
   .data {
     max-width: none;
     width: 21em;
-    height: 294px;
+    height: 295px;
   }
 
   .youtube {
@@ -1331,21 +1336,21 @@ body {
 @media screen and (max-width: 833px) {
   .data {
     width: 19em;
-    height: 278px;
+    height: 280px;
   }
 }
 
 @media screen and (max-width: 773px) {
   .data {
     width: 18em;
-    height: 269px;
+    height: 272px;
   }
 }
 
 @media screen and (max-width: 738px) {
   .data {
     width: 16em;
-    height: 253px;
+    height: 256px;
   }
 }
 
@@ -1371,7 +1376,7 @@ body {
 
     .data {
         width: 18em;
-        height: 269px;
+        height: 272px;
     }
 
   .groupServiceExcel-secundary {
@@ -1607,7 +1612,7 @@ body {
 @media screen and (max-width: 486px) {
   .data {
     width: 17em;
-    height: 261px;
+    height: 264px;
   }
 }
 
@@ -2039,13 +2044,13 @@ body {
 @media screen and (max-width: 402px) {
   .data {
     width: 235px;
-    height: 244px;
+    height: 245px;
   }
 }
 
 @media screen and (max-width: 383px) {
   .data {
-    height: 243px;
+    height: 246px;
   }
 }
 
