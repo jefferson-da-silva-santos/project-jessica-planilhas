@@ -82,7 +82,7 @@ body {
   text-align: center;
   position: relative;
   background-color: var(--primary-color);
-  border: 1px solid #02341c;
+  border: 2.5px solid #02341c;
   display: flex;
   flex-direction: column;
   gap: 1.3em;
@@ -111,7 +111,7 @@ body {
   right: 0;
   top: 0;
   font-size: 1.6em;
-  color: #5dffb0;
+  color: #045c31;
   padding-right: 13px;
   padding-top: 11px;
 }
@@ -134,7 +134,7 @@ body {
 .option-project__group-btn__btn-ver,
 .option-project__group-btn__btn-comprar {
   padding: 0.6em 1em;
-  border: 2px solid #02341c;
+  border: 2.5px solid #02341c;
   border-radius: 5px;
   font-weight: 800;
   font-family: var(--secundary-font);
@@ -487,8 +487,8 @@ body {
 }
 
 .data {
-  background-color: #012816;
-  border: 1px solid #023d21;
+  background-color: #032b18;
+  border: 2.5px solid #02552e;
   border-radius: 3px;
   display: grid;
   grid-template-columns: 1fr;
@@ -534,8 +534,8 @@ body {
   font-family: var(--secundary-font);
   color: #9ce7c5;
   font-weight: bolder;
-  background-color: #012816;
-  border: 2px solid #02341d;
+  background-color: #032b18;
+  border: 2.5px solid #02552e;
   letter-spacing: 1px;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -862,13 +862,13 @@ body {
 .groupDuvidas-title {
   font-family: var(--primary-font);
   color: black;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .groupDuvidas-respostas {
   font-family: var(--secundary-font);
   padding: 1em 3em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.6em;
   color: rgb(27, 27, 27);
 }
@@ -1549,7 +1549,7 @@ body {
 }
 
   .groupDuvidas-pergunta {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .groupDuvidas-respostas {
@@ -1772,7 +1772,7 @@ body {
   }
 
   .groupDuvidas-pergunta {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .groupDuvidas-respostas {
