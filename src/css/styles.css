@@ -91,7 +91,7 @@ body {
   box-shadow: 0px 0px 10px #02341c;
   border-radius: 20px;
   margin: 2em;
-  animation: effectOption .5s ease 0s 1 normal forwards;
+  animation: effectOption 0.5s ease 0s 1 normal forwards;
   align-items: center;
 }
 
@@ -145,7 +145,6 @@ body {
   color: #9ce7c5;
   font-weight: 600;
   width: 13em;
-  
 }
 
 .option-project__group-btn__btn-ver:hover,
@@ -487,19 +486,19 @@ body {
 }
 
 .data {
-  background-color: #032b18;
-  border: 2.5px solid #02552e;
+  background-color: #033921;
+  border: 1px solid #005d31;
   border-radius: 3px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
-  padding: .7em;
+  padding: 0.7em;
   row-gap: 1em;
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
   max-width: 18em;
-  height: 267px;
+  height: 276px;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
@@ -508,10 +507,10 @@ body {
 
 .data-title {
   font-family: var(--secundary-font);
-  color: #9ce7c5;
+  color: #ffffff;
   text-align: center;
   line-height: 20px;
-  font-size: 0.99em;
+  font-size: 0.97em;
   max-width: 16em;
   font-weight: 600;
   margin: auto;
@@ -526,19 +525,20 @@ body {
 }
 
 .btn-ver-planilha {
-  font-size: 0.75em;
+  font-size: 0.8em;
   height: 3.2em;
   border: none;
   border-radius: 3px;
-  font-weight: 500;
+  letter-spacing: 2px;
   font-family: var(--secundary-font);
-  color: #9ce7c5;
+  color: #ffffff;
   font-weight: bolder;
-  background-color: #032b18;
-  border: 2.5px solid #02552e;
+  background-color: #033921;
+  border: 2px solid #065d34;
   letter-spacing: 1px;
   transition: all 0.5s ease;
   cursor: pointer;
+  margin-top: 0.7em;
 }
 
 .btn-ver-planilha:hover {
@@ -1089,25 +1089,25 @@ body {
 
 @media screen and (max-width: 997px) {
   .data {
-    height: 261px;
+    height: 272px;
   }
 }
 
 @media screen and (max-width: 956px) {
   .data {
-    height: 255px;
+    height: 266px;
   }
 }
 
 @media screen and (max-width: 949px) {
   .data {
-    height: 254px;
+    height: 264px;
   }
 }
 
 @media screen and (max-width: 922px) {
   .data {
-    height: 249px;
+    height: 259px;
   }
 }
 
@@ -1220,7 +1220,7 @@ body {
   .data {
     max-width: none;
     width: 21em;
-    height: 295px;
+    height: 307px;
   }
 
   .youtube {
@@ -1336,21 +1336,21 @@ body {
 @media screen and (max-width: 833px) {
   .data {
     width: 19em;
-    height: 280px;
+    height: 291px;
   }
 }
 
 @media screen and (max-width: 773px) {
   .data {
     width: 18em;
-    height: 272px;
+    height: 284px;
   }
 }
 
 @media screen and (max-width: 738px) {
   .data {
     width: 16em;
-    height: 256px;
+    height: 267px;
   }
 }
 
@@ -1374,10 +1374,10 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-    .data {
-        width: 18em;
-        height: 272px;
-    }
+  .data {
+    width: 22em;
+    height: 315px;
+  }
 
   .groupServiceExcel-secundary {
     height: 75em;
@@ -1546,7 +1546,7 @@ body {
     padding: 0;
     row-gap: 1em;
     grid-template-rows: 4em 6fr;
-}
+  }
 
   .groupDuvidas-pergunta {
     font-size: 1.2em;
@@ -1606,13 +1606,6 @@ body {
 
   .link-contato-icon {
     font-size: 1.7em;
-  }
-}
-
-@media screen and (max-width: 486px) {
-  .data {
-    width: 17em;
-    height: 264px;
   }
 }
 
@@ -1687,8 +1680,6 @@ body {
     column-gap: 0em;
     width: 18em;
   } */
-
-  
 
   .data-descricao {
     font-size: 1.1em;
@@ -1857,7 +1848,7 @@ body {
   .option-project__title {
     font-size: 1.5em;
   }
-  
+
   .option-project__description {
     font-size: 1.15em;
   }
@@ -1877,8 +1868,15 @@ body {
   }
 }
 
-@media screen and (max-width: 418px) {
+@media screen and (max-width: 446px) {
+  .data {
+    width: 20em;
+    height: 300px;
+  }
+}
 
+
+@media screen and (max-width: 418px) {
   /* Estilos Header */
 
   .btn {
@@ -2042,16 +2040,19 @@ body {
 }
 
 @media screen and (max-width: 402px) {
-  .data {
-    width: 235px;
-    height: 245px;
+  .groupServiceExcel-secundary {
+    padding: 0;
   }
+  .data {
+    width: 18em;
+    height: 284px;
+}
 }
 
 @media screen and (max-width: 383px) {
-  .data {
+  /* .data {
     height: 246px;
-  }
+  } */
 }
 
 @media screen and (max-width: 378px) {
@@ -2118,6 +2119,13 @@ body {
     font-size: 0.86em;
     font-weight: bolder;
   }
+}
+
+@media screen and (max-width: 362px) {
+  .data {
+    width: 16em;
+    height: 268px;
+}
 }
 
 @media screen and (max-width: 338px) {
@@ -2212,7 +2220,6 @@ body {
   transition: right 1s ease;
   opacity: 1;
 }
-
 
 @media (max-height: 600px) and (max-width: 320px) {
   .sobre {
