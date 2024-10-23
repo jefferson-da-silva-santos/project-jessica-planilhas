@@ -142,7 +142,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
-  color: #9ce7c5;
+  color: #ffffff;
   font-weight: 600;
   width: 13em;
 }
@@ -492,13 +492,13 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
-  padding: 0.7em;
+  padding: 1em 0.7em;
   row-gap: 1em;
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
   max-width: 18em;
-  height: 276px;
+  height: 285px;
   transition-duration: 0.5s;
   transition-timing-function: ease;
   position: relative;
@@ -1089,7 +1089,7 @@ body {
 
 @media screen and (max-width: 997px) {
   .data {
-    height: 272px;
+    height: 278px;
   }
 }
 
@@ -1101,13 +1101,13 @@ body {
 
 @media screen and (max-width: 949px) {
   .data {
-    height: 264px;
+    height: 274px;
   }
 }
 
 @media screen and (max-width: 922px) {
   .data {
-    height: 259px;
+    height: 269px;
   }
 }
 
@@ -1130,6 +1130,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0;
   }
 
   .nav > ul > li {
@@ -1220,7 +1221,7 @@ body {
   .data {
     max-width: none;
     width: 21em;
-    height: 307px;
+    height: 315px;
   }
 
   .youtube {
@@ -1336,21 +1337,21 @@ body {
 @media screen and (max-width: 833px) {
   .data {
     width: 19em;
-    height: 291px;
+    height: 300px;
   }
 }
 
 @media screen and (max-width: 773px) {
   .data {
     width: 18em;
-    height: 284px;
+    height: 291px;
   }
 }
 
 @media screen and (max-width: 738px) {
   .data {
     width: 16em;
-    height: 267px;
+    height: 276px;
   }
 }
 
@@ -1376,7 +1377,7 @@ body {
 
   .data {
     width: 22em;
-    height: 315px;
+    height: 324px;
   }
 
   .groupServiceExcel-secundary {
@@ -1871,7 +1872,7 @@ body {
 @media screen and (max-width: 446px) {
   .data {
     width: 20em;
-    height: 300px;
+    height: 308px;
   }
 }
 
@@ -2045,7 +2046,7 @@ body {
   }
   .data {
     width: 18em;
-    height: 284px;
+    height: 292px;
 }
 }
 
@@ -2124,7 +2125,7 @@ body {
 @media screen and (max-width: 362px) {
   .data {
     width: 16em;
-    height: 268px;
+    height: 277px;
 }
 }
 
