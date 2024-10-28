@@ -287,11 +287,6 @@
               </div>
             </article>
           </section>
-          <div class="groupServiceExcel-terciary">
-            <button id="btn-ver-mais" class="btn-ver-mais-projetos">
-              Ver mais
-            </button>
-          </div>
         </section>
       </div>
 
@@ -738,39 +733,6 @@
             }
           });
         });
-
-        document
-          .getElementById("btn-ver-mais")
-          .addEventListener("click", () => {
-            const sessao = document.querySelector(
-              ".groupServiceExcel-secundary"
-            );
-            const sessaoTerciary = document.querySelector(
-              ".groupServiceExcel-terciary"
-            );
-            const btnVerMais = document.querySelector(".btn-ver-mais-projetos");
-
-            if (!sessionProjectsExpanded) {
-              sessao.style.transition = "height .3s ease";
-              sessao.style.height = "100%";
-              sessaoTerciary.style.boxShadow = "none";
-              btnVerMais.style.outline = "none";
-              sessionProjectsExpanded = !sessionProjectsExpanded;
-              btnVerMais.textContent = "Ver menos";
-            } else {
-              sessao.style.transition = "height .3s ease";
-              if (window.innerWidth > 660) {
-                sessao.style.height = "46em";
-              } else {
-                sessao.style.height = "75em";
-              }
-              btnVerMais.textContent = "Ver mais";
-              btnVerMais.style.outline = "none";
-              sessaoTerciary.style.boxShadow =
-                "0px -46px 27px var(--primary-color)";
-              sessionProjectsExpanded = !sessionProjectsExpanded;
-            }
-          });
 
         document.querySelectorAll(".img-service").forEach((element) => {
           element.addEventListener("mouseover", () => {
