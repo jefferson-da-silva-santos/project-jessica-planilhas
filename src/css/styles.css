@@ -487,6 +487,38 @@ body {
   transition-timing-function: ease-in;
 }
 
+.groupServiceExcel-terciary {
+  padding-top: 4em;
+  margin-bottom: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-planilha-perso {
+  padding: .5em 1em;
+  font-family: var(--secundary-font);
+  text-decoration: none;
+  background-color: #045c31;
+  color: white;
+  border-radius: 50px;
+  font-size: 1.2em;
+  box-shadow: 0px 0px 10px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease;
+}
+
+.btn-planilha-perso:hover {
+  transform: scale(105%);
+}
+
+.btn-planilha-perso i {
+  font-size: 1.2em;
+  margin-left: 12px;
+}
+
 .data {
   background-color: #002b1d;
   border: 1px solid #083d24;
@@ -1647,11 +1679,14 @@ body {
     font-size: 1.8em;
   }
 
-  /* .data {
-    row-gap: 0.5em;
-    column-gap: 0em;
-    width: 18em;
-  } */
+  .btn-planilha-perso {
+    font-size: 1em;
+  }
+
+  .btn-planilha-perso i {
+    margin-left: 10px;
+    font-size: 1em;
+  }
 
   .data-descricao {
     font-size: 1.1em;
@@ -2021,10 +2056,16 @@ body {
 }
 }
 
-@media screen and (max-width: 383px) {
-  /* .data {
-    height: 246px;
-  } */
+@media screen and (max-width: 390px) {
+
+  .groupServiceExcel-terciary {
+    padding-bottom: 0;
+  }
+
+  .btn-planilha-perso {
+    font-size: .8em;
+    padding: 1em;
+  }
 }
 
 @media screen and (max-width: 378px) {
