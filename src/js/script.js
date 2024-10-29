@@ -70,6 +70,7 @@ let optionVisibled = false;
 // Variaveis do details
 const detailsList = document.querySelectorAll(".caixa-pergunta");
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelector('.btn-close-option').addEventListener('click', (event) => {
@@ -232,4 +233,6 @@ function criarObservacao(classeOculta, classeMostrar) {
 
   const elementosOcultos = document.querySelectorAll(classeOculta);
   elementosOcultos.forEach((element) => observacao.observe(element));
+
+  document.querySelector
 }
