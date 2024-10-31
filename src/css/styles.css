@@ -846,6 +846,10 @@ body {
   padding-bottom: 2em;
 }
 
+.p-1 {
+  max-width: 29em;
+}
+
 .groupDuvidas-primary {
   display: flex;
   align-items: center;
