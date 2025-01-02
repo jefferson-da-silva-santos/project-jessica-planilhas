@@ -152,6 +152,10 @@ body {
   background-color: #257850;
 }
 
+.option-project__group-btn__btn-comprar {
+  display: none;
+}
+
 .icon-btn-option {
   color: #011e11;
   font-size: 1.1em;
@@ -599,11 +603,11 @@ body {
 }
 
 .groupData-img-1 {
-  background-image: url("../image/50-30-20-excel.png");
+  background-image: url("../image/GIF.gif");
 }
 
 .groupData-img-2 {
-  background-image: url("../image/gastos-excel.png");
+  background-image: url("../image/Em\ produção....png");
 }
 
 .groupData-img-3 {
@@ -615,7 +619,7 @@ body {
 }
 
 .groupData-img-5 {
-  background-image: url("../image/50-30-20-gs.png");
+  background-image: url("../image/Em\ produção....png");
 }
 
 .groupData-img-6 {
