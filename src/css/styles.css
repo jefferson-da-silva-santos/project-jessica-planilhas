@@ -10,7 +10,7 @@
   --terciary-font: "Open Sans", sans-serif;
 
   --primary-color: #011e11;
-  --secundary-color: #ADDEC8;
+  --secundary-color: #addec8;
 
   --max-width-sections: 960px;
   --width-sections: 90%;
@@ -170,7 +170,7 @@ body {
   left: 0;
   z-index: 12;
   width: 100vw;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .nav {
@@ -332,7 +332,7 @@ body {
 /* Estilos do Sobre */
 
 .groupSobre {
-  background-color: var(--secundary-color);
+  background-color: #ebebeb;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -361,6 +361,7 @@ body {
 .groupSobre-primary img {
   position: absolute;
   width: 54%;
+  filter: blur(1px);
 }
 
 .img-excel {
@@ -411,8 +412,8 @@ body {
 .groupSobre-secundary-texts {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  width: 22em;
+  gap: 2rem;
+  width: 100%;
 }
 
 .titleSobre {
@@ -434,7 +435,7 @@ body {
 
 .groupServiceExcel {
   position: relative;
-  background-color: var(--primary-color);
+  background-color: white;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -469,7 +470,7 @@ body {
   font-family: var(--primary-font);
   text-align: center;
   font-size: 2.4em;
-  color: white;
+  color: #185c37;
 }
 
 .groupServiceExcel-secundary {
@@ -491,16 +492,8 @@ body {
   transition-timing-function: ease-in;
 }
 
-.groupServiceExcel-terciary {
-  padding-top: 4em;
-  margin-bottom: .5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .btn-planilha-perso {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   font-family: var(--secundary-font);
   text-decoration: none;
   background-color: #045c31;
@@ -511,7 +504,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .btn-planilha-perso:hover {
@@ -524,9 +517,9 @@ body {
 }
 
 .data {
-  background-color: #002b1d;
-  border: 1px solid #083d24;
-  border-radius: 3px;
+  background-image: linear-gradient(to bottom right, #185c37 38%, #79a68e);
+  border: none;
+  border-radius: 6px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
@@ -541,7 +534,7 @@ body {
   transition-timing-function: ease;
   position: relative;
   margin: auto;
-  box-shadow: 0px 0px 10px rgb(5, 20, 5);
+  box-shadow: 6px 6px 10px rgb(102 102 102 / 45%);
 }
 
 .data-title {
@@ -549,7 +542,7 @@ body {
   color: #ffffff;
   text-align: center;
   line-height: 20px;
-  font-size: 0.97em;
+  font-size: 1em;
   max-width: 16em;
   font-weight: 600;
   margin: auto;
@@ -564,24 +557,25 @@ body {
 }
 
 .btn-ver-planilha {
-  font-size: 0.8em;
-  height: 3.2em;
+  font-size: .95em;
+  height: 2.4em;
+  font-weight: bolder;
   border: none;
   border-radius: 3px;
   letter-spacing: 2px;
   font-family: var(--secundary-font);
-  color: #ffffff;
+  color: #185c37;
   font-weight: bolder;
-  background-color: #002b1d;
-  border: 2px solid #044124;
+  background-color: #ffffff;
+  border: none;
   letter-spacing: 1px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   margin-top: 0.7em;
-}
-
-.btn-ver-planilha:hover {
-  background-color: #044124;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .groupData-text {
@@ -596,7 +590,7 @@ body {
   justify-content: center;
   align-items: center;
   background-size: 100%;
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
   transition: all 0.5s ease;
   background-repeat: no-repeat;
@@ -610,44 +604,22 @@ body {
   background-image: url("../image/producao.png");
 }
 
-.groupData-img-3 {
-  background-image: url("../image/person-excel.png");
-}
-
-.groupData-img-4 {
-  background-image: url("../image/simples-excel.png");
-}
-
 .groupData-img-5 {
   background-image: url("../image/producao.png");
 }
 
-.groupData-img-6 {
-  background-image: url("../image/gastos-gs.png");
-}
-
-.groupData-img-7 {
-  background-image: url("../image/person-gs.png");
-}
-
-.groupData-img-8 {
-  background-image: url("../image/simples-gs.png");
-}
-
 .groupData-img-9 {
-  background-image: url("../image/planner.png");
+  background-image: url("../image/GIF-planner.gif");
 }
 
 .btn-ver-planilha .icone {
   color: rgb(0, 0, 0);
 }
 
-
-
 /* Estilos do YouTube */
 
 .groupYouTube {
-  background-color: var(--secundary-color);
+  background-color: #ebebeb;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -675,7 +647,7 @@ body {
 .groupTouTube-texts {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 2em;
   padding: 1em;
 }
 
@@ -689,7 +661,8 @@ body {
 
 .textYoutube {
   font-family: var(--secundary-font);
-  font-weight: bolder;
+  font-weight: 500;
+  max-width: 15em;
   font-size: 1.3em;
   line-height: 1.5em;
   color: var(--primary-color);
@@ -704,24 +677,23 @@ body {
 }
 
 .btnYoutube {
-  width: 18em;
-  height: 3.5em;
-  border: 3px solid white;
-  background-color: var(--secundary-color);
-  border-radius: 30px;
+  width: 16em;
+  padding: 1em;
+  border: none;
+  background-image: linear-gradient(to right, #0097b2, #79b699);
+  border-radius: 40px;
+  cursor: pointer;
   transition-property: transform, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: var(--transition-ease);
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: var(--primary-font);
-  font-weight: bolder;
-  color: white;
   font-size: 1em;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 800;
+  color: white;
+  font-family: var(--secundary-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .btnYoutube:hover {
@@ -734,6 +706,13 @@ body {
   justify-content: center;
   align-items: baseline;
   grid-column: 2 / -1;
+}
+
+.groupYouTube-secundary__img {
+  width: 100%;
+  max-width: 35em;
+  margin-bottom: 3em;
+  box-shadow: 6px 6px 10px rgb(102 102 102 / 45%);
 }
 
 /* Estilos Benefícios */
@@ -811,8 +790,8 @@ body {
 }
 
 .icons-beneficios {
-  width: 6em;
-  height: 6em;
+  width: 70px;
+  height: 70px;
 }
 
 .beneficio-item-title {
@@ -829,7 +808,7 @@ body {
 /* Estilos das Duvidas */
 
 .groupDuvidas {
-  background-color: var(--secundary-color);
+  background-color: #ebebeb;
   color: black;
   min-height: 100vh;
   display: flex;
@@ -850,10 +829,6 @@ body {
   padding-bottom: 2em;
 }
 
-.p-1 {
-  max-width: 29em;
-}
-
 .groupDuvidas-primary {
   display: flex;
   align-items: center;
@@ -863,10 +838,16 @@ body {
 
 .groupDuvidas-pergunta {
   font-family: var(--secundary-font);
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 1.4em;
-  padding: 0.7em 1em;
+  padding: 0;
   color: var(--primary-color);
+  cursor: pointer;
+}
+
+.caixa-pergunta {
+  padding: 1em 10px;
+  border-bottom: 1px solid rgb(189, 189, 189);
   cursor: pointer;
 }
 
@@ -883,7 +864,7 @@ body {
 .groupDuvidas-respostas {
   font-family: var(--secundary-font);
   padding: 1em 3em;
-  font-size: 1.1em;
+  font-size: 1.25em;
   line-height: 1.6em;
   color: rgb(27, 27, 27);
 }
@@ -1463,7 +1444,7 @@ body {
 
   .groupSobre-secundary-texts {
     gap: 2rem;
-    width: 24em;
+    width: 100%;
   }
   /* Estilos YouTube */
 
@@ -1890,7 +1871,6 @@ body {
   }
 }
 
-
 @media screen and (max-width: 418px) {
   /* Estilos Header */
 
@@ -2061,17 +2041,12 @@ body {
   .data {
     width: 18em;
     height: 292px;
-}
+  }
 }
 
 @media screen and (max-width: 390px) {
-
-  .groupServiceExcel-terciary {
-    padding-bottom: 0;
-  }
-
   .btn-planilha-perso {
-    font-size: .8em;
+    font-size: 0.8em;
     padding: 1em;
   }
 }
@@ -2146,7 +2121,7 @@ body {
   .data {
     width: 16em;
     height: 277px;
-}
+  }
 }
 
 @media screen and (max-width: 338px) {

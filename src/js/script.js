@@ -17,7 +17,7 @@ let dataProjects = [
   {
     id: 'p3',
     title: 'Planilha de controle financeiro personalizável - Excel',
-    description: 'Personalize seu controle financeiro de acordo com suas necessidades no Excel.',
+    description: 'Personalize seu controle financeiro de acordo com suas nece\\ssidades no Excel.',
     linkSee: 'https://youtu.be/lozbSyah2XI',
     linkBuy: 'https://go.hotmart.com/T86923742R'
   },
@@ -66,71 +66,11 @@ const linksMenu = document.querySelectorAll(".link-menu");
 const groupOption = document.querySelector('.groupOption-project');
 let menuOpen = false;
 let sessionProjectsExpanded = false;
-let optionVisibled = false;
 // Variaveis do details
 const detailsList = document.querySelectorAll(".caixa-pergunta");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  document.querySelector('.btn-close-option').addEventListener('click', (event) => {
-    event.preventDefault();
-
-    if (optionVisibled) {
-      groupOption.style.display = 'none';
-      document.body.style.overflow = 'auto';
-      optionVisibled = !optionVisibled;
-    }
-  });
-
-  document.querySelectorAll('.btn-ver-planilha').forEach(element => {
-    element.addEventListener('click', () => {
-      if (!optionVisibled) {
-        groupOption.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        optionVisibled = !optionVisibled;
-
-
-        const classes = Array.from(element.parentNode.parentNode.classList);
-        
-        dataProjects.forEach(element => {
-          if (element.id === classes[1]) {
-            document.querySelector('.option-project__title').innerHTML = element.title;
-            document.querySelector('.option-project__description').innerHTML = element.description;
-            document.querySelector('.option-project__group-btn__btn-comprar').setAttribute('href', element.linkBuy);
-            document.querySelector('.option-project__group-btn__btn-ver').setAttribute('href', element.linkSee)
-            return;
-          }
-        })
-      }
-    });
-  });
-
-  document.getElementById('btn-ver-mais').addEventListener('click', () => {
-    const sessao = document.querySelector('.groupServiceExcel-secundary');
-    const sessaoTerciary = document.querySelector('.groupServiceExcel-terciary');
-    const btnVerMais = document.querySelector('.btn-ver-mais-projetos');
-
-    if (!sessionProjectsExpanded) {
-      sessao.style.transition = 'height .3s ease';
-      sessao.style.height = '100%';
-      sessaoTerciary.style.boxShadow = 'none';
-      btnVerMais.style.outline = 'none';
-      sessionProjectsExpanded = !sessionProjectsExpanded;
-      btnVerMais.textContent = 'Ver menos';
-    } else {
-      sessao.style.transition = 'height .3s ease';
-      if (window.innerWidth > 660) {
-        sessao.style.height = '46em';
-      } else {
-        sessao.style.height = '75em';
-      }
-      btnVerMais.textContent = 'Ver mais';
-      btnVerMais.style.outline = 'none';
-      sessaoTerciary.style.boxShadow = '0px -46px 27px var(--primary-color)';
-      sessionProjectsExpanded = !sessionProjectsExpanded;
-    }
-  });
 
   document.querySelectorAll(".img-service").forEach((element) => {
     element.addEventListener("mouseover", () => {
