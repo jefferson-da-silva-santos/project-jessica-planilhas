@@ -557,7 +557,7 @@ body {
 }
 
 .btn-ver-planilha {
-  font-size: .95em;
+  font-size: 0.95em;
   height: 2.4em;
   font-weight: bolder;
   border: none;
@@ -869,6 +869,54 @@ body {
   color: rgb(27, 27, 27);
 }
 
+/* Estilos do Sobre Mim */
+
+.groupSobreMim {
+  background-color: white;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: var(--primary-font);
+}
+
+.sobre-mim {
+  width: var(--width-sections);
+  max-width: var(--max-width-sections);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 3rem;
+}
+
+.sobre-mim--secundary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sobre-mim--secundary__title {
+  font-size: 2.8em;
+  font-weight: 600;
+}
+
+.sobre-mim--secundary__text {
+  font-size: 1.1em;
+}
+
+.sobre-mim--primary__img {
+  object-position: center;
+  filter: saturate(140%);
+  z-index: 1;
+  width: 100%;
+  max-width: 20em;
+  min-width: 18em;
+  border-radius: 5px;
+  box-shadow: 6px 6px 10px rgb(102 102 102 / 45%);
+}
+
 /* Estilos do Contato */
 
 .groupContato {
@@ -992,6 +1040,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  padding-top: 4em;
   justify-content: center;
 }
 
@@ -1002,17 +1051,7 @@ body {
   z-index: 1;
   position: absolute;
   width: 100%;
-  max-width: 20em;
-  min-width: 18em;
-  clip-path: polygon(
-    35% 14%,
-    100% 11%,
-    80% 100%,
-    19% 77%,
-    14% 53%,
-    0 38%,
-    5% 0
-  );
+  max-width: 15em;
   animation: float 3s var(--transition-ease) infinite;
 }
 
@@ -1250,6 +1289,20 @@ body {
 
   .textYoutube {
     text-align: center;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  /* Sobre Mim */
+
+  .sobre-mim {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .sobre-mim--primary {
+    padding: 3em 0;
+    margin: auto;
   }
 
   /* Media Beneficios */
@@ -1273,9 +1326,10 @@ body {
 
   .contato {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 36em;
     padding: 2em 0;
   }
+  
 
   .groupContato-primary {
     text-align: center;
@@ -1393,6 +1447,10 @@ body {
 
   .groupHeader-primary > .titleHeader-primary {
     font-size: 1.2em;
+  }
+
+  .sobre-mim--secundary__title {
+    font-size: 2.6em;
   }
 
   .groupSobre {
@@ -1602,7 +1660,26 @@ body {
   }
 }
 
+@media screen and (max-width: 490px) {
+  .sobre-mim--secundary {
+    padding: 0em 0 4em 0;
+  }
+  .sobre-mim {
+    height: 72em;
+    grid-template-rows: 1fr 2fr;
+  }
+}
+
+@media screen and  (max-width: 470px) {
+  .sobre-mim {
+    height: 75em;
+  }
+}
+
 @media screen and (max-width: 466px) {
+  .sobre-mim--secundary__title {
+    font-size: 2.2em;
+  }
   /* Estilos Nav */
 
   /* Estilos do Header */
@@ -1878,6 +1955,10 @@ body {
     width: 14em;
   }
 
+  .sobre-mim--secundary__title {
+    font-size: 2em;
+  }
+
   .groupHeader-primary {
     gap: 2rem;
     padding: 2em 0em 5em 0em;
@@ -2042,6 +2123,9 @@ body {
     width: 18em;
     height: 292px;
   }
+  .sobre-mim {
+    height: 78em;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -2122,6 +2206,12 @@ body {
     width: 16em;
     height: 277px;
   }
+}
+
+@media screen and (max-width: 354px) {
+  .sobre-mim {
+    height: 82em;
+}
 }
 
 @media screen and (max-width: 338px) {
