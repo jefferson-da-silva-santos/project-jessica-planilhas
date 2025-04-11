@@ -61,10 +61,7 @@ body {
 
 /* Estilos do Option */
 
-/* background-color: #012816;
-  border: 1px solid #023d21; */
-
-.groupOption-project {
+.container-dialog {
   position: fixed;
   z-index: 9000;
   bottom: 0;
@@ -72,94 +69,64 @@ body {
   left: 0;
   right: 0;
   background-color: #011e11dd;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--primary-font);
 }
 
-.option-project {
-  text-align: center;
-  position: relative;
-  background-color: var(--primary-color);
-  border: 2.5px solid #02341c;
+.dialog-product {
   display: flex;
   flex-direction: column;
-  gap: 1.3em;
-  max-width: 35em;
-  padding: 3em 2em 2em 2em;
-  box-shadow: 0px 0px 10px #02341c;
+  background-color: #02341c;
+  padding: 2rem;
   border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0px 0px 10px #011f10;
   margin: 2em;
   animation: effectOption 0.5s ease 0s 1 normal forwards;
-  align-items: center;
-}
-
-@keyframes effectOption {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.btn-close-option {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 1.6em;
-  color: #045c31;
-  padding-right: 13px;
-  padding-top: 11px;
-}
-
-.option-project__title {
-  font-size: 2em;
-}
-
-.option-project__description {
-  color: white;
-  font-size: 1.26em;
-}
-
-.option-project__group-btn {
-  margin-top: 1.5em;
-  display: flex;
+  font-family: var(--primary-font);
   gap: 1em;
 }
 
-.option-project__group-btn__btn-ver,
-.option-project__group-btn__btn-comprar {
-  padding: 0.6em 1em;
-  border: 2.5px solid #02341c;
-  border-radius: 5px;
-  font-weight: 800;
-  font-family: var(--secundary-font);
-  background-color: var(--primary-color);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  width: 13em;
+.dialog-product__title {
+  font-size: 1.4rem;
 }
 
-.option-project__group-btn__btn-ver:hover,
-.option-project__group-btn__btn-comprar:hover {
-  background-color: #257850;
+.dialog-product__description {
+  font-size: 1.2rem;
 }
 
-.option-project__group-btn__btn-comprar {
-  display: none;
+.dialog-product__list {
+  list-style-position: inside;
+  list-style-type: circle;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.icon-btn-option {
-  color: #011e11;
-  font-size: 1.1em;
+.dialog-product__prices {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
+
+.dialog-product__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.dialog-product__button {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+}
+
+/* background-color: #012816;
+  border: 1px solid #023d21; */
+
+
 
 /* Estilos do nav */
 
