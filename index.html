@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jéssica | Planilhas</title>
-    <meta name="p:domain_verify" content="65acbccb70dbde3af46f025cf326eb43" />
     <meta
       name="description"
       content="Soluções para você através de planilhas. Conheça nossas planilhas para Excel e Google Sheets."
@@ -13,7 +12,6 @@
       name="keywords"
       content="planilhas, Excel, Google Sheets, produtividade, finanças, controle financeiro, suporte contínuo, automatização de processos"
     />
-    <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="src/css/styles.css" />
     <link
       rel="shortcut icon"
@@ -22,33 +20,30 @@
     />
   </head>
   <body>
+    <script src="./src/js/script.js"></script>
     <div class="container-dialog">
       <div class="dialog-product">
-        <h1 class="dialog-product__title">Planilha para Consultório Odontológico</h1>
-        <p class="dialog-product__description">Um sistema completo e eficiente:</p>
+        <i class="close-dialog bi bi-x"></i>
+        <h1 class="dialog-product__title"></h1>
+        <p class="dialog-product__description"></p>
         <ul class="dialog-product__list">
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
-          <li class="dialog-product__item">Cadastro de pacientes</li>
         </ul>
     
-        <a class="dialog-product__link" href="">Confira o vídeo no YouTube</a>
-        <p class="dialog-product__description">
-          Personalize com sua logo e paleta de cores! Após a compra, entre em contato comigo e faça as alterações sem custo adicional!
+        <a target="_blank" class="dialog-product__link" href="">Confira o vídeo no YouTube</a>
+        <p class="dialog-product__description dialog-product__description2">
         </p>
     
         <div class="dialog-product__prices">
-          <p class="dialog-product__price-1">Excel: R$ 160</p>
-          <p class="dialog-product__price-2">Google Sheets: R$ 140</p>
+          <div class="group">
+            <p class="dialog-product__price dialog-product__price1"></p>
+          </div>
+          <div class="group">
+            <p class="dialog-product__price dialog-product__price2"></p>
+          </div>
         </div>
         <div class="dialog-product__buttons">
-          <button class="dialog-product__button">Comprar Excel</button>
-          <button class="dialog-product__button">Comprar Google Sheets</button>
+          <a target="_blank" href="#" class="dialog-product__button dialog-product__button1">Comprar Excel</a>
+          <a target="_blank" href="#" class="dialog-product__button dialog-product__button2">Comprar Google Sheets</a>
         </div>
     
       </div>
@@ -226,7 +221,7 @@
                 <h3 class="data-title">
                   Planilha para Consultório Odontológico
                 </h3>
-                <a href="#" class="btn-ver-planilha">Ver planilha</a>
+                <a href="#" class="btn-ver-planilha btn-ver-planilha-consultorio">Ver planilha</a>
               </div>
             </article>
 
@@ -636,126 +631,5 @@
         >
       </footer>
     </div>
-    <script>
-      //Variaveis atribuidas para tratar o menu
-      const menu = document.getElementById("listMenu");
-      const btnMenuLink = document.getElementById("btn-menu-link");
-      const iconBtnMenu = document.getElementById("icon-btn-menu");
-      const linksMenu = document.querySelectorAll(".link-menu");
-      const groupOption = document.querySelector(".groupOption-project");
-      let menuOpen = false;
-      let sessionProjectsExpanded = false;
-      // Variaveis do details
-      const detailsList = document.querySelectorAll(".caixa-pergunta");
-
-      window.addEventListener("scroll", () => {
-        document.querySelector(".groupNav").style.boxShadow =
-          window.scrollY === 0 ? "none" : "0px 0px 10px #023d22";
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".img-service").forEach((element) => {
-          element.addEventListener("mouseover", () => {
-            element.style.backgroundSize = "115%";
-          });
-          element.addEventListener("mouseout", () => {
-            element.style.backgroundSize = "100%";
-          });
-        });
-
-        document.querySelectorAll(".btn-ver-planilha").forEach((element) => {
-          element.addEventListener("mouseover", () => {
-            element.parentElement.parentElement.firstElementChild.style.backgroundSize =
-              "115%";
-          });
-          element.addEventListener("mouseout", () => {
-            element.parentElement.parentElement.firstElementChild.style.backgroundSize =
-              "100%";
-          });
-        });
-
-        btnMenuLink.addEventListener("click", (event) => {
-          event.preventDefault();
-          menuOpen ? closeMenu(menu) : openMenu(menu);
-          menuOpen = !menuOpen;
-        });
-
-        window.addEventListener(
-          "resize",
-          debounce(() => {
-            if (window.innerWidth > 900) {
-              document.body.style.overflow = "auto";
-              menu.style.visibility = "visible";
-            } else {
-              menuOpen = false;
-              closeMenu(menu);
-            }
-          }, 100)
-        );
-
-        linksMenu.forEach((link) => {
-          link.addEventListener("click", () => {
-            if (menuOpen) {
-              closeMenu(menu);
-              menuOpen = !menuOpen;
-            }
-          });
-        });
-
-        detailsList.forEach((currentDetail, currentIndex) => {
-          currentDetail.addEventListener("click", () => {
-            detailsList.forEach((detail, index) => {
-              if (index !== currentIndex) {
-                detail.open = false;
-              }
-            });
-          });
-        });
-
-        criarObservacao(".hidden-inicio", "show-inicio");
-        criarObservacao(".hidden-sobre", "show-sobre");
-        criarObservacao(".hidden-youtube", "show-youtube");
-        criarObservacao(".hidden-beneficios", "show-beneficios");
-        criarObservacao(".hidden-youtube-video", "show-youtube-video");
-        criarObservacao(".hidden-inicio-img", "show-inicio-img");
-      });
-
-      function openMenu(menu) {
-        menu.style.visibility = "visible";
-        iconBtnMenu.classList.remove("bi-list");
-        iconBtnMenu.classList.add("bi-x-lg");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeMenu(menu) {
-        menu.style.visibility = "hidden";
-        iconBtnMenu.classList.remove("bi-x-lg");
-        iconBtnMenu.classList.add("bi-list");
-        document.body.style.overflow = "auto";
-      }
-
-      function debounce(func, wait) {
-        let timeout;
-        return function (...args) {
-          clearTimeout(timeout);
-          timeout = setTimeout(() => func.apply(this, args), wait);
-        };
-      }
-
-      function criarObservacao(classeOculta, classeMostrar) {
-        const observacao = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add(classeMostrar);
-            } else {
-              return;
-            }
-          });
-        });
-
-        const elementosOcultos = document.querySelectorAll(classeOculta);
-        elementosOcultos.forEach((element) => observacao.observe(element));
-      }
-    </script>
   </body>
 </html>

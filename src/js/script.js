@@ -1,77 +1,44 @@
-
-let dataProjects = [
-  {
-    id: 'p1',
-    title: 'Planilha Baseada na Regra 50/30/20 - Excel',
-    description: 'Gerencie suas finanças de acordo com a regra 50/30/20 no Excel.',
-    linkSee: 'https://youtu.be/RhlQY29CdHc',
-    linkBuy: 'https://go.hotmart.com/E87078060R'
-  },
-  {
-    id: 'p2',
-    title: 'Planilha para controle de gastos - Excel',
-    description: 'Monitore e controle seus gastos mensais no Excel com auxílio de gráficos intuitivos.',
-    linkSee: 'https://youtu.be/yAAx9B1dVjI',
-    linkBuy: 'https://go.hotmart.com/I86610424W'
-  },
-  {
-    id: 'p3',
-    title: 'Planilha de controle financeiro personalizável - Excel',
-    description: 'Personalize seu controle financeiro de acordo com suas nece\\ssidades no Excel.',
-    linkSee: 'https://youtu.be/lozbSyah2XI',
-    linkBuy: 'https://go.hotmart.com/T86923742R'
-  },
-  {
-    id: 'p4',
-    title: 'Planilha de controle financeiro simples - Excel',
-    description: 'Mantenha suas finanças organizadas com uma planilha simples no Excel.',
-    linkSee: 'https://youtu.be/t24u-C-wRtI',
-    linkBuy: 'https://go.hotmart.com/S89958786B'
-  },
-  {
-    id: 'p5',
-    title: 'Planilha Baseada na Regra 50/30/20 - Google Sheets',
-    description: 'Administre suas finanças seguindo a regra 50/30/20 no Google.',
-    linkSee: 'https://youtu.be/RhlQY29CdHc',
-    linkBuy: 'https://go.hotmart.com/U89372251L'
-  },
-  {
-    id: 'p6',
-    title: 'Planilha para controle de gastos - Google Sheets',
-    description: 'Acompanhe seus gastos mensais no Google Sheets com auxílio de gráficos intuitivos.',
-    linkSee: 'https://youtu.be/yAAx9B1dVjI',
-    linkBuy: 'https://go.hotmart.com/X89372640G'
-  },
-  {
-    id: 'p7',
-    title: 'Planilha de controle financeiro personalizável - Google Sheets',
-    description: 'Customize seu controle financeiro conforme suas preferências no Google Sheets.',
-    linkSee: 'https://youtu.be/lozbSyah2XI',
-    linkBuy: 'https://go.hotmart.com/X89372640G'
-  },
-  {
-    id: 'p8',
-    title: 'Planilha de controle financeiro simples - Google Sheets',
-    description: 'Organize suas finanças com uma planilha simples no Google Sheets.',
-    linkSee: 'https://youtu.be/t24u-C-wRtI',
-    linkBuy: 'https://go.hotmart.com/U89959580R'
-  }
-]
-
-//Variaveis atribuidas para tratar o menu
 const menu = document.getElementById("listMenu");
 const btnMenuLink = document.getElementById("btn-menu-link");
 const iconBtnMenu = document.getElementById("icon-btn-menu");
 const linksMenu = document.querySelectorAll(".link-menu");
-const groupOption = document.querySelector('.groupOption-project');
+const groupOption = document.querySelector(".groupOption-project");
 let menuOpen = false;
 let sessionProjectsExpanded = false;
 // Variaveis do details
 const detailsList = document.querySelectorAll(".caixa-pergunta");
 
 
-document.addEventListener("DOMContentLoaded", () => {
+const dataDialogProducts = [
+  {
+    id: 1,
+    title: "Planilha para Consultório Odontológico",
+    description: "Um sistema completo e eficiente",
+    list: [
+      "Cadastro de pacientes",
+      "Histórico de dados e consultas dos pacientes",
+      "Controle de Consultas e Agendamentos",
+      "Agenda automática",
+      "Controle das despesas",
+      "Odontograma para orçamento",
+      "Painel automático para Análise Financeira do Consultório",
+      "Vídeo de instruções de uso e suporte contínuo",
+    ],
+    description2: "Personalize com sua logo e paleta de cores! Após a compra, entre em contato comigo e faça as alterações sem custo adicional!",
+    video: "https://youtu.be/7J7fvxcvLus?si=SvXYX6ptyM3vIPvc",
+    price1: "Excel: R$ 160",
+    price2: "Google Sheets: R$ 140",
+    linkButton1: "https://hotmart.com/pt-br/marketplace/produtos/planilha-para-consultorio-odontologico-excel/W98803019C",
+    linkButton2: "https://hotmart.com/pt-br/marketplace/produtos/planilha-para-consultorio-odontologico-google-sheets/M98803397F",
+  }
+];
 
+window.addEventListener("scroll", () => {
+  document.querySelector(".groupNav").style.boxShadow =
+    window.scrollY === 0 ? "none" : "0px 0px 10px #023d22";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".img-service").forEach((element) => {
     element.addEventListener("mouseover", () => {
       element.style.backgroundSize = "115%";
@@ -92,11 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  btnMenuLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    menuOpen ? closeMenu(menu) : openMenu(menu);
-    menuOpen = !menuOpen;
-  });
+  if (btnMenuLink) {
+    btnMenuLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      menuOpen ? closeMenu(menu) : openMenu(menu);
+      menuOpen = !menuOpen;
+    });
+  }
 
   window.addEventListener(
     "resize",
@@ -136,7 +105,44 @@ document.addEventListener("DOMContentLoaded", () => {
   criarObservacao(".hidden-beneficios", "show-beneficios");
   criarObservacao(".hidden-youtube-video", "show-youtube-video");
   criarObservacao(".hidden-inicio-img", "show-inicio-img");
+
+  const btnVerPlanilhaConsultorio = getElement('.btn-ver-planilha-consultorio');
+
+  if (btnVerPlanilhaConsultorio) {
+    btnVerPlanilhaConsultorio.addEventListener('click', (e) => {
+      e.preventDefault();
+      openDialogProduct(dataDialogProducts[0]);
+    });
+  }
+
+  const btnCloseDialogProduct = getElement('.close-dialog');
+  if (btnCloseDialogProduct) {
+    btnCloseDialogProduct.addEventListener('click', () => {
+      closeDialogProduct();
+    });
+  }
+
 });
+
+function openDialogProduct(dataDialog) {
+  getElement('.container-dialog').style.display = "flex";
+  document.body.style.overflow = "hidden";
+  getElement('.dialog-product__title').textContent = dataDialog.title;
+  getElement('.dialog-product__description').textContent = dataDialog.description;
+  getElement('.dialog-product__description2').textContent = dataDialog.description2;
+  getElement('.dialog-product__list').innerHTML = dataDialog.list.map((item) => `<li class="dialog-product__item">${item}</li>`).join('');
+  getElement('.dialog-product__link').href = dataDialog.video;
+  getElement('.dialog-product__price1').textContent = dataDialog.price1;
+  getElement('.dialog-product__price2').textContent = dataDialog.price2;
+  getElement('.dialog-product__button1').href = dataDialog.linkButton1;
+  getElement('.dialog-product__button2').href = dataDialog.linkButton2;
+}
+
+function closeDialogProduct() {
+  getElement('.container-dialog').style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
 
 function openMenu(menu) {
   menu.style.visibility = "visible";
@@ -146,10 +152,12 @@ function openMenu(menu) {
 }
 
 function closeMenu(menu) {
-  menu.style.visibility = "hidden";
-  iconBtnMenu.classList.remove("bi-x-lg");
-  iconBtnMenu.classList.add("bi-list");
-  document.body.style.overflow = "auto";
+  if (menu) {
+    menu.style.visibility = "hidden";
+    iconBtnMenu.classList.remove("bi-x-lg");
+    iconBtnMenu.classList.add("bi-list");
+    document.body.style.overflow = "auto";
+  }
 }
 
 function debounce(func, wait) {
@@ -173,6 +181,9 @@ function criarObservacao(classeOculta, classeMostrar) {
 
   const elementosOcultos = document.querySelectorAll(classeOculta);
   elementosOcultos.forEach((element) => observacao.observe(element));
+}
 
-  document.querySelector
+
+function getElement(className, multiple = false) {
+  return multiple ? document.querySelectorAll(className) : document.querySelector(className);
 }
