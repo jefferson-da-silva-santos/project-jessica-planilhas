@@ -12,6 +12,7 @@
       name="keywords"
       content="planilhas, Excel, Google Sheets, produtividade, finanças, controle financeiro, suporte contínuo, automatização de processos"
     />
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js/dist/ua-parser.min.js"></script>
     <link rel="stylesheet" href="src/css/styles.css" />
     <link
       rel="shortcut icon"
@@ -28,8 +29,8 @@
         <ul class="dialog-product__list"></ul>
 
         <a target="_blank" class="dialog-product__link" href=""
-          ><i class="youtube-icon bi bi-youtube"></i>Confira o vídeo no YouTube </a
-        >
+          ><i class="youtube-icon bi bi-youtube"></i>Confira o vídeo no YouTube
+        </a>
         <p class="dialog-product__description dialog-product__description2"></p>
 
         <div class="dialog-product__prices">
@@ -710,6 +711,7 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
+        logAccess();
         document.querySelectorAll(".img-service").forEach((element) => {
           element.addEventListener("mouseover", () => {
             element.style.backgroundSize = "115%";
@@ -795,6 +797,43 @@
           });
         }
       });
+
+      function logAccess() {
+        const parser = new UAParser(); // Criação do objeto parser
+        const uaResult = parser.getResult();
+
+        const accessData = {
+          projeto_id: 2,
+          user_id: "jessica_planilhas", 
+          ip: "",
+          url: window.location.href,
+          referer: document.referrer || "http://localhost:5173/",
+          user_agent: navigator.userAgent,
+          navegador: uaResult.browser.name,
+          sistema_operacional: uaResult.os.name,
+          dispositivo: uaResult.device.type || "desktop",
+          localizacao_geografica: {},
+        };
+
+        fetch("https://ipapi.co/json/")
+          .then((res) => res.json())
+          .then(async (loc) => {
+            accessData.ip = loc.ip;
+            accessData.localizacao_geografica = {
+              cidade: loc.city,
+              pais: loc.country_name,
+            };
+            
+            fetch("https://track-you-api.vercel.app/api/v1/acessos", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(accessData),
+            }).catch(console.error);
+          })
+          .catch(console.error);
+      }
 
       function openDialogProduct(dataDialog) {
         getElement(".container-dialog").style.display = "flex";
