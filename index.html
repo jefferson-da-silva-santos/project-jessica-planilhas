@@ -820,8 +820,12 @@
           .then(async (loc) => {
             accessData.ip = loc.ip;
             accessData.localizacao_geografica = {
-              cidade: loc.city,
-              pais: loc.country_name,
+              cidade: loc.city || 'Desconhecida',
+              estado: loc.region || 'Desconhecido',
+              pais: loc.country_name || 'Desconhecido',
+              codigo_pais: loc.country || 'Desconhecido',
+              latitude: loc.latitude || 0,
+              longitude: loc.longitude || 0,
             };
             
             fetch("https://track-you-api.vercel.app/api/v1/acessos", {
