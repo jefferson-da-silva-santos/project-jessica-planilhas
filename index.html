@@ -238,6 +238,34 @@
               </div>
             </article>
 
+            <article class="data p4">
+              <div
+                class="groupData-img-4 img-service"
+                role="img"
+                aria-label="Imagem da planilha para controle de gastos"
+              ></div>
+              <div class="groupData-text">
+                <h3 class="data-title">Planilha para Clínica de Estética</h3>
+                <a href="#" class="btn-ver-planilha btn-ver-planilha-clinica"
+                  >Ver planilha</a
+                >
+              </div>
+            </article>
+
+            <!-- <article class="data p10">
+              <div
+                class="groupData-img-10 img-service"
+                role="img"
+                aria-label="Imagem da planilha para controle de gastos"
+              ></div>
+              <div class="groupData-text">
+                <h3 class="data-title">
+                  Planilha para Manicure
+                </h3>
+                <a href="#" class="btn-ver-planilha">Ver planilha</a>
+              </div>
+            </article> -->
+
             <article class="data p5">
               <div
                 class="groupData-img-5 img-service"
@@ -248,7 +276,12 @@
                 <h3 class="data-title">
                   Planilha para Controle Compras Parceladas (Grátis)
                 </h3>
-                <a target="_blank" href="https://drive.google.com/drive/folders/1FF6pAn9jKtXOVLjtYluQzA7DHJO3gDYu?usp=sharing" class="btn-ver-planilha">Ver planilha</a>
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1FF6pAn9jKtXOVLjtYluQzA7DHJO3gDYu?usp=sharing"
+                  class="btn-ver-planilha"
+                  >Ver planilha</a
+                >
               </div>
             </article>
 
@@ -682,7 +715,7 @@
         {
           id: 1,
           title: "Planilha para Consultório Odontológico",
-          description: "Um sistema completo e eficiente",
+          description: "Um sistema completo e eficiente para seu consultório!",
           list: [
             "Cadastro de pacientes",
             "Histórico de dados e consultas dos pacientes",
@@ -696,12 +729,34 @@
           description2:
             "Personalize com sua logo e paleta de cores! Após a compra, entre em contato comigo e faça as alterações sem custo adicional!",
           video: "https://youtu.be/7J7fvxcvLus?si=SvXYX6ptyM3vIPvc",
-          price1: "Excel: R$ 160",
-          price2: "Google Sheets: R$ 140",
+          price1: "Excel: R$ 150",
+          price2: "Google Sheets: R$ 130",
           linkButton1:
             "https://hotmart.com/pt-br/marketplace/produtos/planilha-para-consultorio-odontologico-excel/W98803019C",
           linkButton2:
             "https://hotmart.com/pt-br/marketplace/produtos/planilha-para-consultorio-odontologico-google-sheets/M98803397F",
+        },
+        {
+          id: 2,
+          title: "Planilha para Clínica de Estética",
+          description:
+            "Gerencie sua clínica com mais praticidade! Controle agendamentos, histórico de clientes e financeiro em um só lugar.",
+          list: [
+            "Cadastro de clientes",
+            "Histórico de dados e atendimentos dos clientes",
+            "Controle de Atendimentos",
+            "Agenda automática",
+            "Controle das despesas",
+            "Painel automático para Análise Financeira da Clínica",
+            "Vídeo de instruções de uso e suporte contínuo",
+          ],
+          description2:
+            "E mais: personalize com sua logo e paleta de cores! Após a compra, entre em contato comigo e faço as alterações sem custo adicional.",
+          video: "",
+          price1: "Excel: R$ 120",
+          price2: "Google Sheets: R$ 100",
+          linkButton1: "https://go.hotmart.com/P98803925T",
+          linkButton2: "https://go.hotmart.com/Q98534472T",
         },
       ];
 
@@ -790,6 +845,15 @@
           });
         }
 
+        const btnVerPlanilhaClinica = getElement(".btn-ver-planilha-clinica");
+
+        if (btnVerPlanilhaClinica) {
+          btnVerPlanilhaClinica.addEventListener("click", (e) => {
+            e.preventDefault();
+            openDialogProduct(dataDialogProducts[1]);
+          });
+        }
+
         const btnCloseDialogProduct = getElement(".close-dialog");
         if (btnCloseDialogProduct) {
           btnCloseDialogProduct.addEventListener("click", () => {
@@ -804,7 +868,7 @@
 
         const accessData = {
           projeto_id: 2,
-          user_id: "jessica_planilhas", 
+          user_id: "jessica_planilhas",
           ip: "",
           url: window.location.href,
           referer: document.referrer || "http://localhost:5173/",
@@ -820,14 +884,14 @@
           .then(async (loc) => {
             accessData.ip = loc.ip;
             accessData.localizacao_geografica = {
-              cidade: loc.city || 'Desconhecida',
-              estado: loc.region || 'Desconhecido',
-              pais: loc.country_name || 'Desconhecido',
-              codigo_pais: loc.country || 'Desconhecido',
+              cidade: loc.city || "Desconhecida",
+              estado: loc.region || "Desconhecido",
+              pais: loc.country_name || "Desconhecido",
+              codigo_pais: loc.country || "Desconhecido",
               latitude: loc.latitude || 0,
               longitude: loc.longitude || 0,
             };
-            
+
             fetch("https://track-you-api.vercel.app/api/v1/acessos", {
               method: "POST",
               headers: {
