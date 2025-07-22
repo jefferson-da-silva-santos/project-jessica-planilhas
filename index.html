@@ -252,6 +252,20 @@
               </div>
             </article>
 
+            <article class="data p11">
+              <div
+                class="groupData-img-11 img-service"
+                role="img"
+                aria-label="Imagem da planilha para controle de gastos"
+              ></div>
+              <div class="groupData-text">
+                <h3 class="data-title">Planilha para Manicure</h3>
+                <a href="#" class="btn-ver-planilha btn-ver-planilha-manicure"
+                  >Ver planilha</a
+                >
+              </div>
+            </article>
+
             <!-- <article class="data p10">
               <div
                 class="groupData-img-10 img-service"
@@ -758,6 +772,27 @@
           linkButton1: "https://go.hotmart.com/P98803925T",
           linkButton2: "https://go.hotmart.com/Q98534472T",
         },
+        {
+          id: 3,
+          title: "Planilha para Manicure",
+          description:
+            "Organize sua agenda e finanças com facilidade! Controle agendamentos, clientes e ganhos em um só lugar.",
+          list: [
+            "Cadastro de clientes",
+            "Controle de Atendimentos",
+            "Agenda automática",
+            "Controle das despesas",
+            "Painel automático para Análise Financeira",
+            "Vídeo de instruções de uso e suporte contínuo",
+          ],
+          description2:
+            "E mais: personalize com sua logo e paleta de cores! Após a compra, entre em contato comigo e faço as alterações sem custo adicional.",
+          video: "",
+          price1: "Excel: R$ 140",
+          price2: "Google Sheets: R$ 120",
+          linkButton1: "https://youtu.be/FrMw2FNHaKc",
+          linkButton2: "https://go.hotmart.com/H98804179N",
+        }
       ];
 
       window.addEventListener("scroll", () => {
@@ -851,6 +886,15 @@
           btnVerPlanilhaClinica.addEventListener("click", (e) => {
             e.preventDefault();
             openDialogProduct(dataDialogProducts[1]);
+          });
+        }
+
+        const btnVerPlanilhaManicure = getElement(".btn-ver-planilha-manicure");
+
+        if (btnVerPlanilhaManicure) {
+          btnVerPlanilhaManicure.addEventListener("click", (e) => {
+            e.preventDefault();
+            openDialogProduct(dataDialogProducts[2]);
           });
         }
 

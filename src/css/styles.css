@@ -541,6 +541,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition-property: box-shadow;
+  width: 100%;
   max-width: 18em;
   height: 285px;
   transition-duration: 0.5s;
@@ -631,6 +632,10 @@ body {
 
 .groupData-img-9 {
   background-image: url("../image/GIF-planner.gif");
+}
+
+.groupData-img-11 {
+  background-image: url("../image/gif-planilha-manicure.gif");
 }
 
 .btn-ver-planilha .icone {
