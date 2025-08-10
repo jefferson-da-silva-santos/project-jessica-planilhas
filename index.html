@@ -127,18 +127,6 @@
             >
           </section>
           <section class="groupHeader-secundary">
-            <div
-              class="circle hidden-inicio-img"
-              role="img"
-              aria-label="Ilustração"
-            ></div>
-            <img
-              loading="lazy"
-              class="img hidden-inicio-img"
-              src="./src/image/img.webp"
-              role="img"
-              aria-label="Computador"
-            />
           </section>
         </div>
       </header>
@@ -798,6 +786,8 @@
       window.addEventListener("scroll", () => {
         document.querySelector(".groupNav").style.boxShadow =
           window.scrollY === 0 ? "none" : "0px 0px 10px #023d22";
+          document.querySelector(".groupNav").style.backgroundColor = 
+          window.scrollY === 0 ? "transparent" : "#011e11";
       });
 
       document.addEventListener("DOMContentLoaded", () => {
