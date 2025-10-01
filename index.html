@@ -706,12 +706,6 @@
         >
       </footer>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@latest/dist/ua-parser.min.js"></script>
     <script>
       const menu = document.getElementById("listMenu");
       const btnMenuLink = document.getElementById("btn-menu-link");
@@ -801,7 +795,6 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
-        logAccess();
         document.querySelectorAll(".img-service").forEach((element) => {
           element.addEventListener("mouseover", () => {
             element.style.backgroundSize = "115%";
@@ -905,47 +898,6 @@
           });
         }
       });
-
-      function logAccess() {
-        const parser = new UAParser(); // Criação do objeto parser
-        const uaResult = parser.getResult();
-
-        const accessData = {
-          projeto_id: 2,
-          user_id: "jessica_planilhas",
-          ip: "",
-          url: window.location.href,
-          referer: document.referrer || "http://localhost:5173/",
-          user_agent: navigator.userAgent,
-          navegador: uaResult.browser.name,
-          sistema_operacional: uaResult.os.name,
-          dispositivo: uaResult.device.type || "desktop",
-          localizacao_geografica: {},
-        };
-
-        fetch("https://ipapi.co/json/")
-          .then((res) => res.json())
-          .then(async (loc) => {
-            accessData.ip = loc.ip;
-            accessData.localizacao_geografica = {
-              cidade: loc.city || "Desconhecida",
-              estado: loc.region || "Desconhecido",
-              pais: loc.country_name || "Desconhecido",
-              codigo_pais: loc.country || "Desconhecido",
-              latitude: loc.latitude || 0,
-              longitude: loc.longitude || 0,
-            };
-
-            fetch("https://track-you-api.vercel.app/api/v1/acessos", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(accessData),
-            }).catch(console.error);
-          })
-          .catch(console.error);
-      }
 
       function openDialogProduct(dataDialog) {
         getElement(".container-dialog").style.display = "flex";
